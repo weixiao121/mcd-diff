@@ -27,6 +27,12 @@
 
 **但我没有 —— 因为好吃。** 🍟
 
+<p align="center">
+  <img src="docs/images/hero.png" alt="麦门 Diff 报告：74 单重开后本可以省 ¥279" width="820">
+</p>
+
+> ↑ 示例报告（虚构数据）。完整产物见 [`examples/sample_diff.html`](examples/sample_diff.html)，可直接双击打开。
+
 ---
 
 ## ⚡ 30 秒看懂它和别的项目有什么不一样
