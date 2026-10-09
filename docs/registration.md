@@ -86,6 +86,54 @@ git push -u origin main
   - 情绪钩子（社交平台）：《平行宇宙的我，一年少花 ¥371 —— 相当于 10.3 顿麦当劳。但我没有换，因为好吃》
 - [ ] 每天查看 `RANKING.md` 追踪名次
 
+### 仓库 About / Topics（纯自然流量入口）
+
+仓库主页右侧 **About** 区域 → 点 ⚙️（Edit repository details）：
+
+**Description**（350 字符上限，直接复制）：
+
+```text
+把你的麦当劳账单跑一遍 diff —— 在「同等预算 ∩ 同等热量」约束下把历史订单重新点一遍，算出本可以省下多少钱、少吃多少热量。基于麦当劳 MCP，只读、零第三方依赖、完全确定性。非麦当劳官方产品。
+```
+
+**Topics**（逐个输入、回车确认）：
+
+```text
+mcp
+mcdonalds
+python
+cli
+agent
+llm
+optimization
+nutrition
+data-visualization
+personal-finance
+workbuddy
+hackathon
+```
+
+> Topics 只允许小写字母、数字和连字符，最多 20 个。它决定仓库能不能出现在
+> GitHub 的 Topics 页（如 <https://github.com/topics/mcp>）和搜索结果里 —— 这是最干净的自然流量入口。
+> 建议顺手填 **Website**：把 `examples/sample_diff.html` 挂成在线预览（见下方「在线 Demo」）。
+
+### 在线 Demo（文件已就绪 ✅，只差开关）
+
+`docs/index.html` 已由 `scripts/build_demo.py` 生成 —— 它就是示例报告，只是在顶部多了一条
+「示例报告 · 订单数据为虚构、菜单数据为真实」的横幅，免得访客把 ¥2,660 → ¥2,289 误读成真实账单。
+同目录的 `.nojekyll` 用于关闭 Jekyll。
+
+**只剩一步：** 仓库 **Settings → Pages** → Source 选 `Deploy from a branch` → 分支 `main`、目录 `/docs` → **Save**。
+约 1 分钟后得到：
+
+```text
+https://weixiao121.github.io/mcd-diff/
+```
+
+再把这个地址填进 About 的 **Website** 字段（与 Description、Topics 在同一个 ⚙️ 面板里）。
+
+> 以后改了示例报告要重新打包：`python scripts/build_demo.py`
+
 > ⚠️ **严禁**：脚本刷 Star、多账号、购买 Star。真人自然收藏没问题，作弊会被取消资格。
 
 ## 五、时间节点

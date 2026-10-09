@@ -7,6 +7,7 @@
   <img alt="MCP" src="https://img.shields.io/badge/MCP-Streamable%20HTTP-DA291C">
   <img alt="Deps" src="https://img.shields.io/badge/dependencies-0-brightgreen">
   <img alt="Tests" src="https://img.shields.io/badge/tests-22%20passed-brightgreen">
+  <a href="https://weixiao121.github.io/mcd-diff/"><img alt="Live Demo" src="https://img.shields.io/badge/在线%20Demo-立即打开-DA291C"></a>
   <img alt="License" src="https://img.shields.io/badge/license-MIT-blue">
   <img alt="非官方" src="https://img.shields.io/badge/非麦当劳官方产品-声明-FFC72C">
 </p>
@@ -33,7 +34,7 @@
   <img src="docs/images/hero.png" alt="麦门 Diff 报告：74 单重开后本可以省 ¥371" width="820">
 </p>
 
-> ↑ 示例报告首屏（订单为虚构数据，菜单为真实数据）。完整产物见 [`examples/sample_diff.html`](examples/sample_diff.html)，可直接双击打开。
+> ↑ 示例报告首屏（订单为虚构数据，菜单为真实数据）。**不想装环境？→ [打开在线 Demo](https://weixiao121.github.io/mcd-diff/)**，或直接双击 [`examples/sample_diff.html`](examples/sample_diff.html) 离线看。
 
 ---
 

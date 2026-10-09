@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>麦门 Diff · 你的订单重开报告</title>
+<style>
+:root{
+  --bg:#FBF8F3; --card:#FFF; --ink:#2B2320; --ink2:#6B5F55; --ink3:#9C8F83;
+  --line:#EBE3D9; --soft:#F5F0E8;
+  --brand:#DA291C; --brand2:#FFC72C;
+  --minus:#A32D2D; --minus-bg:#FDF3F3; --minus-line:#F0D5D5;
+  --plus:#0F6E56; --plus-bg:#F1F7F4; --plus-line:#CFE3DA;
+  --r:14px;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;background:var(--bg);color:var(--ink);line-height:1.65;
+  font-family:"PingFang SC","Microsoft YaHei","Hiragino Sans GB",system-ui,-apple-system,"Segoe UI",sans-serif;
+  -webkit-font-smoothing:antialiased;
+}
+.page{max-width:880px;margin:0 auto;padding:26px 20px 70px}
+h1,h2,h3{margin:0;font-weight:600;letter-spacing:.2px}
+p{margin:0}
+
+/* ---------- HERO ---------- */
+.hero{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:30px 30px 26px;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0 0 auto 0;height:5px;background:linear-gradient(90deg,var(--brand),var(--brand2))}
+.hero-bar{display:flex;justify-content:space-between;align-items:center;font-size:12.5px;color:var(--ink3);margin-bottom:20px}
+.brand{font-weight:600;color:var(--brand);letter-spacing:.4px}
+.hero h1{font-size:26px;line-height:1.45}
+.hero h1 b{color:var(--brand);font-size:30px}
+.hero-window{font-size:12.5px;color:var(--ink3);margin-top:8px}
+.hero-diff{margin:20px 0 4px;border:1px solid var(--line);border-radius:12px;overflow:hidden;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+.hd-row{display:flex;align-items:center;gap:12px;padding:9px 14px;font-size:13.5px}
+.hd-row.hd-minus{background:var(--minus-bg);color:var(--minus)}
+.hd-row.hd-plus{background:var(--plus-bg);color:var(--plus);border-top:1px solid var(--line)}
+.hd-row.hd-sum{background:#fff;font-weight:700;border-top:1px solid var(--line)}
+.hd-sign{width:12px;font-weight:700}
+.hd-label{flex:1;opacity:.85}
+.hd-val{font-weight:700}
+.hero-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:20px}
+.hero-stats>div{background:var(--soft);border-radius:12px;padding:14px 16px;text-align:center}
+.hero-stats b{display:block;font-size:23px;color:var(--brand);letter-spacing:-.5px}
+.hero-stats i{font-style:normal;font-size:12px;color:var(--ink2)}
+.hero-line{margin-top:22px;font-size:15.5px;color:var(--ink2);text-align:center;padding-top:18px;border-top:1px dashed var(--line)}
+.hero-line b{color:var(--ink)}
+
+/* ---------- SECTIONS ---------- */
+section{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:26px 28px;margin-top:18px}
+h2{font-size:17px;margin-bottom:6px}
+.sec-desc{font-size:13px;color:var(--ink3);margin-bottom:18px}
+.empty{color:var(--ink3);font-size:13.5px}
+
+/* ---------- 重开橱窗 ---------- */
+.replay{border:1px solid var(--line);border-radius:12px;overflow:hidden;margin-bottom:14px}
+.replay:last-child{margin-bottom:0}
+.rp-head{display:flex;align-items:center;gap:10px;padding:9px 14px;background:var(--soft);font-size:12.5px;color:var(--ink2)}
+.rp-idx{font-family:ui-monospace,Menlo,monospace;font-weight:700;color:var(--ink3)}
+.rp-store{flex:1;color:var(--ink3)}
+.rp-save{font-weight:700;color:var(--plus);background:#fff;border:1px solid var(--plus-line);border-radius:999px;padding:2px 10px}
+.rp-grid{display:grid;grid-template-columns:1fr 1fr}
+.rp-col{padding:13px 15px}
+.rp-old{background:var(--minus-bg);border-right:1px solid var(--line)}
+.rp-new{background:var(--plus-bg)}
+.rp-tag{font-size:11.5px;font-weight:700;letter-spacing:.3px}
+.rp-old .rp-tag{color:var(--minus)}
+.rp-new .rp-tag{color:var(--plus)}
+.rp-items{font-size:13.5px;margin-top:7px;line-height:1.55}
+.rp-sum{margin-top:9px;font-size:12.5px;color:var(--ink2);font-family:ui-monospace,Menlo,monospace}
+.rp-delta{padding:9px 15px;font-size:12.5px;background:#fff;border-top:1px solid var(--line);color:var(--ink2)}
+.rp-note{padding:7px 15px;font-size:11.5px;color:var(--ink3);background:var(--soft)}
+
+/* ---------- 账簿 ---------- */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px}
+.card{background:var(--soft);border-radius:12px;padding:15px 16px;display:flex;flex-direction:column}
+.card-num{font-size:22px;font-weight:700;color:var(--brand);letter-spacing:-.5px}
+.card-label{font-size:12.5px;color:var(--ink);margin-top:3px}
+.card-sub{font-size:11.5px;color:var(--ink3);margin-top:2px}
+.attrs{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:22px}
+.attr h3{font-size:13.5px;color:var(--ink2);margin-bottom:10px}
+.attr-row{display:flex;align-items:center;gap:9px;margin-bottom:7px;font-size:12.5px}
+.attr-key{width:62px;color:var(--ink2);flex:none}
+.attr-bar{flex:1;height:7px;background:var(--soft);border-radius:99px;overflow:hidden}
+.attr-bar i{display:block;height:100%;background:var(--brand);border-radius:99px}
+.attr-val{width:104px;text-align:right;color:var(--ink3);font-family:ui-monospace,Menlo,monospace;font-size:11.5px;flex:none}
+
+/* ---------- 路线表 ---------- */
+table.modes{width:100%;border-collapse:collapse;font-size:13px}
+table.modes th{text-align:right;font-weight:500;color:var(--ink3);font-size:12px;padding:0 10px 9px}
+table.modes th:first-child{text-align:left}
+table.modes td{padding:11px 10px;border-top:1px solid var(--line);text-align:right}
+table.modes td:first-child{text-align:left}
+table.modes tr.is-default{background:var(--plus-bg)}
+table.modes tr.is-default td:first-child{border-left:3px solid var(--plus);padding-left:12px}
+table.modes b{font-size:13.5px}
+.mdesc{display:block;font-size:11.5px;color:var(--ink3)}
+.num{font-family:ui-monospace,Menlo,monospace;color:var(--ink2)}
+.num.strong{color:var(--plus);font-weight:700;font-size:14px}
+
+/* ---------- 排行榜 ---------- */
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.two-col>section{margin-top:0}
+.ranking{list-style:none;margin:0;padding:0}
+.ranking li{display:flex;align-items:center;gap:8px;padding:8px 0;border-bottom:1px dashed var(--line);font-size:12.5px}
+.ranking li:last-child{border-bottom:0}
+.rk-date{color:var(--ink3);font-family:ui-monospace,Menlo,monospace;font-size:11.5px;flex:none}
+.rk-combo{flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink2)}
+.rk-cost{font-family:ui-monospace,Menlo,monospace;color:var(--ink2);flex:none}
+.rk-delta{flex:none;font-weight:700;font-size:11.5px;padding:1px 8px;border-radius:999px}
+.rk-delta.minus{color:var(--minus);background:var(--minus-bg)}
+.rk-delta.plus{color:var(--plus);background:var(--plus-bg)}
+
+/* ---------- 平行宇宙 ---------- */
+.parallel{display:grid;grid-template-columns:1fr auto 1fr;gap:14px;align-items:center}
+.pl-col{border-radius:12px;padding:18px 14px;text-align:center;display:flex;flex-direction:column;gap:3px}
+.pl-real{background:var(--soft)}
+.pl-para{background:var(--plus-bg);border:1px solid var(--plus-line)}
+.pl-tag{font-size:11px;color:var(--ink3);letter-spacing:.4px}
+.pl-emoji{font-size:28px;line-height:1.2}
+.pl-name{font-size:14px;font-weight:600}
+.pl-index{font-size:11.5px;color:var(--ink3);font-family:ui-monospace,Menlo,monospace}
+.pl-mid{text-align:center;display:flex;flex-direction:column;gap:6px;min-width:112px}
+.pl-vs{font-size:11.5px;color:var(--ink3)}
+.pl-gap{font-size:11.5px;font-weight:600;border-radius:999px;padding:3px 9px}
+.pl-gap.up{color:var(--plus);background:var(--plus-bg)}
+.pl-gap.down{color:var(--minus);background:var(--minus-bg)}
+.pl-gap.flat{color:var(--ink2);background:var(--soft)}
+.pl-metrics{list-style:none;margin:12px 0 0;padding:10px 0 0;border-top:1px dashed var(--line);width:100%}
+.pl-metrics li{display:flex;justify-content:space-between;font-size:12px;padding:2px 0}
+.pl-metrics i{font-style:normal;color:var(--ink3)}
+.pl-metrics b{font-family:ui-monospace,Menlo,monospace;color:var(--ink2)}
+.pl-foot{margin-top:14px;text-align:center;font-size:13px;color:var(--ink2)}
+.pl-foot b{color:var(--plus)}
+
+/* ---------- 徽章 ---------- */
+.badges{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:10px}
+.badge{display:flex;align-items:center;gap:11px;background:var(--soft);border-radius:11px;padding:11px 13px}
+.bd-emoji{font-size:19px;flex:none}
+.bd-body{display:flex;flex-direction:column}
+.bd-body b{font-size:13px}
+.bd-body i{font-style:normal;font-size:11.5px;color:var(--ink3)}
+
+/* ---------- FOOTER ---------- */
+footer{margin-top:22px;font-size:11.5px;color:var(--ink3);line-height:1.8;text-align:center}
+footer b{color:var(--ink2)}
+
+@media(max-width:720px){
+  .page{padding:18px 14px 50px}
+  .hero,section{padding:20px 18px}
+  .hero h1{font-size:21px}
+  .hero h1 b{font-size:25px}
+  .hero-stats{grid-template-columns:1fr;gap:8px}
+  .hero-stats>div{display:flex;align-items:baseline;justify-content:space-between;text-align:left;padding:10px 14px}
+  .hero-stats b{font-size:19px}
+  .rp-grid{grid-template-columns:1fr}
+  .rp-old{border-right:0;border-bottom:1px solid var(--line)}
+  .attrs,.two-col{grid-template-columns:1fr;gap:16px}
+  .parallel{grid-template-columns:1fr;gap:10px}
+  .pl-mid{flex-direction:row;justify-content:center;min-width:0}
+}
+</style>
+</head>
+<body>
+<div style="background:#FFC72C;color:#1a1a1a;padding:11px 18px;text-align:center;font:500 14px/1.65 -apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif;border-bottom:1px solid rgba(0,0,0,.12)"><b>示例报告</b>　·　订单数据为程序生成的<b>虚构数据</b>（74 单），菜单价格与营养来自麦当劳 MCP 的<b>真实数据</b>　·　<a href="https://github.com/weixiao121/mcd-diff" style="color:#1a1a1a;text-decoration:underline">查看项目源码</a></div>
+<div class="page">
+
+  <header class="hero">
+    <div class="hero-bar">
+      <span class="brand">🔀 mcd-diff · 麦门 Diff</span>
+      <span class="stamp">2026-10-09T20:30:00+08:00</span>
+    </div>
+    <h1>我把在麦当劳的 <b>74</b> 单，重新点了一遍</h1>
+    <p class="hero-window">统计窗口 2026-01-08 ~ 2026-10-07 ｜ 74 单中 61 单存在重开空间（82.4%）</p>
+
+    <div class="hero-diff">
+      <div class="hd-row hd-minus"><span class="hd-sign">−</span><span class="hd-label">实际支出</span><span class="hd-val">¥2,660</span></div>
+      <div class="hd-row hd-plus"><span class="hd-sign">+</span><span class="hd-label">重开之后</span><span class="hd-val">¥2,289</span></div>
+      <div class="hd-row hd-sum"><span class="hd-sign"></span><span class="hd-label">本可以省下</span><span class="hd-val">¥371</span></div>
+    </div>
+
+    <div class="hero-stats">
+      <div><b>5,162</b><i>可减 kcal</i></div>
+      <div><b>14.0%</b><i>占全年支出</i></div>
+      <div><b>35</b><i>重开潜力 / 100</i></div>
+    </div>
+
+    <p class="hero-line">但我没有 —— <b>因为好吃。</b>🍟</p>
+  </header>
+
+  <section>
+    <h2>⏪ 重开橱窗</h2>
+    <p class="sec-desc">下面这几单，是你这一年里「最值得重开」的。左边是你实际点的，右边是同等条件下的更优解。</p>
+      <article class="replay">
+        <div class="rp-head">
+          <span class="rp-idx">#01</span>
+          <span class="rp-date">2026-04-06 20:12</span>
+          <span class="rp-store">杭州武林广场店</span>
+          <span class="rp-save">省 ¥14.16</span>
+        </div>
+        <div class="rp-grid">
+          <div class="rp-col rp-old">
+            <span class="rp-tag">− 你点的</span>
+            <p class="rp-items">麦辣鸡腿汉堡 · 薯条 · 可乐 · 薄皮焦香V翅</p>
+            <p class="rp-sum">¥54.44 · 1,113 kcal · 45 g</p>
+          </div>
+          <div class="rp-col rp-new">
+            <span class="rp-tag">+ 重开的</span>
+            <p class="rp-items">圆筒冰淇淋 · 那么大鸡排（椒盐风味） · 优品豆浆 · 麦香鸡</p>
+            <p class="rp-sum">¥40.28 · 1,049 kcal · 49 g</p>
+          </div>
+        </div>
+        <p class="rp-delta">Δ 便宜 ¥14.16 · 少 64 kcal · 蛋白 +4 g</p>
+        
+      </article>
+      <article class="replay">
+        <div class="rp-head">
+          <span class="rp-idx">#02</span>
+          <span class="rp-date">2026-03-06 19:31</span>
+          <span class="rp-store">广州天河城店</span>
+          <span class="rp-save">省 ¥13.89</span>
+        </div>
+        <div class="rp-grid">
+          <div class="rp-col rp-old">
+            <span class="rp-tag">− 你点的</span>
+            <p class="rp-items">双层吉士汉堡 · 薯条 · 可乐 · 新地</p>
+            <p class="rp-sum">¥58.55 · 1,110 kcal · 35 g</p>
+          </div>
+          <div class="rp-col rp-new">
+            <span class="rp-tag">+ 重开的</span>
+            <p class="rp-items">苹果片 · 圆筒冰淇淋 · 双层吉士汉堡 · 优品豆浆</p>
+            <p class="rp-sum">¥44.66 · 756 kcal · 37 g</p>
+          </div>
+        </div>
+        <p class="rp-delta">Δ 便宜 ¥13.89 · 少 354 kcal · 蛋白 +2 g</p>
+        
+      </article>
+      <article class="replay">
+        <div class="rp-head">
+          <span class="rp-idx">#03</span>
+          <span class="rp-date">2026-09-26 12:05</span>
+          <span class="rp-store">上海徐家汇店</span>
+          <span class="rp-save">省 ¥12.39</span>
+        </div>
+        <div class="rp-grid">
+          <div class="rp-col rp-old">
+            <span class="rp-tag">− 你点的</span>
+            <p class="rp-items">麦香鱼 · 玉米杯 · 雪碧 · 玉米杯</p>
+            <p class="rp-sum">¥54.79 · 604 kcal · 24 g</p>
+          </div>
+          <div class="rp-col rp-new">
+            <span class="rp-tag">+ 重开的</span>
+            <p class="rp-items">苹果片 · 圆筒冰淇淋 · 麦香鱼 · 纯牛奶(盒装)</p>
+            <p class="rp-sum">¥42.4 · 579 kcal · 25 g</p>
+          </div>
+        </div>
+        <p class="rp-delta">Δ 便宜 ¥12.39 · 少 25 kcal · 蛋白 +1 g</p>
+        
+      </article>
+      <article class="replay">
+        <div class="rp-head">
+          <span class="rp-idx">#04</span>
+          <span class="rp-date">2026-02-27 11:38</span>
+          <span class="rp-store">上海南京西路店</span>
+          <span class="rp-save">省 ¥11.87</span>
+        </div>
+        <div class="rp-grid">
+          <div class="rp-col rp-old">
+            <span class="rp-tag">− 你点的</span>
+            <p class="rp-items">板烧鸡腿堡 · 玉米杯 · 雪碧 · 薯条</p>
+            <p class="rp-sum">¥45.96 · 872 kcal · 31 g</p>
+          </div>
+          <div class="rp-col rp-new">
+            <span class="rp-tag">+ 重开的</span>
+            <p class="rp-items">苹果片 · 圆筒冰淇淋 · 优品豆浆 · 麦辣鸡腿汉堡</p>
+            <p class="rp-sum">¥34.09 · 812 kcal · 34 g</p>
+          </div>
+        </div>
+        <p class="rp-delta">Δ 便宜 ¥11.87 · 少 60 kcal · 蛋白 +3 g</p>
+        
+      </article>
+      <article class="replay">
+        <div class="rp-head">
+          <span class="rp-idx">#05</span>
+          <span class="rp-date">2026-05-05 13:46</span>
+          <span class="rp-store">上海南京西路店</span>
+          <span class="rp-save">省 ¥11.25</span>
+        </div>
+        <div class="rp-grid">
+          <div class="rp-col rp-old">
+            <span class="rp-tag">− 你点的</span>
+            <p class="rp-items">板烧鸡腿堡 · 薯条 · 雪碧</p>
+            <p class="rp-sum">¥42.31 · 785 kcal · 27 g</p>
+          </div>
+          <div class="rp-col rp-new">
+            <span class="rp-tag">+ 重开的</span>
+            <p class="rp-items">脆香油条 · 优品豆浆 · 麦香鸡</p>
+            <p class="rp-sum">¥31.06 · 773 kcal · 28 g</p>
+          </div>
+        </div>
+        <p class="rp-delta">Δ 便宜 ¥11.25 · 少 12 kcal · 蛋白 +1 g</p>
+        
+      </article>
+  </section>
+
+  <section>
+    <h2>💸 差额账簿</h2>
+    <p class="sec-desc">所有差额都锁定在「该单自身的实付金额 ∩ 自身热量」之内 —— 不劝你少花，也不劝你少吃。</p>
+    <div class="cards">
+        <div class="card"><span class="card-num">¥371</span><span class="card-label">可节省空间</span><span class="card-sub">占全年支出的 14.0%</span></div>
+        <div class="card"><span class="card-num">5,162 kcal</span><span class="card-label">可减热量</span><span class="card-sub">在同等约束下折算</span></div>
+        <div class="card"><span class="card-num">+161 g</span><span class="card-label">蛋白净变化</span><span class="card-sub">重开后多摄入</span></div>
+        <div class="card"><span class="card-num">¥5.02</span><span class="card-label">单均可省</span><span class="card-sub">74 单平均</span></div>
+        <div class="card"><span class="card-num">35</span><span class="card-label">重开潜力</span><span class="card-sub">/ 100</span></div>
+    </div>
+    <div class="attrs">
+        <div class="attr"><h3>按时段</h3>
+          <div class="attr-row"><span class="attr-key">lunch</span><span class="attr-bar"><i style="width:100.0%"></i></span><span class="attr-val">¥129 · 20.5%</span></div>
+          <div class="attr-row"><span class="attr-key">dinner</span><span class="attr-bar"><i style="width:92.0%"></i></span><span class="attr-val">¥112 · 18.9%</span></div>
+          <div class="attr-row"><span class="attr-key">breakfast</span><span class="attr-bar"><i style="width:29.2%"></i></span><span class="attr-val">¥57.06 · 6.0%</span></div>
+          <div class="attr-row"><span class="attr-key">late</span><span class="attr-bar"><i style="width:76.4%"></i></span><span class="attr-val">¥56.62 · 15.7%</span></div>
+          <div class="attr-row"><span class="attr-key">afternoon</span><span class="attr-bar"><i style="width:63.8%"></i></span><span class="attr-val">¥16.22 · 13.1%</span></div>
+        </div>
+        <div class="attr"><h3>按渠道</h3>
+          <div class="attr-row"><span class="attr-key">dinein</span><span class="attr-bar"><i style="width:87.4%"></i></span><span class="attr-val">¥138 · 17.2%</span></div>
+          <div class="attr-row"><span class="attr-key">pickup</span><span class="attr-bar"><i style="width:58.1%"></i></span><span class="attr-val">¥121 · 11.4%</span></div>
+          <div class="attr-row"><span class="attr-key">delivery</span><span class="attr-bar"><i style="width:73.6%"></i></span><span class="attr-val">¥90.2 · 14.4%</span></div>
+          <div class="attr-row"><span class="attr-key">mcdrive</span><span class="attr-bar"><i style="width:54.2%"></i></span><span class="attr-val">¥13.27 · 10.6%</span></div>
+          <div class="attr-row"><span class="attr-key">party</span><span class="attr-bar"><i style="width:100.0%"></i></span><span class="attr-val">¥8.19 · 19.6%</span></div>
+        </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>🧭 三条重开路线</h2>
+    <p class="sec-desc">约束完全相同，只有目标函数不同 —— 同一段历史，你想把它重开成什么样。</p>
+    <table class="modes">
+      <thead>
+        <tr><th>路线</th><th>可省金额</th><th>可减热量</th><th>蛋白净变化</th><th>潜力指数</th></tr>
+      </thead>
+      <tbody>
+          <tr class="is-default"><td><b>省钱向</b><span class="mdesc">同预算同热量内，价格压到最低</span></td><td class="num strong">¥371</td><td class="num">5,162 kcal</td><td class="num">+161 g</td><td class="num">35</td></tr>
+          <tr><td><b>扎实向</b><span class="mdesc">同预算同热量内，蛋白质拉到最高</span></td><td class="num strong">¥73.47</td><td class="num">2,959 kcal</td><td class="num">+493 g</td><td class="num">7</td></tr>
+          <tr><td><b>轻负担向</b><span class="mdesc">同预算同热量内，热量压到最低</span></td><td class="num strong">¥103</td><td class="num">12,268 kcal</td><td class="num">+103 g</td><td class="num">10</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <div class="two-col">
+    <section>
+      <h2>🏆 最值得重开的 5 单</h2>
+      <p class="sec-desc">按可省金额排序。</p>
+        <ul class="ranking">
+          <li><span class="rk-date">2026-04-06</span><span class="rk-combo">麦辣鸡腿汉堡 · 薯条 · 可乐 · 薄皮焦香V翅</span><span class="rk-cost">¥54.44</span><span class="rk-delta minus">省 ¥14.16</span></li>
+          <li><span class="rk-date">2026-03-06</span><span class="rk-combo">双层吉士汉堡 · 薯条 · 可乐 · 新地</span><span class="rk-cost">¥58.55</span><span class="rk-delta minus">省 ¥13.89</span></li>
+          <li><span class="rk-date">2026-09-26</span><span class="rk-combo">麦香鱼 · 玉米杯 · 雪碧 · 玉米杯</span><span class="rk-cost">¥54.79</span><span class="rk-delta minus">省 ¥12.39</span></li>
+          <li><span class="rk-date">2026-02-27</span><span class="rk-combo">板烧鸡腿堡 · 玉米杯 · 雪碧 · 薯条</span><span class="rk-cost">¥45.96</span><span class="rk-delta minus">省 ¥11.87</span></li>
+          <li><span class="rk-date">2026-05-05</span><span class="rk-combo">板烧鸡腿堡 · 薯条 · 雪碧</span><span class="rk-cost">¥42.31</span><span class="rk-delta minus">省 ¥11.25</span></li>
+        </ul>
+    </section>
+    <section>
+      <h2>✨ 点得最漂亮的 5 单</h2>
+      <p class="sec-desc">这些单本来就已是最优解。</p>
+        <ul class="ranking">
+          <li><span class="rk-date">2026-02-20</span><span class="rk-combo">双层猪柳蛋麦满分 · 优品豆浆</span><span class="rk-cost">¥26.14</span><span class="rk-delta plus">已是最优</span></li>
+          <li><span class="rk-date">2026-03-21</span><span class="rk-combo">猪柳蛋麦满分 · 鲜萃咖啡 · 玉米杯</span><span class="rk-cost">¥31.91</span><span class="rk-delta plus">已是最优</span></li>
+          <li><span class="rk-date">2026-04-11</span><span class="rk-combo">猪柳蛋麦满分 · 鲜萃咖啡</span><span class="rk-cost">¥23.28</span><span class="rk-delta plus">已是最优</span></li>
+          <li><span class="rk-date">2026-04-22</span><span class="rk-combo">猪柳蛋麦满分 · 鲜萃咖啡</span><span class="rk-cost">¥24.32</span><span class="rk-delta plus">已是最优</span></li>
+          <li><span class="rk-date">2026-05-14</span><span class="rk-combo">猪柳蛋麦满分 · 鲜萃咖啡</span><span class="rk-cost">¥20.84</span><span class="rk-delta plus">已是最优</span></li>
+        </ul>
+    </section>
+  </div>
+
+  <section>
+    <h2>🌀 平行宇宙</h2>
+    <p class="sec-desc">把重开后的订单集重新送进人格引擎 —— 另一个宇宙的你，是什么样？</p>
+        <div class="parallel">
+          <div class="pl-col pl-real">
+            <span class="pl-tag">现实宇宙</span>
+            <span class="pl-emoji">🌅</span>
+            <span class="pl-name">早餐先锋</span>
+            <span class="pl-index">麦门指数 85</span>
+            <ul class="pl-metrics">
+              <li><i>年支出</i><b>¥2,660</b></li>
+              <li><i>客单价</i><b>¥35.95</b></li>
+              <li><i>热量汇率</i><b>20.5</b></li>
+            </ul>
+          </div>
+          <div class="pl-mid">
+            <span class="pl-vs">重开之后</span>
+            <span class="pl-gap up">省下 ¥371</span>
+          </div>
+          <div class="pl-col pl-para">
+            <span class="pl-tag">平行宇宙</span>
+            <span class="pl-emoji">🌅</span>
+            <span class="pl-name">早餐先锋</span>
+            <span class="pl-index">麦门指数 78</span>
+            <ul class="pl-metrics">
+              <li><i>年支出</i><b>¥2,289</b></li>
+              <li><i>客单价</i><b>¥30.93</b></li>
+              <li><i>热量汇率</i><b>21.5</b></li>
+            </ul>
+          </div>
+        </div>
+        <p class="pl-foot">你少花的 ¥371，相当于 <b>10.3 顿</b>麦当劳（按你的平均客单价计）。</p>
+  </section>
+
+  <section>
+    <h2>🏅 徽章</h2>
+    <p class="sec-desc">这一年，你的订单替你解锁了这些。</p>
+    <div class="badges">
+          <div class="badge"><span class="bd-emoji">🪙</span><span class="bd-body"><b>重开大户</b><i>一年可省 ¥371</i></span></div>
+          <div class="badge"><span class="bd-emoji">🔥</span><span class="bd-body"><b>热量回收师</b><i>可少摄入 5,162 kcal</i></span></div>
+          <div class="badge"><span class="bd-emoji">🛵</span><span class="bd-body"><b>外卖税</b><i>外卖单的可优化空间明显偏高</i></span></div>
+          <div class="badge"><span class="bd-emoji">🌙</span><span class="bd-body"><b>深夜溢价</b><i>深夜单的可优化空间最高</i></span></div>
+    </div>
+  </section>
+
+  <footer>
+    <p><b>⚠️ 声明</b>：本报告为机械换算与陈述，不构成任何消费、营养或健康建议。</p>
+    <p>所有「重开」结果都是在「该单自身实付金额 ∩ 自身热量」约束下求得的<b>同条件更优解</b>，并已按该单原有优惠力度折算，全程不调用任何下单类工具。</p>
+    <p>本项目为麦当劳程序员创意开发大赛参赛作品，<b>非麦当劳官方产品</b>。示例数据为程序生成的虚构数据。</p>
+  </footer>
+
+</div>
+</body>
+</html>
