@@ -152,9 +152,14 @@ class OrderDiff:
 
 
 def _actual_of(order: Order) -> tuple[float, float, float]:
-    """返回该单的（实付金额, 热量, 蛋白质）。金额缺失时用菜单原价兜底。"""
+    """返回该单的（实付金额, 热量, 蛋白质）。
+
+    金额缺失时用明细原价兜底 —— 但**只在金额确实缺失时**。
+    上游明确给出 `0`（积分或活动全额抵扣）时不能兜底，否则会把
+    "实付 0 元" 虚报成"实付 26.5 元"，凭空造出一个不存在的可节省空间。
+    """
     cost = order.total
-    if cost <= 0:
+    if cost <= 0 and not order.total_reported:
         cost = sum(i.price * i.qty for i in order.items)
     kcal = sum(i.calories * i.qty for i in order.items)
     protein = sum(i.protein * i.qty for i in order.items)
@@ -233,9 +238,23 @@ def replay_order(
         actual_protein=protein,
     )
 
-    if cost <= 0 or not order.items:
+    if not order.items:
         diff.feasible = False
-        diff.note = "该单缺少金额或商品明细，无法重开"
+        diff.note = "该单缺少商品明细，无法重开"
+        return diff
+
+    if cost <= 0:
+        if order.total_reported:
+            # 实付 0 元 —— 积分 / 活动全额抵扣。已经"花 0 元吃到"，
+            # 没有可优化空间；归入「已是最优」，而不是当作坏数据。
+            diff.optimal_items = list(diff.actual_items)
+            diff.optimal_cost = 0.0
+            diff.optimal_kcal = kcal
+            diff.optimal_protein = protein
+            diff.note = "实付 0 元（积分或活动全额抵扣），本就没有可优化空间"
+            return diff
+        diff.feasible = False
+        diff.note = "该单缺少实付金额，无法重开"
         return diff
 
     solver = _SOLVERS[mode]

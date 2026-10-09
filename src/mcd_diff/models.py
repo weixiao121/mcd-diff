@@ -63,17 +63,30 @@ class Order:
     total: float = 0.0        # 实付金额
     discount: float = 0.0     # 优惠金额
     items: list[OrderItem] = field(default_factory=list)
+    #: 实付金额是否由上游**明确给出**。
+    #: 用来区分「真的付了 0 元（积分/活动全额抵扣）」和「接口没给金额」——
+    #: 前者是事实、不该被菜单价兜底，后者才需要用菜单原价估算。
+    total_reported: bool = False
 
     @classmethod
     def from_dict(cls, d: dict[str, Any]) -> "Order":
+        raw_total = d.get("total")
+        if raw_total in (None, ""):
+            raw_total = d.get("payAmount")
+        if raw_total in (None, ""):
+            raw_total = d.get("totalAmount")
+        reported = "total_reported" in d and d["total_reported"] is not None
+        if not reported:
+            reported = raw_total not in (None, "")
         return cls(
             order_id=str(d.get("order_id") or d.get("orderId") or ""),
             time=str(d.get("time") or d.get("orderTime") or d.get("created_at") or ""),
             channel=str(d.get("channel") or d.get("orderChannel") or "dinein").lower(),
             store=str(d.get("store") or d.get("storeName") or ""),
-            total=_f(d.get("total") or d.get("payAmount") or d.get("totalAmount")),
+            total=_f(raw_total),
             discount=_f(d.get("discount") or d.get("discountAmount")),
             items=[OrderItem.from_dict(i) for i in (d.get("items") or []) if isinstance(i, dict)],
+            total_reported=bool(reported),
         )
 
 

@@ -146,6 +146,38 @@ class TestRegretEngine(unittest.TestCase):
         d = replay_order(_order([], 0.0), self.menu)
         self.assertFalse(d.feasible)
 
+    def test_free_order_is_perfect_not_inflated(self) -> None:
+        """实付 0 元（积分/活动全额抵扣）的单，不能被菜单价兜底成"可节省"。
+
+        回归用例：真实数据里两笔 0 元单曾被兜底成 ¥26.5 / ¥25.5，
+        虚报出「实际支出 ¥66、本可以省 ¥14」——而用户其实只付了 ¥13.9。
+        """
+        items = [{"name": "巨无霸", "qty": 1, "price": 26.5, "calories": 513, "protein": 27}]
+        free = Order.from_dict({
+            "order_id": "F1", "time": "2025-12-25T12:14:13+08:00", "channel": "pickup",
+            "store": "测试店", "total": 0.0, "total_reported": True, "items": items,
+        })
+        self.assertTrue(free.total_reported)
+
+        d = replay_order(free, self.menu, mode="thrift")
+        self.assertTrue(d.feasible)
+        self.assertEqual(d.actual_cost, 0.0, "0 元单被菜单价兜底了")
+        self.assertEqual(d.delta_cost, 0.0)
+        self.assertFalse(d.changed, "0 元单应归入「已是最优」")
+        self.assertIn("0 元", d.note)
+
+    def test_missing_amount_still_falls_back(self) -> None:
+        """金额**确实缺失**（上游没给）时，仍应回退到明细原价估算。"""
+        items = [{"name": "巨无霸", "qty": 1, "price": 26.5, "calories": 513, "protein": 27}]
+        no_amount = Order.from_dict({
+            "order_id": "N1", "time": "2025-12-25T12:14:13+08:00", "channel": "pickup",
+            "store": "测试店", "items": items,
+        })
+        self.assertFalse(no_amount.total_reported)
+
+        d = replay_order(no_amount, self.menu, mode="thrift")
+        self.assertEqual(d.actual_cost, 26.5, "金额缺失时应回退到明细原价")
+
     def test_bad_mode_raises(self) -> None:
         with self.assertRaises(ValueError):
             replay_order(_order(BIGMAC_MEAL, 48.5), self.menu, mode="nope")
