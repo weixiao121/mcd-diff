@@ -1,30 +1,422 @@
 {
-  "_note": "示例菜单与营养数据（近似值，仅用于离线演示与求解器测试）。真实运行时请以 query-meals + list-nutrition-foods 的返回结果为准。",
-  "_source": "脱敏示例：字段结构对齐麦当劳 MCP 的 query-meals / list-nutrition-foods",
+  "_note": "真实菜单数据，由 scripts/collect.py 从麦当劳 MCP 的 query-meals + list-nutrition-foods 实拉生成（多时段合并）。价格与营养均为 MCP 返回值，未做人工调整。",
+  "_source": "麦当劳 MCP · query-meals / list-nutrition-foods",
+  "_coverage": {
+    "menu_total": 151,
+    "solver_items": 41,
+    "combos": 71,
+    "merch": 1
+  },
   "items": [
-    { "name": "巨无霸",         "category": "主食", "price": 25.5, "calories": 550, "protein": 26, "fat": 29, "carbs": 45, "sodium": 950 },
-    { "name": "安格斯厚牛堡",   "category": "主食", "price": 32.0, "calories": 590, "protein": 33, "fat": 33, "carbs": 40, "sodium": 1100 },
-    { "name": "板烧鸡腿堡",     "category": "主食", "price": 23.5, "calories": 430, "protein": 24, "fat": 17, "carbs": 42, "sodium": 850 },
-    { "name": "麦辣鸡腿汉堡",   "category": "主食", "price": 22.5, "calories": 480, "protein": 22, "fat": 24, "carbs": 45, "sodium": 900 },
-    { "name": "双层吉士汉堡",   "category": "主食", "price": 21.0, "calories": 450, "protein": 25, "fat": 22, "carbs": 35, "sodium": 900 },
-    { "name": "吉士汉堡",       "category": "主食", "price": 12.5, "calories": 300, "protein": 15, "fat": 13, "carbs": 31, "sodium": 720 },
-    { "name": "麦香鱼",         "category": "主食", "price": 14.0, "calories": 340, "protein": 15, "fat": 15, "carbs": 33, "sodium": 580 },
-    { "name": "吉士蛋麦满分",   "category": "早餐", "price": 14.0, "calories": 300, "protein": 17, "fat": 13, "carbs": 30, "sodium": 700 },
-    { "name": "猪柳蛋麦满分",   "category": "早餐", "price": 16.0, "calories": 380, "protein": 21, "fat": 23, "carbs": 31, "sodium": 830 },
-    { "name": "热香饼(3片)",    "category": "早餐", "price": 13.0, "calories": 320, "protein": 7,  "fat": 10, "carbs": 52, "sodium": 480 },
-    { "name": "那么大鸡排",     "category": "小食", "price": 16.5, "calories": 460, "protein": 24, "fat": 27, "carbs": 30, "sodium": 900 },
-    { "name": "麦乐鸡(5块)",    "category": "小食", "price": 14.5, "calories": 230, "protein": 14, "fat": 13, "carbs": 12, "sodium": 490 },
-    { "name": "麦辣鸡翅(2块)",  "category": "小食", "price": 13.5, "calories": 240, "protein": 14, "fat": 16, "carbs": 11, "sodium": 600 },
-    { "name": "大薯条",         "category": "小食", "price": 17.0, "calories": 340, "protein": 4,  "fat": 16, "carbs": 44, "sodium": 230 },
-    { "name": "中薯条",         "category": "小食", "price": 13.0, "calories": 230, "protein": 3,  "fat": 11, "carbs": 30, "sodium": 160 },
-    { "name": "玉米杯",         "category": "小食", "price": 8.0,  "calories": 90,  "protein": 3,  "fat": 2,  "carbs": 17, "sodium": 5   },
-    { "name": "香芋派",         "category": "甜品", "price": 9.0,  "calories": 220, "protein": 3,  "fat": 10, "carbs": 30, "sodium": 130 },
-    { "name": "麦旋风",         "category": "甜品", "price": 13.5, "calories": 230, "protein": 5,  "fat": 7,  "carbs": 38, "sodium": 90  },
-    { "name": "可口可乐(中)",   "category": "饮料", "price": 10.0, "calories": 150, "protein": 0,  "fat": 0,  "carbs": 38, "sodium": 15  },
-    { "name": "雪碧(中)",       "category": "饮料", "price": 10.0, "calories": 150, "protein": 0,  "fat": 0,  "carbs": 38, "sodium": 20  },
-    { "name": "橙汁",           "category": "饮料", "price": 12.0, "calories": 130, "protein": 1,  "fat": 0,  "carbs": 31, "sodium": 5   },
-    { "name": "鲜煮咖啡",       "category": "饮料", "price": 12.0, "calories": 5,   "protein": 0,  "fat": 0,  "carbs": 1,  "sodium": 5   },
-    { "name": "拿铁",           "category": "饮料", "price": 17.0, "calories": 130, "protein": 7,  "fat": 7,  "carbs": 9,  "sodium": 80  },
-    { "name": "卡布奇诺",       "category": "饮料", "price": 17.0, "calories": 110, "protein": 6,  "fat": 6,  "carbs": 8,  "sodium": 70  }
+    {
+      "name": "培根安格斯厚牛堡",
+      "category": "安格斯MAX厚牛堡",
+      "price": 34.5,
+      "calories": 707,
+      "protein": 34,
+      "fat": 44,
+      "carbs": 43,
+      "sodium": 1037
+    },
+    {
+      "name": "芝士安格斯厚牛堡",
+      "category": "安格斯MAX厚牛堡",
+      "price": 31.5,
+      "calories": 696,
+      "protein": 32,
+      "fat": 44,
+      "carbs": 43,
+      "sodium": 897
+    },
+    {
+      "name": "薯条",
+      "category": "小食甜品/其他",
+      "price": 14.0,
+      "calories": 289,
+      "protein": 4,
+      "fat": 12,
+      "carbs": 38,
+      "sodium": 165
+    },
+    {
+      "name": "玉米杯",
+      "category": "小食甜品/其他",
+      "price": 13.0,
+      "calories": 87,
+      "protein": 4,
+      "fat": 1,
+      "carbs": 12,
+      "sodium": 2
+    },
+    {
+      "name": "新地",
+      "category": "小食甜品/其他",
+      "price": 12.5,
+      "calories": 245,
+      "protein": 4,
+      "fat": 6,
+      "carbs": 43,
+      "sodium": 84
+    },
+    {
+      "name": "派",
+      "category": "小食甜品/其他",
+      "price": 8.5,
+      "calories": 232,
+      "protein": 2,
+      "fat": 12,
+      "carbs": 28,
+      "sodium": 159
+    },
+    {
+      "name": "脆薯饼",
+      "category": "小食甜品/其他",
+      "price": 8.0,
+      "calories": 146,
+      "protein": 1,
+      "fat": 9,
+      "carbs": 14,
+      "sodium": 311
+    },
+    {
+      "name": "脆香油条",
+      "category": "小食甜品/其他",
+      "price": 8.0,
+      "calories": 202,
+      "protein": 5,
+      "fat": 12,
+      "carbs": 19,
+      "sodium": 230
+    },
+    {
+      "name": "苹果片",
+      "category": "小食甜品/其他",
+      "price": 7.0,
+      "calories": 32,
+      "protein": 0,
+      "fat": 0,
+      "carbs": 7,
+      "sodium": 0
+    },
+    {
+      "name": "圆筒冰淇淋",
+      "category": "小食甜品/其他",
+      "price": 5.0,
+      "calories": 93,
+      "protein": 2,
+      "fat": 3,
+      "carbs": 14,
+      "sodium": 36
+    },
+    {
+      "name": "巨无霸",
+      "category": "巨无霸牛鱼肉堡",
+      "price": 26.5,
+      "calories": 513,
+      "protein": 27,
+      "fat": 26,
+      "carbs": 42,
+      "sodium": 961
+    },
+    {
+      "name": "培根蔬萃双层牛堡",
+      "category": "巨无霸牛鱼肉堡",
+      "price": 24.5,
+      "calories": 442,
+      "protein": 24,
+      "fat": 23,
+      "carbs": 34,
+      "sodium": 728
+    },
+    {
+      "name": "双层深海鳕鱼堡",
+      "category": "巨无霸牛鱼肉堡",
+      "price": 24.0,
+      "calories": 485,
+      "protein": 28,
+      "fat": 21,
+      "carbs": 46,
+      "sodium": 917
+    },
+    {
+      "name": "双层吉士汉堡",
+      "category": "巨无霸牛鱼肉堡",
+      "price": 23.0,
+      "calories": 429,
+      "protein": 27,
+      "fat": 22,
+      "carbs": 31,
+      "sodium": 1017
+    },
+    {
+      "name": "麦香鱼",
+      "category": "巨无霸牛鱼肉堡",
+      "price": 22.0,
+      "calories": 325,
+      "protein": 16,
+      "fat": 13,
+      "carbs": 35,
+      "sodium": 556
+    },
+    {
+      "name": "火腿扒早安营养卷",
+      "category": "早安营养卷",
+      "price": 16.5,
+      "calories": 444,
+      "protein": 16,
+      "fat": 24,
+      "carbs": 39,
+      "sodium": 1065
+    },
+    {
+      "name": "原味板烧鸡腿炒双蛋堡",
+      "category": "炒双蛋堡系列",
+      "price": 18.0,
+      "calories": 419,
+      "protein": 27,
+      "fat": 21,
+      "carbs": 30,
+      "sodium": 715
+    },
+    {
+      "name": "猪柳炒双蛋堡",
+      "category": "炒双蛋堡系列",
+      "price": 18.0,
+      "calories": 437,
+      "protein": 25,
+      "fat": 24,
+      "carbs": 29,
+      "sodium": 705
+    },
+    {
+      "name": "薄皮焦香V翅",
+      "category": "炸鸡",
+      "price": 15.5,
+      "calories": 192,
+      "protein": 17,
+      "fat": 11,
+      "carbs": 6,
+      "sodium": 594
+    },
+    {
+      "name": "麦乐鸡",
+      "category": "炸鸡",
+      "price": 14.5,
+      "calories": 213,
+      "protein": 12,
+      "fat": 12,
+      "carbs": 13,
+      "sodium": 422
+    },
+    {
+      "name": "那么大鸡排（椒盐风味）",
+      "category": "炸鸡",
+      "price": 14.0,
+      "calories": 385,
+      "protein": 24,
+      "fat": 21,
+      "carbs": 24,
+      "sodium": 996
+    },
+    {
+      "name": "【美汁源】“黄金橙橙”",
+      "category": "饮品",
+      "price": 13.0,
+      "calories": 165,
+      "protein": 0,
+      "fat": 0,
+      "carbs": 41,
+      "sodium": 53
+    },
+    {
+      "name": "100% 苹果汁(盒装)",
+      "category": "饮品",
+      "price": 11.5,
+      "calories": 88,
+      "protein": 0,
+      "fat": 0,
+      "carbs": 21,
+      "sodium": 0
+    },
+    {
+      "name": "怡泉+C",
+      "category": "饮品",
+      "price": 11.5,
+      "calories": 110,
+      "protein": 0,
+      "fat": 0,
+      "carbs": 27,
+      "sodium": 0
+    },
+    {
+      "name": "锡兰红茶",
+      "category": "饮品",
+      "price": 11.0,
+      "calories": 2,
+      "protein": 0,
+      "fat": 0,
+      "carbs": 0,
+      "sodium": 0
+    },
+    {
+      "name": "纯牛奶(盒装)",
+      "category": "饮品",
+      "price": 10.5,
+      "calories": 129,
+      "protein": 7,
+      "fat": 7,
+      "carbs": 10,
+      "sodium": 73
+    },
+    {
+      "name": "优品豆浆",
+      "category": "饮品",
+      "price": 10.0,
+      "calories": 202,
+      "protein": 8,
+      "fat": 4,
+      "carbs": 33,
+      "sodium": 43
+    },
+    {
+      "name": "鲜萃咖啡",
+      "category": "饮品",
+      "price": 10.0,
+      "calories": 13,
+      "protein": 1,
+      "fat": 0,
+      "carbs": 0,
+      "sodium": 3
+    },
+    {
+      "name": "可乐",
+      "category": "饮品",
+      "price": 9.5,
+      "calories": 147,
+      "protein": 0,
+      "fat": 0,
+      "carbs": 36,
+      "sodium": 0
+    },
+    {
+      "name": "雪碧",
+      "category": "饮品",
+      "price": 9.5,
+      "calories": 105,
+      "protein": 0,
+      "fat": 0,
+      "carbs": 26,
+      "sodium": 29
+    },
+    {
+      "name": "板烧鸡腿堡",
+      "category": "鸡肉汉堡/卷",
+      "price": 23.5,
+      "calories": 391,
+      "protein": 23,
+      "fat": 17,
+      "carbs": 35,
+      "sodium": 1041
+    },
+    {
+      "name": "麦辣鸡腿汉堡",
+      "category": "鸡肉汉堡/卷",
+      "price": 22.5,
+      "calories": 485,
+      "protein": 24,
+      "fat": 24,
+      "carbs": 42,
+      "sodium": 1208
+    },
+    {
+      "name": "酥酥多笋卷",
+      "category": "鸡肉汉堡/卷",
+      "price": 20.5,
+      "calories": 342,
+      "protein": 14,
+      "fat": 15,
+      "carbs": 36,
+      "sodium": 1044
+    },
+    {
+      "name": "麦香鸡",
+      "category": "鸡肉汉堡/卷",
+      "price": 16.5,
+      "calories": 369,
+      "protein": 15,
+      "fat": 17,
+      "carbs": 39,
+      "sodium": 731
+    },
+    {
+      "name": "双层猪柳蛋麦满分",
+      "category": "麦满分系列",
+      "price": 21.0,
+      "calories": 513,
+      "protein": 29,
+      "fat": 32,
+      "carbs": 26,
+      "sodium": 1210
+    },
+    {
+      "name": "双层原味板烧鸡腿麦满分",
+      "category": "麦满分系列",
+      "price": 19.0,
+      "calories": 355,
+      "protein": 23,
+      "fat": 17,
+      "carbs": 27,
+      "sodium": 984
+    },
+    {
+      "name": "猪柳蛋麦满分",
+      "category": "麦满分系列",
+      "price": 18.0,
+      "calories": 387,
+      "protein": 23,
+      "fat": 21,
+      "carbs": 25,
+      "sodium": 846
+    },
+    {
+      "name": "原味板烧鸡腿麦满分",
+      "category": "麦满分系列",
+      "price": 15.0,
+      "calories": 246,
+      "protein": 15,
+      "fat": 9,
+      "carbs": 25,
+      "sodium": 611
+    },
+    {
+      "name": "猪柳麦满分",
+      "category": "麦满分系列",
+      "price": 14.5,
+      "calories": 308,
+      "protein": 16,
+      "fat": 16,
+      "carbs": 24,
+      "sodium": 781
+    },
+    {
+      "name": "大脆鸡扒麦满分",
+      "category": "麦满分系列",
+      "price": 11.5,
+      "calories": 361,
+      "protein": 16,
+      "fat": 17,
+      "carbs": 35,
+      "sodium": 804
+    },
+    {
+      "name": "火腿扒麦满分",
+      "category": "麦满分系列",
+      "price": 11.0,
+      "calories": 261,
+      "protein": 14,
+      "fat": 12,
+      "carbs": 24,
+      "sodium": 608
+    }
   ]
 }

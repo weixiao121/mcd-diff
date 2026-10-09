@@ -448,7 +448,7 @@ def compute_badges(s: dict[str, Any]) -> list[dict[str, str]]:
     if s["order_count"] >= 60:
         badges.append({"emoji": "🔀", "name": "重开素材库", "desc": f"累计 {s['order_count']} 单可供重开"})
 
-    # ---- 双账簿新增徽章 ----
+    # ---- 四象限画像衍生徽章 ----
     fx = s["fx"]
     if fx["orders"]:
         spread = fx["p75"] - fx["p25"]

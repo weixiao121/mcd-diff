@@ -12,122 +12,162 @@
   },
   "orders": [
     {
-      "order_id": "MC202601160068",
-      "time": "2026-01-16T08:05:14+08:00",
-      "channel": "dinein",
-      "store": "北京国贸店",
-      "total": 28.03,
-      "discount": 4.97,
+      "order_id": "MC202601080073",
+      "time": "2026-01-08T20:12:00+08:00",
+      "channel": "delivery",
+      "store": "上海徐家汇店",
+      "total": 45.98,
+      "discount": 4.02,
       "items": [
         {
-          "name": "热香饼(3片)",
+          "name": "巨无霸",
           "qty": 1,
-          "price": 11.04,
-          "calories": 320.0,
-          "protein": 7.0,
-          "fat": 10.0,
-          "carbs": 52.0,
-          "sodium": 480.0
+          "price": 24.37,
+          "calories": 513.0,
+          "protein": 27.0,
+          "fat": 26.0,
+          "carbs": 42.0,
+          "sodium": 961.0
         },
         {
-          "name": "鲜煮咖啡",
+          "name": "薯条",
           "qty": 1,
-          "price": 10.19,
-          "calories": 5.0,
+          "price": 12.87,
+          "calories": 289.0,
+          "protein": 4.0,
+          "fat": 12.0,
+          "carbs": 38.0,
+          "sodium": 165.0
+        },
+        {
+          "name": "可乐",
+          "qty": 1,
+          "price": 8.74,
+          "calories": 147.0,
           "protein": 0.0,
           "fat": 0.0,
-          "carbs": 1.0,
-          "sodium": 5.0
-        },
-        {
-          "name": "玉米杯",
-          "qty": 1,
-          "price": 6.79,
-          "calories": 90.0,
-          "protein": 3.0,
-          "fat": 2.0,
-          "carbs": 17.0,
-          "sodium": 5.0
+          "carbs": 36.0,
+          "sodium": 0.0
         }
       ]
     },
     {
-      "order_id": "MC202601240062",
+      "order_id": "MC202601240063",
       "time": "2026-01-24T13:46:34+08:00",
       "channel": "dinein",
-      "store": "北京国贸店",
-      "total": 34.55,
-      "discount": 4.95,
+      "store": "深圳福田中心店",
+      "total": 48.27,
+      "discount": 5.23,
       "items": [
         {
-          "name": "吉士蛋麦满分",
+          "name": "麦乐鸡",
           "qty": 1,
-          "price": 12.25,
-          "calories": 300.0,
-          "protein": 17.0,
-          "fat": 13.0,
-          "carbs": 30.0,
-          "sodium": 700.0
+          "price": 13.08,
+          "calories": 213.0,
+          "protein": 12.0,
+          "fat": 12.0,
+          "carbs": 13.0,
+          "sodium": 422.0
         },
         {
-          "name": "鲜煮咖啡",
+          "name": "薯条",
           "qty": 1,
-          "price": 10.5,
-          "calories": 5.0,
+          "price": 12.63,
+          "calories": 289.0,
+          "protein": 4.0,
+          "fat": 12.0,
+          "carbs": 38.0,
+          "sodium": 165.0
+        },
+        {
+          "name": "薄皮焦香V翅",
+          "qty": 1,
+          "price": 13.99,
+          "calories": 192.0,
+          "protein": 17.0,
+          "fat": 11.0,
+          "carbs": 6.0,
+          "sodium": 594.0
+        },
+        {
+          "name": "可乐",
+          "qty": 1,
+          "price": 8.57,
+          "calories": 147.0,
           "protein": 0.0,
           "fat": 0.0,
-          "carbs": 1.0,
-          "sodium": 5.0
-        },
-        {
-          "name": "麦辣鸡翅(2块)",
-          "qty": 1,
-          "price": 11.81,
-          "calories": 240.0,
-          "protein": 14.0,
-          "fat": 16.0,
-          "carbs": 11.0,
-          "sodium": 600.0
+          "carbs": 36.0,
+          "sodium": 0.0
         }
       ]
     },
     {
-      "order_id": "MC202602140018",
-      "time": "2026-02-14T08:24:07+08:00",
+      "order_id": "MC202601240022",
+      "time": "2026-01-24T23:46:53+08:00",
       "channel": "pickup",
-      "store": "北京国贸店",
-      "total": 32.12,
-      "discount": 0.88,
+      "store": "上海徐家汇店",
+      "total": 33.21,
+      "discount": 10.79,
       "items": [
         {
-          "name": "热香饼(3片)",
+          "name": "酥酥多笋卷",
           "qty": 1,
-          "price": 12.65,
-          "calories": 320.0,
-          "protein": 7.0,
-          "fat": 10.0,
-          "carbs": 52.0,
-          "sodium": 480.0
+          "price": 15.47,
+          "calories": 342.0,
+          "protein": 14.0,
+          "fat": 15.0,
+          "carbs": 36.0,
+          "sodium": 1044.0
         },
         {
-          "name": "鲜煮咖啡",
+          "name": "那么大鸡排（椒盐风味）",
           "qty": 1,
-          "price": 11.68,
-          "calories": 5.0,
+          "price": 10.57,
+          "calories": 385.0,
+          "protein": 24.0,
+          "fat": 21.0,
+          "carbs": 24.0,
+          "sodium": 996.0
+        },
+        {
+          "name": "可乐",
+          "qty": 1,
+          "price": 7.17,
+          "calories": 147.0,
           "protein": 0.0,
           "fat": 0.0,
-          "carbs": 1.0,
-          "sodium": 5.0
+          "carbs": 36.0,
+          "sodium": 0.0
+        }
+      ]
+    },
+    {
+      "order_id": "MC202602200050",
+      "time": "2026-02-20T08:53:23+08:00",
+      "channel": "pickup",
+      "store": "上海陆家嘴环路店",
+      "total": 26.14,
+      "discount": 4.86,
+      "items": [
+        {
+          "name": "双层猪柳蛋麦满分",
+          "qty": 1,
+          "price": 17.71,
+          "calories": 513.0,
+          "protein": 29.0,
+          "fat": 32.0,
+          "carbs": 26.0,
+          "sodium": 1210.0
         },
         {
-          "name": "玉米杯",
+          "name": "优品豆浆",
           "qty": 1,
-          "price": 7.79,
-          "calories": 90.0,
-          "protein": 3.0,
-          "fat": 2.0,
-          "carbs": 17.0,
-          "sodium": 5.0
+          "price": 8.43,
+          "calories": 202.0,
+          "protein": 8.0,
+          "fat": 4.0,
+          "carbs": 33.0,
+          "sodium": 43.0
         }
       ]
     },
@@ -136,258 +176,168 @@
       "time": "2026-02-27T11:38:57+08:00",
       "channel": "pickup",
       "store": "上海南京西路店",
-      "total": 36.39,
-      "discount": 11.11,
-      "items": [
-        {
-          "name": "玉米杯",
-          "qty": 1,
-          "price": 6.13,
-          "calories": 90.0,
-          "protein": 3.0,
-          "fat": 2.0,
-          "carbs": 17.0,
-          "sodium": 5.0
-        },
-        {
-          "name": "麦香鱼",
-          "qty": 1,
-          "price": 10.72,
-          "calories": 340.0,
-          "protein": 15.0,
-          "fat": 15.0,
-          "carbs": 33.0,
-          "sodium": 580.0
-        },
-        {
-          "name": "橙汁",
-          "qty": 1,
-          "price": 9.19,
-          "calories": 130.0,
-          "protein": 1.0,
-          "fat": 0.0,
-          "carbs": 31.0,
-          "sodium": 5.0
-        },
-        {
-          "name": "麦辣鸡翅(2块)",
-          "qty": 1,
-          "price": 10.34,
-          "calories": 240.0,
-          "protein": 14.0,
-          "fat": 16.0,
-          "carbs": 11.0,
-          "sodium": 600.0
-        }
-      ]
-    },
-    {
-      "order_id": "MC202602280025",
-      "time": "2026-02-28T08:05:32+08:00",
-      "channel": "pickup",
-      "store": "杭州武林广场店",
-      "total": 27.74,
-      "discount": 6.26,
-      "items": [
-        {
-          "name": "吉士蛋麦满分",
-          "qty": 1,
-          "price": 11.42,
-          "calories": 300.0,
-          "protein": 17.0,
-          "fat": 13.0,
-          "carbs": 30.0,
-          "sodium": 700.0
-        },
-        {
-          "name": "鲜煮咖啡",
-          "qty": 1,
-          "price": 9.79,
-          "calories": 5.0,
-          "protein": 0.0,
-          "fat": 0.0,
-          "carbs": 1.0,
-          "sodium": 5.0
-        },
-        {
-          "name": "玉米杯",
-          "qty": 1,
-          "price": 6.53,
-          "calories": 90.0,
-          "protein": 3.0,
-          "fat": 2.0,
-          "carbs": 17.0,
-          "sodium": 5.0
-        }
-      ]
-    },
-    {
-      "order_id": "MC202603020036",
-      "time": "2026-03-02T13:46:06+08:00",
-      "channel": "pickup",
-      "store": "上海南京西路店",
-      "total": 30.23,
-      "discount": 3.77,
-      "items": [
-        {
-          "name": "热香饼(3片)",
-          "qty": 1,
-          "price": 11.56,
-          "calories": 320.0,
-          "protein": 7.0,
-          "fat": 10.0,
-          "carbs": 52.0,
-          "sodium": 480.0
-        },
-        {
-          "name": "鲜煮咖啡",
-          "qty": 1,
-          "price": 10.67,
-          "calories": 5.0,
-          "protein": 0.0,
-          "fat": 0.0,
-          "carbs": 1.0,
-          "sodium": 5.0
-        },
-        {
-          "name": "香芋派",
-          "qty": 1,
-          "price": 8.0,
-          "calories": 220.0,
-          "protein": 3.0,
-          "fat": 10.0,
-          "carbs": 30.0,
-          "sodium": 130.0
-        }
-      ]
-    },
-    {
-      "order_id": "MC202603040023",
-      "time": "2026-03-04T13:05:47+08:00",
-      "channel": "dinein",
-      "store": "上海徐家汇店",
-      "total": 39.6,
-      "discount": 5.9,
-      "items": [
-        {
-          "name": "麦辣鸡腿汉堡",
-          "qty": 1,
-          "price": 19.58,
-          "calories": 480.0,
-          "protein": 22.0,
-          "fat": 24.0,
-          "carbs": 45.0,
-          "sodium": 900.0
-        },
-        {
-          "name": "中薯条",
-          "qty": 1,
-          "price": 11.31,
-          "calories": 230.0,
-          "protein": 3.0,
-          "fat": 11.0,
-          "carbs": 30.0,
-          "sodium": 160.0
-        },
-        {
-          "name": "可口可乐(中)",
-          "qty": 1,
-          "price": 8.7,
-          "calories": 150.0,
-          "protein": 0.0,
-          "fat": 0.0,
-          "carbs": 38.0,
-          "sodium": 15.0
-        }
-      ]
-    },
-    {
-      "order_id": "MC202603060043",
-      "time": "2026-03-06T19:31:49+08:00",
-      "channel": "dinein",
-      "store": "广州天河城店",
-      "total": 57.06,
-      "discount": 0.44,
-      "items": [
-        {
-          "name": "双层吉士汉堡",
-          "qty": 1,
-          "price": 20.84,
-          "calories": 450.0,
-          "protein": 25.0,
-          "fat": 22.0,
-          "carbs": 35.0,
-          "sodium": 900.0
-        },
-        {
-          "name": "中薯条",
-          "qty": 1,
-          "price": 12.9,
-          "calories": 230.0,
-          "protein": 3.0,
-          "fat": 11.0,
-          "carbs": 30.0,
-          "sodium": 160.0
-        },
-        {
-          "name": "可口可乐(中)",
-          "qty": 1,
-          "price": 9.92,
-          "calories": 150.0,
-          "protein": 0.0,
-          "fat": 0.0,
-          "carbs": 38.0,
-          "sodium": 15.0
-        },
-        {
-          "name": "麦旋风",
-          "qty": 1,
-          "price": 13.4,
-          "calories": 230.0,
-          "protein": 5.0,
-          "fat": 7.0,
-          "carbs": 38.0,
-          "sodium": 90.0
-        }
-      ]
-    },
-    {
-      "order_id": "MC202603080020",
-      "time": "2026-03-08T22:31:41+08:00",
-      "channel": "mcdrive",
-      "store": "上海徐家汇店",
-      "total": 31.35,
-      "discount": 10.15,
+      "total": 45.96,
+      "discount": 14.04,
       "items": [
         {
           "name": "板烧鸡腿堡",
           "qty": 1,
-          "price": 17.75,
-          "calories": 430.0,
-          "protein": 24.0,
+          "price": 18.0,
+          "calories": 391.0,
+          "protein": 23.0,
           "fat": 17.0,
-          "carbs": 42.0,
-          "sodium": 850.0
+          "carbs": 35.0,
+          "sodium": 1041.0
         },
         {
           "name": "玉米杯",
           "qty": 1,
-          "price": 6.04,
-          "calories": 90.0,
-          "protein": 3.0,
-          "fat": 2.0,
-          "carbs": 17.0,
-          "sodium": 5.0
+          "price": 9.96,
+          "calories": 87.0,
+          "protein": 4.0,
+          "fat": 1.0,
+          "carbs": 12.0,
+          "sodium": 2.0
         },
         {
-          "name": "雪碧(中)",
+          "name": "雪碧",
           "qty": 1,
-          "price": 7.55,
-          "calories": 150.0,
+          "price": 7.28,
+          "calories": 105.0,
           "protein": 0.0,
           "fat": 0.0,
+          "carbs": 26.0,
+          "sodium": 29.0
+        },
+        {
+          "name": "薯条",
+          "qty": 1,
+          "price": 10.72,
+          "calories": 289.0,
+          "protein": 4.0,
+          "fat": 12.0,
           "carbs": 38.0,
-          "sodium": 20.0
+          "sodium": 165.0
+        }
+      ]
+    },
+    {
+      "order_id": "MC202603060044",
+      "time": "2026-03-06T19:31:49+08:00",
+      "channel": "dinein",
+      "store": "广州天河城店",
+      "total": 58.55,
+      "discount": 0.45,
+      "items": [
+        {
+          "name": "双层吉士汉堡",
+          "qty": 1,
+          "price": 22.82,
+          "calories": 429.0,
+          "protein": 27.0,
+          "fat": 22.0,
+          "carbs": 31.0,
+          "sodium": 1017.0
+        },
+        {
+          "name": "薯条",
+          "qty": 1,
+          "price": 13.89,
+          "calories": 289.0,
+          "protein": 4.0,
+          "fat": 12.0,
+          "carbs": 38.0,
+          "sodium": 165.0
+        },
+        {
+          "name": "可乐",
+          "qty": 1,
+          "price": 9.43,
+          "calories": 147.0,
+          "protein": 0.0,
+          "fat": 0.0,
+          "carbs": 36.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "新地",
+          "qty": 1,
+          "price": 12.4,
+          "calories": 245.0,
+          "protein": 4.0,
+          "fat": 6.0,
+          "carbs": 43.0,
+          "sodium": 84.0
+        }
+      ]
+    },
+    {
+      "order_id": "MC202603080072",
+      "time": "2026-03-08T07:18:13+08:00",
+      "channel": "pickup",
+      "store": "深圳福田中心店",
+      "total": 26.9,
+      "discount": 1.6,
+      "items": [
+        {
+          "name": "猪柳炒双蛋堡",
+          "qty": 1,
+          "price": 16.99,
+          "calories": 437.0,
+          "protein": 25.0,
+          "fat": 24.0,
+          "carbs": 29.0,
+          "sodium": 705.0
+        },
+        {
+          "name": "纯牛奶(盒装)",
+          "qty": 1,
+          "price": 9.91,
+          "calories": 129.0,
+          "protein": 7.0,
+          "fat": 7.0,
+          "carbs": 10.0,
+          "sodium": 73.0
+        }
+      ]
+    },
+    {
+      "order_id": "MC202603100068",
+      "time": "2026-03-10T18:46:05+08:00",
+      "channel": "delivery",
+      "store": "广州天河城店",
+      "total": 42.13,
+      "discount": 7.87,
+      "items": [
+        {
+          "name": "巨无霸",
+          "qty": 1,
+          "price": 22.33,
+          "calories": 513.0,
+          "protein": 27.0,
+          "fat": 26.0,
+          "carbs": 42.0,
+          "sodium": 961.0
+        },
+        {
+          "name": "薯条",
+          "qty": 1,
+          "price": 11.8,
+          "calories": 289.0,
+          "protein": 4.0,
+          "fat": 12.0,
+          "carbs": 38.0,
+          "sodium": 165.0
+        },
+        {
+          "name": "可乐",
+          "qty": 1,
+          "price": 8.01,
+          "calories": 147.0,
+          "protein": 0.0,
+          "fat": 0.0,
+          "carbs": 36.0,
+          "sodium": 0.0
         }
       ]
     },
@@ -395,189 +345,159 @@
       "order_id": "MC202603210017",
       "time": "2026-03-21T08:31:14+08:00",
       "channel": "delivery",
-      "store": "北京国贸店",
-      "total": 37.61,
-      "discount": 3.89,
+      "store": "深圳福田中心店",
+      "total": 28.65,
+      "discount": 9.35,
       "items": [
         {
-          "name": "猪柳蛋麦满分",
+          "name": "双层猪柳蛋麦满分",
           "qty": 1,
-          "price": 14.5,
-          "calories": 380.0,
-          "protein": 21.0,
-          "fat": 23.0,
-          "carbs": 31.0,
-          "sodium": 830.0
+          "price": 15.83,
+          "calories": 513.0,
+          "protein": 29.0,
+          "fat": 32.0,
+          "carbs": 26.0,
+          "sodium": 1210.0
         },
         {
-          "name": "鲜煮咖啡",
+          "name": "优品豆浆",
           "qty": 1,
-          "price": 10.87,
-          "calories": 5.0,
+          "price": 7.54,
+          "calories": 202.0,
+          "protein": 8.0,
+          "fat": 4.0,
+          "carbs": 33.0,
+          "sodium": 43.0
+        },
+        {
+          "name": "苹果片",
+          "qty": 1,
+          "price": 5.28,
+          "calories": 32.0,
           "protein": 0.0,
           "fat": 0.0,
-          "carbs": 1.0,
-          "sodium": 5.0
-        },
-        {
-          "name": "麦旋风",
-          "qty": 1,
-          "price": 12.23,
-          "calories": 230.0,
-          "protein": 5.0,
-          "fat": 7.0,
-          "carbs": 38.0,
-          "sodium": 90.0
+          "carbs": 7.0,
+          "sodium": 0.0
         }
       ]
     },
     {
-      "order_id": "MC202603240047",
-      "time": "2026-03-24T16:12:56+08:00",
-      "channel": "dinein",
-      "store": "上海徐家汇店",
-      "total": 46.99,
-      "discount": 12.01,
-      "items": [
-        {
-          "name": "安格斯厚牛堡",
-          "qty": 1,
-          "price": 25.48,
-          "calories": 590.0,
-          "protein": 33.0,
-          "fat": 33.0,
-          "carbs": 40.0,
-          "sodium": 1100.0
-        },
-        {
-          "name": "大薯条",
-          "qty": 1,
-          "price": 13.54,
-          "calories": 340.0,
-          "protein": 4.0,
-          "fat": 16.0,
-          "carbs": 44.0,
-          "sodium": 230.0
-        },
-        {
-          "name": "可口可乐(中)",
-          "qty": 1,
-          "price": 7.96,
-          "calories": 150.0,
-          "protein": 0.0,
-          "fat": 0.0,
-          "carbs": 38.0,
-          "sodium": 15.0
-        }
-      ]
-    },
-    {
-      "order_id": "MC202603250037",
-      "time": "2026-03-25T09:46:32+08:00",
+      "order_id": "MC202603210070",
+      "time": "2026-03-21T09:46:40+08:00",
       "channel": "pickup",
-      "store": "杭州武林广场店",
-      "total": 21.37,
-      "discount": 4.63,
-      "items": [
-        {
-          "name": "吉士蛋麦满分",
-          "qty": 1,
-          "price": 11.5,
-          "calories": 300.0,
-          "protein": 17.0,
-          "fat": 13.0,
-          "carbs": 30.0,
-          "sodium": 700.0
-        },
-        {
-          "name": "鲜煮咖啡",
-          "qty": 1,
-          "price": 9.86,
-          "calories": 5.0,
-          "protein": 0.0,
-          "fat": 0.0,
-          "carbs": 1.0,
-          "sodium": 5.0
-        }
-      ]
-    },
-    {
-      "order_id": "MC202603280026",
-      "time": "2026-03-28T07:31:33+08:00",
-      "channel": "delivery",
-      "store": "上海南京西路店",
-      "total": 31.82,
-      "discount": 9.68,
+      "store": "北京国贸店",
+      "total": 31.91,
+      "discount": 9.09,
       "items": [
         {
           "name": "猪柳蛋麦满分",
           "qty": 1,
-          "price": 12.27,
-          "calories": 380.0,
-          "protein": 21.0,
-          "fat": 23.0,
-          "carbs": 31.0,
-          "sodium": 830.0
+          "price": 14.01,
+          "calories": 387.0,
+          "protein": 23.0,
+          "fat": 21.0,
+          "carbs": 25.0,
+          "sodium": 846.0
         },
         {
-          "name": "鲜煮咖啡",
+          "name": "鲜萃咖啡",
           "qty": 1,
-          "price": 9.2,
-          "calories": 5.0,
-          "protein": 0.0,
+          "price": 7.78,
+          "calories": 13.0,
+          "protein": 1.0,
           "fat": 0.0,
-          "carbs": 1.0,
-          "sodium": 5.0
-        },
-        {
-          "name": "麦辣鸡翅(2块)",
-          "qty": 1,
-          "price": 10.35,
-          "calories": 240.0,
-          "protein": 14.0,
-          "fat": 16.0,
-          "carbs": 11.0,
-          "sodium": 600.0
-        }
-      ]
-    },
-    {
-      "order_id": "MC202603280035",
-      "time": "2026-03-28T19:38:08+08:00",
-      "channel": "delivery",
-      "store": "杭州武林广场店",
-      "total": 27.0,
-      "discount": 6.0,
-      "items": [
-        {
-          "name": "热香饼(3片)",
-          "qty": 1,
-          "price": 10.64,
-          "calories": 320.0,
-          "protein": 7.0,
-          "fat": 10.0,
-          "carbs": 52.0,
-          "sodium": 480.0
-        },
-        {
-          "name": "鲜煮咖啡",
-          "qty": 1,
-          "price": 9.82,
-          "calories": 5.0,
-          "protein": 0.0,
-          "fat": 0.0,
-          "carbs": 1.0,
-          "sodium": 5.0
+          "carbs": 0.0,
+          "sodium": 3.0
         },
         {
           "name": "玉米杯",
           "qty": 1,
-          "price": 6.54,
-          "calories": 90.0,
-          "protein": 3.0,
-          "fat": 2.0,
-          "carbs": 17.0,
-          "sodium": 5.0
+          "price": 10.12,
+          "calories": 87.0,
+          "protein": 4.0,
+          "fat": 1.0,
+          "carbs": 12.0,
+          "sodium": 2.0
+        }
+      ]
+    },
+    {
+      "order_id": "MC202603240048",
+      "time": "2026-03-24T16:12:56+08:00",
+      "channel": "dinein",
+      "store": "上海徐家汇店",
+      "total": 46.19,
+      "discount": 11.81,
+      "items": [
+        {
+          "name": "培根安格斯厚牛堡",
+          "qty": 1,
+          "price": 27.48,
+          "calories": 707.0,
+          "protein": 34.0,
+          "fat": 44.0,
+          "carbs": 43.0,
+          "sodium": 1037.0
+        },
+        {
+          "name": "薯条",
+          "qty": 1,
+          "price": 11.15,
+          "calories": 289.0,
+          "protein": 4.0,
+          "fat": 12.0,
+          "carbs": 38.0,
+          "sodium": 165.0
+        },
+        {
+          "name": "可乐",
+          "qty": 1,
+          "price": 7.57,
+          "calories": 147.0,
+          "protein": 0.0,
+          "fat": 0.0,
+          "carbs": 36.0,
+          "sodium": 0.0
+        }
+      ]
+    },
+    {
+      "order_id": "MC202604020021",
+      "time": "2026-04-02T08:18:41+08:00",
+      "channel": "dinein",
+      "store": "上海南京西路店",
+      "total": 36.88,
+      "discount": 1.12,
+      "items": [
+        {
+          "name": "双层猪柳蛋麦满分",
+          "qty": 1,
+          "price": 20.38,
+          "calories": 513.0,
+          "protein": 29.0,
+          "fat": 32.0,
+          "carbs": 26.0,
+          "sodium": 1210.0
+        },
+        {
+          "name": "优品豆浆",
+          "qty": 1,
+          "price": 9.7,
+          "calories": 202.0,
+          "protein": 8.0,
+          "fat": 4.0,
+          "carbs": 33.0,
+          "sodium": 43.0
+        },
+        {
+          "name": "苹果片",
+          "qty": 1,
+          "price": 6.79,
+          "calories": 32.0,
+          "protein": 0.0,
+          "fat": 0.0,
+          "carbs": 7.0,
+          "sodium": 0.0
         }
       ]
     },
@@ -586,318 +506,518 @@
       "time": "2026-04-05T08:18:19+08:00",
       "channel": "dinein",
       "store": "上海南京西路店",
-      "total": 20.15,
-      "discount": 5.85,
+      "total": 25.58,
+      "discount": 7.42,
       "items": [
         {
-          "name": "吉士蛋麦满分",
+          "name": "原味板烧鸡腿麦满分",
           "qty": 1,
-          "price": 10.85,
-          "calories": 300.0,
-          "protein": 17.0,
-          "fat": 13.0,
-          "carbs": 30.0,
-          "sodium": 700.0
+          "price": 11.63,
+          "calories": 246.0,
+          "protein": 15.0,
+          "fat": 9.0,
+          "carbs": 25.0,
+          "sodium": 611.0
         },
         {
-          "name": "鲜煮咖啡",
-          "qty": 1,
-          "price": 9.3,
-          "calories": 5.0,
-          "protein": 0.0,
-          "fat": 0.0,
-          "carbs": 1.0,
-          "sodium": 5.0
-        }
-      ]
-    },
-    {
-      "order_id": "MC202604060052",
-      "time": "2026-04-06T19:46:46+08:00",
-      "channel": "pickup",
-      "store": "上海陆家嘴环路店",
-      "total": 36.84,
-      "discount": 10.66,
-      "items": [
-        {
-          "name": "玉米杯",
+          "name": "脆香油条",
           "qty": 1,
           "price": 6.2,
-          "calories": 90.0,
-          "protein": 3.0,
-          "fat": 2.0,
-          "carbs": 17.0,
-          "sodium": 5.0
+          "calories": 202.0,
+          "protein": 5.0,
+          "fat": 12.0,
+          "carbs": 19.0,
+          "sodium": 230.0
         },
         {
-          "name": "麦香鱼",
+          "name": "鲜萃咖啡",
           "qty": 1,
-          "price": 10.86,
-          "calories": 340.0,
-          "protein": 15.0,
-          "fat": 15.0,
-          "carbs": 33.0,
-          "sodium": 580.0
-        },
-        {
-          "name": "橙汁",
-          "qty": 1,
-          "price": 9.31,
-          "calories": 130.0,
+          "price": 7.75,
+          "calories": 13.0,
           "protein": 1.0,
           "fat": 0.0,
-          "carbs": 31.0,
-          "sodium": 5.0
-        },
-        {
-          "name": "麦辣鸡翅(2块)",
-          "qty": 1,
-          "price": 10.47,
-          "calories": 240.0,
-          "protein": 14.0,
-          "fat": 16.0,
-          "carbs": 11.0,
-          "sodium": 600.0
+          "carbs": 0.0,
+          "sodium": 3.0
         }
       ]
     },
     {
-      "order_id": "MC202604230024",
-      "time": "2026-04-23T09:38:51+08:00",
-      "channel": "pickup",
-      "store": "上海徐家汇店",
-      "total": 28.07,
-      "discount": 4.93,
+      "order_id": "MC202604050036",
+      "time": "2026-04-05T22:38:24+08:00",
+      "channel": "delivery",
+      "store": "广州天河城店",
+      "total": 37.01,
+      "discount": 12.99,
       "items": [
         {
-          "name": "热香饼(3片)",
+          "name": "巨无霸",
           "qty": 1,
-          "price": 11.06,
-          "calories": 320.0,
-          "protein": 7.0,
-          "fat": 10.0,
-          "carbs": 52.0,
-          "sodium": 480.0
+          "price": 19.62,
+          "calories": 513.0,
+          "protein": 27.0,
+          "fat": 26.0,
+          "carbs": 42.0,
+          "sodium": 961.0
         },
         {
-          "name": "鲜煮咖啡",
+          "name": "薯条",
           "qty": 1,
-          "price": 10.21,
-          "calories": 5.0,
+          "price": 10.36,
+          "calories": 289.0,
+          "protein": 4.0,
+          "fat": 12.0,
+          "carbs": 38.0,
+          "sodium": 165.0
+        },
+        {
+          "name": "可乐",
+          "qty": 1,
+          "price": 7.03,
+          "calories": 147.0,
           "protein": 0.0,
           "fat": 0.0,
-          "carbs": 1.0,
-          "sodium": 5.0
-        },
-        {
-          "name": "玉米杯",
-          "qty": 1,
-          "price": 6.8,
-          "calories": 90.0,
-          "protein": 3.0,
-          "fat": 2.0,
-          "carbs": 17.0,
-          "sodium": 5.0
+          "carbs": 36.0,
+          "sodium": 0.0
         }
       ]
     },
     {
-      "order_id": "MC202604250054",
+      "order_id": "MC202604060065",
+      "time": "2026-04-06T20:12:53+08:00",
+      "channel": "dinein",
+      "store": "杭州武林广场店",
+      "total": 54.44,
+      "discount": 7.06,
+      "items": [
+        {
+          "name": "麦辣鸡腿汉堡",
+          "qty": 1,
+          "price": 19.92,
+          "calories": 485.0,
+          "protein": 24.0,
+          "fat": 24.0,
+          "carbs": 42.0,
+          "sodium": 1208.0
+        },
+        {
+          "name": "薯条",
+          "qty": 1,
+          "price": 12.39,
+          "calories": 289.0,
+          "protein": 4.0,
+          "fat": 12.0,
+          "carbs": 38.0,
+          "sodium": 165.0
+        },
+        {
+          "name": "可乐",
+          "qty": 1,
+          "price": 8.41,
+          "calories": 147.0,
+          "protein": 0.0,
+          "fat": 0.0,
+          "carbs": 36.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "薄皮焦香V翅",
+          "qty": 1,
+          "price": 13.72,
+          "calories": 192.0,
+          "protein": 17.0,
+          "fat": 11.0,
+          "carbs": 6.0,
+          "sodium": 594.0
+        }
+      ]
+    },
+    {
+      "order_id": "MC202604110019",
+      "time": "2026-04-11T07:31:55+08:00",
+      "channel": "delivery",
+      "store": "杭州武林广场店",
+      "total": 23.28,
+      "discount": 4.72,
+      "items": [
+        {
+          "name": "猪柳蛋麦满分",
+          "qty": 1,
+          "price": 14.97,
+          "calories": 387.0,
+          "protein": 23.0,
+          "fat": 21.0,
+          "carbs": 25.0,
+          "sodium": 846.0
+        },
+        {
+          "name": "鲜萃咖啡",
+          "qty": 1,
+          "price": 8.32,
+          "calories": 13.0,
+          "protein": 1.0,
+          "fat": 0.0,
+          "carbs": 0.0,
+          "sodium": 3.0
+        }
+      ]
+    },
+    {
+      "order_id": "MC202604220040",
+      "time": "2026-04-22T08:18:56+08:00",
+      "channel": "pickup",
+      "store": "杭州武林广场店",
+      "total": 24.32,
+      "discount": 3.68,
+      "items": [
+        {
+          "name": "猪柳蛋麦满分",
+          "qty": 1,
+          "price": 15.64,
+          "calories": 387.0,
+          "protein": 23.0,
+          "fat": 21.0,
+          "carbs": 25.0,
+          "sodium": 846.0
+        },
+        {
+          "name": "鲜萃咖啡",
+          "qty": 1,
+          "price": 8.69,
+          "calories": 13.0,
+          "protein": 1.0,
+          "fat": 0.0,
+          "carbs": 0.0,
+          "sodium": 3.0
+        }
+      ]
+    },
+    {
+      "order_id": "MC202604220025",
+      "time": "2026-04-22T09:38:17+08:00",
+      "channel": "pickup",
+      "store": "北京国贸店",
+      "total": 33.59,
+      "discount": 4.41,
+      "items": [
+        {
+          "name": "双层猪柳蛋麦满分",
+          "qty": 1,
+          "price": 18.57,
+          "calories": 513.0,
+          "protein": 29.0,
+          "fat": 32.0,
+          "carbs": 26.0,
+          "sodium": 1210.0
+        },
+        {
+          "name": "优品豆浆",
+          "qty": 1,
+          "price": 8.84,
+          "calories": 202.0,
+          "protein": 8.0,
+          "fat": 4.0,
+          "carbs": 33.0,
+          "sodium": 43.0
+        },
+        {
+          "name": "苹果片",
+          "qty": 1,
+          "price": 6.19,
+          "calories": 32.0,
+          "protein": 0.0,
+          "fat": 0.0,
+          "carbs": 7.0,
+          "sodium": 0.0
+        }
+      ]
+    },
+    {
+      "order_id": "MC202604250055",
       "time": "2026-04-25T15:31:33+08:00",
       "channel": "dinein",
       "store": "上海徐家汇店",
-      "total": 35.72,
-      "discount": 5.78,
+      "total": 37.88,
+      "discount": 6.12,
       "items": [
         {
-          "name": "板烧鸡腿堡",
+          "name": "酥酥多笋卷",
           "qty": 1,
-          "price": 20.23,
-          "calories": 430.0,
+          "price": 17.65,
+          "calories": 342.0,
+          "protein": 14.0,
+          "fat": 15.0,
+          "carbs": 36.0,
+          "sodium": 1044.0
+        },
+        {
+          "name": "那么大鸡排（椒盐风味）",
+          "qty": 1,
+          "price": 12.05,
+          "calories": 385.0,
           "protein": 24.0,
-          "fat": 17.0,
-          "carbs": 42.0,
-          "sodium": 850.0
+          "fat": 21.0,
+          "carbs": 24.0,
+          "sodium": 996.0
         },
         {
-          "name": "玉米杯",
+          "name": "可乐",
           "qty": 1,
-          "price": 6.89,
-          "calories": 90.0,
-          "protein": 3.0,
-          "fat": 2.0,
-          "carbs": 17.0,
-          "sodium": 5.0
-        },
-        {
-          "name": "雪碧(中)",
-          "qty": 1,
-          "price": 8.61,
-          "calories": 150.0,
+          "price": 8.18,
+          "calories": 147.0,
           "protein": 0.0,
           "fat": 0.0,
-          "carbs": 38.0,
-          "sodium": 20.0
+          "carbs": 36.0,
+          "sodium": 0.0
         }
       ]
     },
     {
-      "order_id": "MC202604260028",
+      "order_id": "MC202604260029",
       "time": "2026-04-26T09:53:27+08:00",
       "channel": "dinein",
       "store": "杭州武林广场店",
-      "total": 25.72,
-      "discount": 0.28,
+      "total": 32.65,
+      "discount": 0.35,
       "items": [
         {
-          "name": "吉士蛋麦满分",
+          "name": "原味板烧鸡腿麦满分",
           "qty": 1,
-          "price": 13.85,
-          "calories": 300.0,
-          "protein": 17.0,
-          "fat": 13.0,
-          "carbs": 30.0,
-          "sodium": 700.0
+          "price": 14.84,
+          "calories": 246.0,
+          "protein": 15.0,
+          "fat": 9.0,
+          "carbs": 25.0,
+          "sodium": 611.0
         },
         {
-          "name": "鲜煮咖啡",
+          "name": "脆香油条",
           "qty": 1,
-          "price": 11.87,
-          "calories": 5.0,
-          "protein": 0.0,
+          "price": 7.91,
+          "calories": 202.0,
+          "protein": 5.0,
+          "fat": 12.0,
+          "carbs": 19.0,
+          "sodium": 230.0
+        },
+        {
+          "name": "鲜萃咖啡",
+          "qty": 1,
+          "price": 9.89,
+          "calories": 13.0,
+          "protein": 1.0,
           "fat": 0.0,
-          "carbs": 1.0,
-          "sodium": 5.0
+          "carbs": 0.0,
+          "sodium": 3.0
         }
       ]
     },
     {
-      "order_id": "MC202604260022",
-      "time": "2026-04-26T22:53:13+08:00",
-      "channel": "pickup",
-      "store": "深圳福田中心店",
-      "total": 49.63,
-      "discount": 0.87,
+      "order_id": "MC202604270027",
+      "time": "2026-04-27T08:38:55+08:00",
+      "channel": "mcdrive",
+      "store": "上海南京西路店",
+      "total": 34.5,
+      "discount": 10.5,
       "items": [
         {
-          "name": "板烧鸡腿堡",
+          "name": "双层猪柳蛋麦满分",
           "qty": 1,
-          "price": 23.09,
-          "calories": 430.0,
-          "protein": 24.0,
-          "fat": 17.0,
+          "price": 16.1,
+          "calories": 513.0,
+          "protein": 29.0,
+          "fat": 32.0,
+          "carbs": 26.0,
+          "sodium": 1210.0
+        },
+        {
+          "name": "优品豆浆",
+          "qty": 1,
+          "price": 7.67,
+          "calories": 202.0,
+          "protein": 8.0,
+          "fat": 4.0,
+          "carbs": 33.0,
+          "sodium": 43.0
+        },
+        {
+          "name": "薯条",
+          "qty": 1,
+          "price": 10.73,
+          "calories": 289.0,
+          "protein": 4.0,
+          "fat": 12.0,
+          "carbs": 38.0,
+          "sodium": 165.0
+        }
+      ]
+    },
+    {
+      "order_id": "MC202604270037",
+      "time": "2026-04-27T23:38:44+08:00",
+      "channel": "dinein",
+      "store": "北京国贸店",
+      "total": 39.73,
+      "discount": 10.27,
+      "items": [
+        {
+          "name": "巨无霸",
+          "qty": 1,
+          "price": 21.06,
+          "calories": 513.0,
+          "protein": 27.0,
+          "fat": 26.0,
           "carbs": 42.0,
-          "sodium": 850.0
+          "sodium": 961.0
         },
         {
-          "name": "玉米杯",
+          "name": "薯条",
           "qty": 1,
-          "price": 7.86,
-          "calories": 90.0,
-          "protein": 3.0,
-          "fat": 2.0,
-          "carbs": 17.0,
-          "sodium": 5.0
+          "price": 11.13,
+          "calories": 289.0,
+          "protein": 4.0,
+          "fat": 12.0,
+          "carbs": 38.0,
+          "sodium": 165.0
         },
         {
-          "name": "雪碧(中)",
+          "name": "可乐",
           "qty": 1,
-          "price": 9.83,
-          "calories": 150.0,
+          "price": 7.55,
+          "calories": 147.0,
           "protein": 0.0,
           "fat": 0.0,
-          "carbs": 38.0,
-          "sodium": 20.0
-        },
-        {
-          "name": "香芋派",
-          "qty": 1,
-          "price": 8.84,
-          "calories": 220.0,
-          "protein": 3.0,
-          "fat": 10.0,
-          "carbs": 30.0,
-          "sodium": 130.0
+          "carbs": 36.0,
+          "sodium": 0.0
         }
       ]
     },
     {
-      "order_id": "MC202604280049",
-      "time": "2026-04-28T12:53:44+08:00",
-      "channel": "pickup",
-      "store": "上海陆家嘴环路店",
-      "total": 37.1,
-      "discount": 6.9,
-      "items": [
-        {
-          "name": "双层吉士汉堡",
-          "qty": 1,
-          "price": 17.71,
-          "calories": 450.0,
-          "protein": 25.0,
-          "fat": 22.0,
-          "carbs": 35.0,
-          "sodium": 900.0
-        },
-        {
-          "name": "中薯条",
-          "qty": 1,
-          "price": 10.96,
-          "calories": 230.0,
-          "protein": 3.0,
-          "fat": 11.0,
-          "carbs": 30.0,
-          "sodium": 160.0
-        },
-        {
-          "name": "可口可乐(中)",
-          "qty": 1,
-          "price": 8.43,
-          "calories": 150.0,
-          "protein": 0.0,
-          "fat": 0.0,
-          "carbs": 38.0,
-          "sodium": 15.0
-        }
-      ]
-    },
-    {
-      "order_id": "MC202605020030",
+      "order_id": "MC202605020031",
       "time": "2026-05-02T11:12:12+08:00",
       "channel": "pickup",
-      "store": "上海南京西路店",
-      "total": 26.29,
-      "discount": 7.71,
+      "store": "杭州武林广场店",
+      "total": 44.21,
+      "discount": 9.29,
       "items": [
         {
-          "name": "吉士蛋麦满分",
+          "name": "麦乐鸡",
           "qty": 1,
-          "price": 10.82,
-          "calories": 300.0,
-          "protein": 17.0,
-          "fat": 13.0,
-          "carbs": 30.0,
-          "sodium": 700.0
+          "price": 11.98,
+          "calories": 213.0,
+          "protein": 12.0,
+          "fat": 12.0,
+          "carbs": 13.0,
+          "sodium": 422.0
         },
         {
-          "name": "鲜煮咖啡",
+          "name": "薯条",
           "qty": 1,
-          "price": 9.28,
-          "calories": 5.0,
+          "price": 11.57,
+          "calories": 289.0,
+          "protein": 4.0,
+          "fat": 12.0,
+          "carbs": 38.0,
+          "sodium": 165.0
+        },
+        {
+          "name": "薄皮焦香V翅",
+          "qty": 1,
+          "price": 12.81,
+          "calories": 192.0,
+          "protein": 17.0,
+          "fat": 11.0,
+          "carbs": 6.0,
+          "sodium": 594.0
+        },
+        {
+          "name": "可乐",
+          "qty": 1,
+          "price": 7.85,
+          "calories": 147.0,
           "protein": 0.0,
           "fat": 0.0,
-          "carbs": 1.0,
-          "sodium": 5.0
+          "carbs": 36.0,
+          "sodium": 0.0
+        }
+      ]
+    },
+    {
+      "order_id": "MC202605040067",
+      "time": "2026-05-04T12:24:08+08:00",
+      "channel": "delivery",
+      "store": "北京国贸店",
+      "total": 36.5,
+      "discount": 9.5,
+      "items": [
+        {
+          "name": "麦辣鸡腿汉堡",
+          "qty": 1,
+          "price": 17.86,
+          "calories": 485.0,
+          "protein": 24.0,
+          "fat": 24.0,
+          "carbs": 42.0,
+          "sodium": 1208.0
         },
         {
-          "name": "玉米杯",
+          "name": "薯条",
           "qty": 1,
-          "price": 6.19,
-          "calories": 90.0,
-          "protein": 3.0,
-          "fat": 2.0,
-          "carbs": 17.0,
-          "sodium": 5.0
+          "price": 11.11,
+          "calories": 289.0,
+          "protein": 4.0,
+          "fat": 12.0,
+          "carbs": 38.0,
+          "sodium": 165.0
+        },
+        {
+          "name": "可乐",
+          "qty": 1,
+          "price": 7.54,
+          "calories": 147.0,
+          "protein": 0.0,
+          "fat": 0.0,
+          "carbs": 36.0,
+          "sodium": 0.0
+        }
+      ]
+    },
+    {
+      "order_id": "MC202605050066",
+      "time": "2026-05-05T13:12:34+08:00",
+      "channel": "mcdrive",
+      "store": "上海南京西路店",
+      "total": 34.68,
+      "discount": 11.32,
+      "items": [
+        {
+          "name": "麦辣鸡腿汉堡",
+          "qty": 1,
+          "price": 16.96,
+          "calories": 485.0,
+          "protein": 24.0,
+          "fat": 24.0,
+          "carbs": 42.0,
+          "sodium": 1208.0
+        },
+        {
+          "name": "薯条",
+          "qty": 1,
+          "price": 10.55,
+          "calories": 289.0,
+          "protein": 4.0,
+          "fat": 12.0,
+          "carbs": 38.0,
+          "sodium": 165.0
+        },
+        {
+          "name": "可乐",
+          "qty": 1,
+          "price": 7.16,
+          "calories": 147.0,
+          "protein": 0.0,
+          "fat": 0.0,
+          "carbs": 36.0,
+          "sodium": 0.0
         }
       ]
     },
@@ -906,178 +1026,148 @@
       "time": "2026-05-05T13:46:24+08:00",
       "channel": "dinein",
       "store": "上海南京西路店",
-      "total": 41.86,
-      "discount": 4.64,
+      "total": 42.31,
+      "discount": 4.69,
       "items": [
         {
           "name": "板烧鸡腿堡",
           "qty": 1,
           "price": 21.16,
-          "calories": 430.0,
-          "protein": 24.0,
+          "calories": 391.0,
+          "protein": 23.0,
           "fat": 17.0,
-          "carbs": 42.0,
-          "sodium": 850.0
+          "carbs": 35.0,
+          "sodium": 1041.0
         },
         {
-          "name": "中薯条",
+          "name": "薯条",
           "qty": 1,
-          "price": 11.7,
-          "calories": 230.0,
-          "protein": 3.0,
-          "fat": 11.0,
-          "carbs": 30.0,
-          "sodium": 160.0
+          "price": 12.6,
+          "calories": 289.0,
+          "protein": 4.0,
+          "fat": 12.0,
+          "carbs": 38.0,
+          "sodium": 165.0
         },
         {
-          "name": "雪碧(中)",
+          "name": "雪碧",
           "qty": 1,
-          "price": 9.0,
-          "calories": 150.0,
+          "price": 8.55,
+          "calories": 105.0,
           "protein": 0.0,
           "fat": 0.0,
-          "carbs": 38.0,
-          "sodium": 20.0
+          "carbs": 26.0,
+          "sodium": 29.0
         }
       ]
     },
     {
-      "order_id": "MC202605100044",
-      "time": "2026-05-10T12:38:26+08:00",
+      "order_id": "MC202605060024",
+      "time": "2026-05-06T17:24:21+08:00",
       "channel": "pickup",
-      "store": "上海陆家嘴环路店",
-      "total": 27.43,
-      "discount": 6.57,
+      "store": "杭州武林广场店",
+      "total": 36.12,
+      "discount": 8.38,
       "items": [
-        {
-          "name": "玉米杯",
-          "qty": 1,
-          "price": 6.45,
-          "calories": 90.0,
-          "protein": 3.0,
-          "fat": 2.0,
-          "carbs": 17.0,
-          "sodium": 5.0
-        },
         {
           "name": "麦香鱼",
           "qty": 1,
-          "price": 11.29,
-          "calories": 340.0,
-          "protein": 15.0,
-          "fat": 15.0,
-          "carbs": 33.0,
-          "sodium": 580.0
-        },
-        {
-          "name": "橙汁",
-          "qty": 1,
-          "price": 9.68,
-          "calories": 130.0,
-          "protein": 1.0,
-          "fat": 0.0,
-          "carbs": 31.0,
-          "sodium": 5.0
-        }
-      ]
-    },
-    {
-      "order_id": "MC202605130034",
-      "time": "2026-05-13T08:38:51+08:00",
-      "channel": "delivery",
-      "store": "上海陆家嘴环路店",
-      "total": 19.56,
-      "discount": 6.44,
-      "items": [
-        {
-          "name": "吉士蛋麦满分",
-          "qty": 1,
-          "price": 10.53,
-          "calories": 300.0,
-          "protein": 17.0,
+          "price": 17.86,
+          "calories": 325.0,
+          "protein": 16.0,
           "fat": 13.0,
-          "carbs": 30.0,
-          "sodium": 700.0
+          "carbs": 35.0,
+          "sodium": 556.0
         },
         {
-          "name": "鲜煮咖啡",
+          "name": "玉米杯",
           "qty": 1,
-          "price": 9.03,
-          "calories": 5.0,
+          "price": 10.55,
+          "calories": 87.0,
+          "protein": 4.0,
+          "fat": 1.0,
+          "carbs": 12.0,
+          "sodium": 2.0
+        },
+        {
+          "name": "雪碧",
+          "qty": 1,
+          "price": 7.71,
+          "calories": 105.0,
           "protein": 0.0,
           "fat": 0.0,
-          "carbs": 1.0,
-          "sodium": 5.0
+          "carbs": 26.0,
+          "sodium": 29.0
         }
       ]
     },
     {
-      "order_id": "MC202605160067",
-      "time": "2026-05-16T22:05:57+08:00",
-      "channel": "dinein",
-      "store": "杭州武林广场店",
-      "total": 37.34,
-      "discount": 11.16,
+      "order_id": "MC202605100045",
+      "time": "2026-05-10T12:38:26+08:00",
+      "channel": "pickup",
+      "store": "上海陆家嘴环路店",
+      "total": 37.11,
+      "discount": 8.89,
       "items": [
         {
-          "name": "巨无霸",
+          "name": "板烧鸡腿堡",
           "qty": 1,
-          "price": 19.63,
-          "calories": 550.0,
-          "protein": 26.0,
-          "fat": 29.0,
-          "carbs": 45.0,
-          "sodium": 950.0
+          "price": 18.96,
+          "calories": 391.0,
+          "protein": 23.0,
+          "fat": 17.0,
+          "carbs": 35.0,
+          "sodium": 1041.0
         },
         {
-          "name": "中薯条",
+          "name": "玉米杯",
           "qty": 1,
-          "price": 10.01,
-          "calories": 230.0,
-          "protein": 3.0,
-          "fat": 11.0,
-          "carbs": 30.0,
-          "sodium": 160.0
+          "price": 10.49,
+          "calories": 87.0,
+          "protein": 4.0,
+          "fat": 1.0,
+          "carbs": 12.0,
+          "sodium": 2.0
         },
         {
-          "name": "可口可乐(中)",
+          "name": "雪碧",
           "qty": 1,
-          "price": 7.7,
-          "calories": 150.0,
+          "price": 7.66,
+          "calories": 105.0,
           "protein": 0.0,
           "fat": 0.0,
-          "carbs": 38.0,
-          "sodium": 15.0
+          "carbs": 26.0,
+          "sodium": 29.0
         }
       ]
     },
     {
-      "order_id": "MC202605220038",
-      "time": "2026-05-22T12:12:09+08:00",
+      "order_id": "MC202605140057",
+      "time": "2026-05-14T07:12:44+08:00",
       "channel": "pickup",
-      "store": "深圳福田中心店",
-      "total": 26.58,
-      "discount": 1.42,
+      "store": "上海徐家汇店",
+      "total": 20.84,
+      "discount": 7.16,
       "items": [
         {
           "name": "猪柳蛋麦满分",
           "qty": 1,
-          "price": 15.19,
-          "calories": 380.0,
-          "protein": 21.0,
-          "fat": 23.0,
-          "carbs": 31.0,
-          "sodium": 830.0
+          "price": 13.4,
+          "calories": 387.0,
+          "protein": 23.0,
+          "fat": 21.0,
+          "carbs": 25.0,
+          "sodium": 846.0
         },
         {
-          "name": "鲜煮咖啡",
+          "name": "鲜萃咖啡",
           "qty": 1,
-          "price": 11.39,
-          "calories": 5.0,
-          "protein": 0.0,
+          "price": 7.44,
+          "calories": 13.0,
+          "protein": 1.0,
           "fat": 0.0,
-          "carbs": 1.0,
-          "sodium": 5.0
+          "carbs": 0.0,
+          "sodium": 3.0
         }
       ]
     },
@@ -1086,148 +1176,118 @@
       "time": "2026-05-22T18:18:01+08:00",
       "channel": "pickup",
       "store": "北京国贸店",
-      "total": 26.44,
-      "discount": 7.56,
+      "total": 35.77,
+      "discount": 10.23,
       "items": [
+        {
+          "name": "板烧鸡腿堡",
+          "qty": 1,
+          "price": 18.28,
+          "calories": 391.0,
+          "protein": 23.0,
+          "fat": 17.0,
+          "carbs": 35.0,
+          "sodium": 1041.0
+        },
         {
           "name": "玉米杯",
           "qty": 1,
-          "price": 6.22,
-          "calories": 90.0,
-          "protein": 3.0,
-          "fat": 2.0,
-          "carbs": 17.0,
-          "sodium": 5.0
+          "price": 10.11,
+          "calories": 87.0,
+          "protein": 4.0,
+          "fat": 1.0,
+          "carbs": 12.0,
+          "sodium": 2.0
         },
         {
-          "name": "麦香鱼",
+          "name": "雪碧",
           "qty": 1,
-          "price": 10.89,
-          "calories": 340.0,
-          "protein": 15.0,
-          "fat": 15.0,
-          "carbs": 33.0,
-          "sodium": 580.0
-        },
-        {
-          "name": "橙汁",
-          "qty": 1,
-          "price": 9.33,
-          "calories": 130.0,
-          "protein": 1.0,
-          "fat": 0.0,
-          "carbs": 31.0,
-          "sodium": 5.0
-        }
-      ]
-    },
-    {
-      "order_id": "MC202605240031",
-      "time": "2026-05-24T09:12:25+08:00",
-      "channel": "dinein",
-      "store": "上海徐家汇店",
-      "total": 23.5,
-      "discount": 2.5,
-      "items": [
-        {
-          "name": "吉士蛋麦满分",
-          "qty": 1,
-          "price": 12.66,
-          "calories": 300.0,
-          "protein": 17.0,
-          "fat": 13.0,
-          "carbs": 30.0,
-          "sodium": 700.0
-        },
-        {
-          "name": "鲜煮咖啡",
-          "qty": 1,
-          "price": 10.85,
-          "calories": 5.0,
+          "price": 7.39,
+          "calories": 105.0,
           "protein": 0.0,
           "fat": 0.0,
-          "carbs": 1.0,
-          "sodium": 5.0
+          "carbs": 26.0,
+          "sodium": 29.0
         }
       ]
     },
     {
-      "order_id": "MC202605250021",
-      "time": "2026-05-25T11:05:26+08:00",
-      "channel": "pickup",
-      "store": "北京国贸店",
-      "total": 18.65,
-      "discount": 6.35,
-      "items": [
-        {
-          "name": "热香饼(3片)",
-          "qty": 1,
-          "price": 9.7,
-          "calories": 320.0,
-          "protein": 7.0,
-          "fat": 10.0,
-          "carbs": 52.0,
-          "sodium": 480.0
-        },
-        {
-          "name": "鲜煮咖啡",
-          "qty": 1,
-          "price": 8.95,
-          "calories": 5.0,
-          "protein": 0.0,
-          "fat": 0.0,
-          "carbs": 1.0,
-          "sodium": 5.0
-        }
-      ]
-    },
-    {
-      "order_id": "MC202605250046",
+      "order_id": "MC202605250047",
       "time": "2026-05-25T22:12:01+08:00",
       "channel": "delivery",
       "store": "上海陆家嘴环路店",
-      "total": 52.05,
-      "discount": 2.95,
+      "total": 43.53,
+      "discount": 2.47,
       "items": [
         {
-          "name": "麦乐鸡(5块)",
+          "name": "板烧鸡腿堡",
           "qty": 1,
-          "price": 13.72,
-          "calories": 230.0,
-          "protein": 14.0,
-          "fat": 13.0,
-          "carbs": 12.0,
-          "sodium": 490.0
+          "price": 22.24,
+          "calories": 391.0,
+          "protein": 23.0,
+          "fat": 17.0,
+          "carbs": 35.0,
+          "sodium": 1041.0
         },
         {
-          "name": "大薯条",
+          "name": "玉米杯",
           "qty": 1,
-          "price": 16.09,
-          "calories": 340.0,
+          "price": 12.3,
+          "calories": 87.0,
           "protein": 4.0,
-          "fat": 16.0,
-          "carbs": 44.0,
-          "sodium": 230.0
+          "fat": 1.0,
+          "carbs": 12.0,
+          "sodium": 2.0
         },
         {
-          "name": "麦辣鸡翅(2块)",
+          "name": "雪碧",
           "qty": 1,
-          "price": 12.78,
-          "calories": 240.0,
-          "protein": 14.0,
-          "fat": 16.0,
-          "carbs": 11.0,
-          "sodium": 600.0
-        },
-        {
-          "name": "可口可乐(中)",
-          "qty": 1,
-          "price": 9.46,
-          "calories": 150.0,
+          "price": 8.99,
+          "calories": 105.0,
           "protein": 0.0,
           "fat": 0.0,
+          "carbs": 26.0,
+          "sodium": 29.0
+        }
+      ]
+    },
+    {
+      "order_id": "MC202605280052",
+      "time": "2026-05-28T12:38:38+08:00",
+      "channel": "pickup",
+      "store": "上海南京西路店",
+      "total": 37.65,
+      "discount": 8.35,
+      "items": [
+        {
+          "name": "麦辣鸡腿汉堡",
+          "qty": 1,
+          "price": 18.42,
+          "calories": 485.0,
+          "protein": 24.0,
+          "fat": 24.0,
+          "carbs": 42.0,
+          "sodium": 1208.0
+        },
+        {
+          "name": "薯条",
+          "qty": 1,
+          "price": 11.46,
+          "calories": 289.0,
+          "protein": 4.0,
+          "fat": 12.0,
           "carbs": 38.0,
-          "sodium": 15.0
+          "sodium": 165.0
+        },
+        {
+          "name": "可乐",
+          "qty": 1,
+          "price": 7.78,
+          "calories": 147.0,
+          "protein": 0.0,
+          "fat": 0.0,
+          "carbs": 36.0,
+          "sodium": 0.0
         }
       ]
     },
@@ -1236,38 +1296,98 @@
       "time": "2026-05-28T18:46:40+08:00",
       "channel": "delivery",
       "store": "杭州武林广场店",
-      "total": 45.39,
-      "discount": 3.11,
+      "total": 46.79,
+      "discount": 3.21,
       "items": [
         {
           "name": "巨无霸",
           "qty": 1,
-          "price": 23.86,
-          "calories": 550.0,
-          "protein": 26.0,
-          "fat": 29.0,
-          "carbs": 45.0,
-          "sodium": 950.0
+          "price": 24.8,
+          "calories": 513.0,
+          "protein": 27.0,
+          "fat": 26.0,
+          "carbs": 42.0,
+          "sodium": 961.0
         },
         {
-          "name": "中薯条",
+          "name": "薯条",
           "qty": 1,
-          "price": 12.17,
-          "calories": 230.0,
-          "protein": 3.0,
-          "fat": 11.0,
-          "carbs": 30.0,
-          "sodium": 160.0
+          "price": 13.1,
+          "calories": 289.0,
+          "protein": 4.0,
+          "fat": 12.0,
+          "carbs": 38.0,
+          "sodium": 165.0
         },
         {
-          "name": "可口可乐(中)",
+          "name": "可乐",
           "qty": 1,
-          "price": 9.36,
-          "calories": 150.0,
+          "price": 8.89,
+          "calories": 147.0,
           "protein": 0.0,
           "fat": 0.0,
-          "carbs": 38.0,
-          "sodium": 15.0
+          "carbs": 36.0,
+          "sodium": 0.0
+        }
+      ]
+    },
+    {
+      "order_id": "MC202606070053",
+      "time": "2026-06-07T08:31:24+08:00",
+      "channel": "pickup",
+      "store": "杭州武林广场店",
+      "total": 21.97,
+      "discount": 6.03,
+      "items": [
+        {
+          "name": "猪柳蛋麦满分",
+          "qty": 1,
+          "price": 14.12,
+          "calories": 387.0,
+          "protein": 23.0,
+          "fat": 21.0,
+          "carbs": 25.0,
+          "sodium": 846.0
+        },
+        {
+          "name": "鲜萃咖啡",
+          "qty": 1,
+          "price": 7.85,
+          "calories": 13.0,
+          "protein": 1.0,
+          "fat": 0.0,
+          "carbs": 0.0,
+          "sodium": 3.0
+        }
+      ]
+    },
+    {
+      "order_id": "MC202606080026",
+      "time": "2026-06-08T07:12:50+08:00",
+      "channel": "pickup",
+      "store": "北京国贸店",
+      "total": 27.56,
+      "discount": 0.44,
+      "items": [
+        {
+          "name": "猪柳蛋麦满分",
+          "qty": 1,
+          "price": 17.72,
+          "calories": 387.0,
+          "protein": 23.0,
+          "fat": 21.0,
+          "carbs": 25.0,
+          "sodium": 846.0
+        },
+        {
+          "name": "鲜萃咖啡",
+          "qty": 1,
+          "price": 9.84,
+          "calories": 13.0,
+          "protein": 1.0,
+          "fat": 0.0,
+          "carbs": 0.0,
+          "sodium": 3.0
         }
       ]
     },
@@ -1276,43 +1396,43 @@
       "time": "2026-06-10T08:31:12+08:00",
       "channel": "pickup",
       "store": "上海徐家汇店",
-      "total": 37.22,
-      "discount": 1.28,
+      "total": 30.94,
+      "discount": 1.06,
       "items": [
         {
-          "name": "热香饼(3片)",
+          "name": "大脆鸡扒麦满分",
           "qty": 1,
-          "price": 12.57,
-          "calories": 320.0,
-          "protein": 7.0,
-          "fat": 10.0,
-          "carbs": 52.0,
-          "sodium": 480.0
+          "price": 11.12,
+          "calories": 361.0,
+          "protein": 16.0,
+          "fat": 17.0,
+          "carbs": 35.0,
+          "sodium": 804.0
         },
         {
-          "name": "鲜煮咖啡",
+          "name": "脆薯饼",
           "qty": 1,
-          "price": 11.6,
-          "calories": 5.0,
-          "protein": 0.0,
-          "fat": 0.0,
-          "carbs": 1.0,
-          "sodium": 5.0
+          "price": 7.73,
+          "calories": 146.0,
+          "protein": 1.0,
+          "fat": 9.0,
+          "carbs": 14.0,
+          "sodium": 311.0
         },
         {
-          "name": "麦旋风",
+          "name": "新地",
           "qty": 1,
-          "price": 13.05,
-          "calories": 230.0,
-          "protein": 5.0,
-          "fat": 7.0,
-          "carbs": 38.0,
-          "sodium": 90.0
+          "price": 12.09,
+          "calories": 245.0,
+          "protein": 4.0,
+          "fat": 6.0,
+          "carbs": 43.0,
+          "sodium": 84.0
         }
       ]
     },
     {
-      "order_id": "MC202606100058",
+      "order_id": "MC202606100059",
       "time": "2026-06-10T13:12:23+08:00",
       "channel": "dinein",
       "store": "上海南京西路店",
@@ -1320,184 +1440,224 @@
       "discount": 8.4,
       "items": [
         {
-          "name": "麦乐鸡(5块)",
+          "name": "芝士安格斯厚牛堡",
           "qty": 1,
-          "price": 12.28,
-          "calories": 230.0,
-          "protein": 14.0,
-          "fat": 13.0,
-          "carbs": 12.0,
-          "sodium": 490.0
+          "price": 26.69,
+          "calories": 696.0,
+          "protein": 32.0,
+          "fat": 44.0,
+          "carbs": 43.0,
+          "sodium": 897.0
         },
         {
-          "name": "大薯条",
+          "name": "薯条",
           "qty": 1,
-          "price": 14.4,
-          "calories": 340.0,
+          "price": 11.86,
+          "calories": 289.0,
           "protein": 4.0,
-          "fat": 16.0,
-          "carbs": 44.0,
-          "sodium": 230.0
+          "fat": 12.0,
+          "carbs": 38.0,
+          "sodium": 165.0
         },
         {
-          "name": "麦辣鸡翅(2块)",
+          "name": "可乐",
           "qty": 1,
-          "price": 11.44,
-          "calories": 240.0,
-          "protein": 14.0,
-          "fat": 16.0,
-          "carbs": 11.0,
-          "sodium": 600.0
-        },
-        {
-          "name": "可口可乐(中)",
-          "qty": 1,
-          "price": 8.47,
-          "calories": 150.0,
+          "price": 8.05,
+          "calories": 147.0,
           "protein": 0.0,
           "fat": 0.0,
-          "carbs": 38.0,
-          "sodium": 15.0
+          "carbs": 36.0,
+          "sodium": 0.0
         }
       ]
     },
     {
-      "order_id": "MC202606130027",
+      "order_id": "MC202606130028",
       "time": "2026-06-13T21:46:33+08:00",
       "channel": "dinein",
       "store": "杭州武林广场店",
-      "total": 44.09,
-      "discount": 4.41,
+      "total": 48.63,
+      "discount": 4.87,
       "items": [
         {
-          "name": "巨无霸",
+          "name": "麦乐鸡",
           "qty": 1,
-          "price": 23.18,
-          "calories": 550.0,
-          "protein": 26.0,
-          "fat": 29.0,
-          "carbs": 45.0,
-          "sodium": 950.0
+          "price": 13.18,
+          "calories": 213.0,
+          "protein": 12.0,
+          "fat": 12.0,
+          "carbs": 13.0,
+          "sodium": 422.0
         },
         {
-          "name": "中薯条",
+          "name": "薯条",
           "qty": 1,
-          "price": 11.82,
-          "calories": 230.0,
-          "protein": 3.0,
-          "fat": 11.0,
-          "carbs": 30.0,
-          "sodium": 160.0
-        },
-        {
-          "name": "可口可乐(中)",
-          "qty": 1,
-          "price": 9.09,
-          "calories": 150.0,
-          "protein": 0.0,
-          "fat": 0.0,
+          "price": 12.73,
+          "calories": 289.0,
+          "protein": 4.0,
+          "fat": 12.0,
           "carbs": 38.0,
-          "sodium": 15.0
-        }
-      ]
-    },
-    {
-      "order_id": "MC202606160007",
-      "time": "2026-06-16T08:18:57+08:00",
-      "channel": "dinein",
-      "store": "北京国贸店",
-      "total": 22.39,
-      "discount": 5.61,
-      "items": [
-        {
-          "name": "猪柳蛋麦满分",
-          "qty": 1,
-          "price": 12.79,
-          "calories": 380.0,
-          "protein": 21.0,
-          "fat": 23.0,
-          "carbs": 31.0,
-          "sodium": 830.0
+          "sodium": 165.0
         },
         {
-          "name": "鲜煮咖啡",
+          "name": "薄皮焦香V翅",
           "qty": 1,
-          "price": 9.6,
-          "calories": 5.0,
-          "protein": 0.0,
-          "fat": 0.0,
-          "carbs": 1.0,
-          "sodium": 5.0
-        }
-      ]
-    },
-    {
-      "order_id": "MC202606160032",
-      "time": "2026-06-16T08:53:31+08:00",
-      "channel": "dinein",
-      "store": "广州天河城店",
-      "total": 27.81,
-      "discount": 6.19,
-      "items": [
-        {
-          "name": "吉士蛋麦满分",
-          "qty": 1,
-          "price": 11.45,
-          "calories": 300.0,
+          "price": 14.09,
+          "calories": 192.0,
           "protein": 17.0,
-          "fat": 13.0,
-          "carbs": 30.0,
-          "sodium": 700.0
+          "fat": 11.0,
+          "carbs": 6.0,
+          "sodium": 594.0
         },
         {
-          "name": "鲜煮咖啡",
+          "name": "可乐",
           "qty": 1,
-          "price": 9.82,
-          "calories": 5.0,
+          "price": 8.64,
+          "calories": 147.0,
           "protein": 0.0,
           "fat": 0.0,
-          "carbs": 1.0,
-          "sodium": 5.0
+          "carbs": 36.0,
+          "sodium": 0.0
+        }
+      ]
+    },
+    {
+      "order_id": "MC202606150038",
+      "time": "2026-06-15T22:31:47+08:00",
+      "channel": "pickup",
+      "store": "广州天河城店",
+      "total": 40.23,
+      "discount": 5.77,
+      "items": [
+        {
+          "name": "板烧鸡腿堡",
+          "qty": 1,
+          "price": 20.55,
+          "calories": 391.0,
+          "protein": 23.0,
+          "fat": 17.0,
+          "carbs": 35.0,
+          "sodium": 1041.0
         },
         {
           "name": "玉米杯",
           "qty": 1,
-          "price": 6.54,
-          "calories": 90.0,
-          "protein": 3.0,
-          "fat": 2.0,
-          "carbs": 17.0,
-          "sodium": 5.0
+          "price": 11.37,
+          "calories": 87.0,
+          "protein": 4.0,
+          "fat": 1.0,
+          "carbs": 12.0,
+          "sodium": 2.0
+        },
+        {
+          "name": "雪碧",
+          "qty": 1,
+          "price": 8.31,
+          "calories": 105.0,
+          "protein": 0.0,
+          "fat": 0.0,
+          "carbs": 26.0,
+          "sodium": 29.0
         }
       ]
     },
     {
-      "order_id": "MC202606170029",
+      "order_id": "MC202606160033",
+      "time": "2026-06-16T08:53:31+08:00",
+      "channel": "dinein",
+      "store": "广州天河城店",
+      "total": 27.64,
+      "discount": 0.86,
+      "items": [
+        {
+          "name": "猪柳炒双蛋堡",
+          "qty": 1,
+          "price": 17.46,
+          "calories": 437.0,
+          "protein": 25.0,
+          "fat": 24.0,
+          "carbs": 29.0,
+          "sodium": 705.0
+        },
+        {
+          "name": "纯牛奶(盒装)",
+          "qty": 1,
+          "price": 10.18,
+          "calories": 129.0,
+          "protein": 7.0,
+          "fat": 7.0,
+          "carbs": 10.0,
+          "sodium": 73.0
+        }
+      ]
+    },
+    {
+      "order_id": "MC202606170054",
+      "time": "2026-06-17T08:12:50+08:00",
+      "channel": "delivery",
+      "store": "北京国贸店",
+      "total": 28.28,
+      "discount": 2.72,
+      "items": [
+        {
+          "name": "双层猪柳蛋麦满分",
+          "qty": 1,
+          "price": 19.16,
+          "calories": 513.0,
+          "protein": 29.0,
+          "fat": 32.0,
+          "carbs": 26.0,
+          "sodium": 1210.0
+        },
+        {
+          "name": "优品豆浆",
+          "qty": 1,
+          "price": 9.12,
+          "calories": 202.0,
+          "protein": 8.0,
+          "fat": 4.0,
+          "carbs": 33.0,
+          "sodium": 43.0
+        }
+      ]
+    },
+    {
+      "order_id": "MC202606170030",
       "time": "2026-06-17T08:24:40+08:00",
       "channel": "dinein",
       "store": "上海陆家嘴环路店",
-      "total": 24.62,
-      "discount": 1.38,
+      "total": 31.25,
+      "discount": 1.75,
       "items": [
         {
-          "name": "吉士蛋麦满分",
+          "name": "原味板烧鸡腿麦满分",
           "qty": 1,
-          "price": 13.26,
-          "calories": 300.0,
-          "protein": 17.0,
-          "fat": 13.0,
-          "carbs": 30.0,
-          "sodium": 700.0
+          "price": 14.2,
+          "calories": 246.0,
+          "protein": 15.0,
+          "fat": 9.0,
+          "carbs": 25.0,
+          "sodium": 611.0
         },
         {
-          "name": "鲜煮咖啡",
+          "name": "脆香油条",
           "qty": 1,
-          "price": 11.36,
-          "calories": 5.0,
-          "protein": 0.0,
+          "price": 7.58,
+          "calories": 202.0,
+          "protein": 5.0,
+          "fat": 12.0,
+          "carbs": 19.0,
+          "sodium": 230.0
+        },
+        {
+          "name": "鲜萃咖啡",
+          "qty": 1,
+          "price": 9.47,
+          "calories": 13.0,
+          "protein": 1.0,
           "fat": 0.0,
-          "carbs": 1.0,
-          "sodium": 5.0
+          "carbs": 0.0,
+          "sodium": 3.0
         }
       ]
     },
@@ -1506,548 +1666,458 @@
       "time": "2026-06-18T07:12:40+08:00",
       "channel": "delivery",
       "store": "上海南京西路店",
-      "total": 24.57,
-      "discount": 0.43,
+      "total": 24.53,
+      "discount": 3.97,
       "items": [
         {
-          "name": "热香饼(3片)",
+          "name": "猪柳炒双蛋堡",
           "qty": 1,
-          "price": 12.78,
-          "calories": 320.0,
-          "protein": 7.0,
-          "fat": 10.0,
-          "carbs": 52.0,
-          "sodium": 480.0
+          "price": 15.49,
+          "calories": 437.0,
+          "protein": 25.0,
+          "fat": 24.0,
+          "carbs": 29.0,
+          "sodium": 705.0
         },
         {
-          "name": "鲜煮咖啡",
+          "name": "纯牛奶(盒装)",
           "qty": 1,
-          "price": 11.8,
-          "calories": 5.0,
-          "protein": 0.0,
-          "fat": 0.0,
-          "carbs": 1.0,
-          "sodium": 5.0
+          "price": 9.04,
+          "calories": 129.0,
+          "protein": 7.0,
+          "fat": 7.0,
+          "carbs": 10.0,
+          "sodium": 73.0
         }
       ]
     },
     {
-      "order_id": "MC202606190045",
-      "time": "2026-06-19T12:18:38+08:00",
-      "channel": "pickup",
-      "store": "广州天河城店",
-      "total": 53.32,
-      "discount": 10.68,
+      "order_id": "MC202606180071",
+      "time": "2026-06-18T08:24:22+08:00",
+      "channel": "dinein",
+      "store": "杭州武林广场店",
+      "total": 25.08,
+      "discount": 7.92,
       "items": [
         {
-          "name": "麦乐鸡(5块)",
+          "name": "原味板烧鸡腿麦满分",
           "qty": 1,
-          "price": 12.08,
-          "calories": 230.0,
-          "protein": 14.0,
-          "fat": 13.0,
-          "carbs": 12.0,
-          "sodium": 490.0
+          "price": 11.4,
+          "calories": 246.0,
+          "protein": 15.0,
+          "fat": 9.0,
+          "carbs": 25.0,
+          "sodium": 611.0
         },
         {
-          "name": "大薯条",
+          "name": "脆香油条",
           "qty": 1,
-          "price": 14.16,
-          "calories": 340.0,
-          "protein": 4.0,
-          "fat": 16.0,
-          "carbs": 44.0,
+          "price": 6.08,
+          "calories": 202.0,
+          "protein": 5.0,
+          "fat": 12.0,
+          "carbs": 19.0,
           "sodium": 230.0
         },
         {
-          "name": "麦辣鸡翅(2块)",
+          "name": "鲜萃咖啡",
           "qty": 1,
-          "price": 11.25,
-          "calories": 240.0,
-          "protein": 14.0,
-          "fat": 16.0,
-          "carbs": 11.0,
-          "sodium": 600.0
-        },
-        {
-          "name": "可口可乐(中)",
-          "qty": 1,
-          "price": 8.33,
-          "calories": 150.0,
-          "protein": 0.0,
+          "price": 7.6,
+          "calories": 13.0,
+          "protein": 1.0,
           "fat": 0.0,
-          "carbs": 38.0,
-          "sodium": 15.0
-        },
-        {
-          "name": "香芋派",
-          "qty": 1,
-          "price": 7.5,
-          "calories": 220.0,
-          "protein": 3.0,
-          "fat": 10.0,
-          "carbs": 30.0,
-          "sodium": 130.0
+          "carbs": 0.0,
+          "sodium": 3.0
         }
       ]
     },
     {
-      "order_id": "MC202606230050",
-      "time": "2026-06-23T08:53:43+08:00",
-      "channel": "pickup",
-      "store": "北京国贸店",
-      "total": 37.71,
-      "discount": 0.79,
-      "items": [
-        {
-          "name": "热香饼(3片)",
-          "qty": 1,
-          "price": 12.73,
-          "calories": 320.0,
-          "protein": 7.0,
-          "fat": 10.0,
-          "carbs": 52.0,
-          "sodium": 480.0
-        },
-        {
-          "name": "鲜煮咖啡",
-          "qty": 1,
-          "price": 11.75,
-          "calories": 5.0,
-          "protein": 0.0,
-          "fat": 0.0,
-          "carbs": 1.0,
-          "sodium": 5.0
-        },
-        {
-          "name": "麦辣鸡翅(2块)",
-          "qty": 1,
-          "price": 13.22,
-          "calories": 240.0,
-          "protein": 14.0,
-          "fat": 16.0,
-          "carbs": 11.0,
-          "sodium": 600.0
-        }
-      ]
-    },
-    {
-      "order_id": "MC202606240057",
-      "time": "2026-06-24T07:18:09+08:00",
+      "order_id": "MC202606190046",
+      "time": "2026-06-19T12:18:38+08:00",
       "channel": "pickup",
       "store": "广州天河城店",
-      "total": 19.91,
-      "discount": 6.09,
+      "total": 52.91,
+      "discount": 10.59,
       "items": [
         {
-          "name": "吉士蛋麦满分",
+          "name": "芝士安格斯厚牛堡",
           "qty": 1,
-          "price": 10.72,
-          "calories": 300.0,
-          "protein": 17.0,
-          "fat": 13.0,
-          "carbs": 30.0,
-          "sodium": 700.0
+          "price": 26.24,
+          "calories": 696.0,
+          "protein": 32.0,
+          "fat": 44.0,
+          "carbs": 43.0,
+          "sodium": 897.0
         },
         {
-          "name": "鲜煮咖啡",
+          "name": "薯条",
           "qty": 1,
-          "price": 9.19,
-          "calories": 5.0,
+          "price": 11.66,
+          "calories": 289.0,
+          "protein": 4.0,
+          "fat": 12.0,
+          "carbs": 38.0,
+          "sodium": 165.0
+        },
+        {
+          "name": "可乐",
+          "qty": 1,
+          "price": 7.92,
+          "calories": 147.0,
           "protein": 0.0,
           "fat": 0.0,
-          "carbs": 1.0,
-          "sodium": 5.0
+          "carbs": 36.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "派",
+          "qty": 1,
+          "price": 7.08,
+          "calories": 232.0,
+          "protein": 2.0,
+          "fat": 12.0,
+          "carbs": 28.0,
+          "sodium": 159.0
         }
       ]
     },
     {
-      "order_id": "MC202606250040",
+      "order_id": "MC202606220020",
+      "time": "2026-06-22T07:24:33+08:00",
+      "channel": "pickup",
+      "store": "广州天河城店",
+      "total": 29.6,
+      "discount": 3.9,
+      "items": [
+        {
+          "name": "大脆鸡扒麦满分",
+          "qty": 1,
+          "price": 10.16,
+          "calories": 361.0,
+          "protein": 16.0,
+          "fat": 17.0,
+          "carbs": 35.0,
+          "sodium": 804.0
+        },
+        {
+          "name": "脆薯饼",
+          "qty": 1,
+          "price": 7.07,
+          "calories": 146.0,
+          "protein": 1.0,
+          "fat": 9.0,
+          "carbs": 14.0,
+          "sodium": 311.0
+        },
+        {
+          "name": "薯条",
+          "qty": 1,
+          "price": 12.37,
+          "calories": 289.0,
+          "protein": 4.0,
+          "fat": 12.0,
+          "carbs": 38.0,
+          "sodium": 165.0
+        }
+      ]
+    },
+    {
+      "order_id": "MC202606230051",
+      "time": "2026-06-23T08:53:43+08:00",
+      "channel": "pickup",
+      "store": "广州天河城店",
+      "total": 26.88,
+      "discount": 1.62,
+      "items": [
+        {
+          "name": "猪柳炒双蛋堡",
+          "qty": 1,
+          "price": 16.98,
+          "calories": 437.0,
+          "protein": 25.0,
+          "fat": 24.0,
+          "carbs": 29.0,
+          "sodium": 705.0
+        },
+        {
+          "name": "纯牛奶(盒装)",
+          "qty": 1,
+          "price": 9.9,
+          "calories": 129.0,
+          "protein": 7.0,
+          "fat": 7.0,
+          "carbs": 10.0,
+          "sodium": 73.0
+        }
+      ]
+    },
+    {
+      "order_id": "MC202606250041",
       "time": "2026-06-25T07:46:45+08:00",
       "channel": "delivery",
       "store": "上海陆家嘴环路店",
-      "total": 21.13,
-      "discount": 4.87,
+      "total": 26.81,
+      "discount": 6.19,
       "items": [
         {
-          "name": "吉士蛋麦满分",
+          "name": "原味板烧鸡腿麦满分",
           "qty": 1,
-          "price": 11.38,
-          "calories": 300.0,
-          "protein": 17.0,
-          "fat": 13.0,
-          "carbs": 30.0,
-          "sodium": 700.0
+          "price": 12.19,
+          "calories": 246.0,
+          "protein": 15.0,
+          "fat": 9.0,
+          "carbs": 25.0,
+          "sodium": 611.0
         },
         {
-          "name": "鲜煮咖啡",
+          "name": "脆香油条",
           "qty": 1,
-          "price": 9.75,
-          "calories": 5.0,
-          "protein": 0.0,
+          "price": 6.5,
+          "calories": 202.0,
+          "protein": 5.0,
+          "fat": 12.0,
+          "carbs": 19.0,
+          "sodium": 230.0
+        },
+        {
+          "name": "鲜萃咖啡",
+          "qty": 1,
+          "price": 8.13,
+          "calories": 13.0,
+          "protein": 1.0,
           "fat": 0.0,
-          "carbs": 1.0,
-          "sodium": 5.0
+          "carbs": 0.0,
+          "sodium": 3.0
         }
       ]
     },
     {
-      "order_id": "MC202606260015",
-      "time": "2026-06-26T23:46:27+08:00",
+      "order_id": "MC202606250015",
+      "time": "2026-06-25T17:46:26+08:00",
       "channel": "delivery",
       "store": "上海徐家汇店",
-      "total": 43.75,
-      "discount": 4.75,
+      "total": 45.1,
+      "discount": 4.9,
       "items": [
         {
           "name": "巨无霸",
           "qty": 1,
-          "price": 23.0,
-          "calories": 550.0,
-          "protein": 26.0,
-          "fat": 29.0,
-          "carbs": 45.0,
-          "sodium": 950.0
+          "price": 23.9,
+          "calories": 513.0,
+          "protein": 27.0,
+          "fat": 26.0,
+          "carbs": 42.0,
+          "sodium": 961.0
         },
         {
-          "name": "中薯条",
+          "name": "薯条",
           "qty": 1,
-          "price": 11.73,
-          "calories": 230.0,
-          "protein": 3.0,
-          "fat": 11.0,
-          "carbs": 30.0,
-          "sodium": 160.0
+          "price": 12.63,
+          "calories": 289.0,
+          "protein": 4.0,
+          "fat": 12.0,
+          "carbs": 38.0,
+          "sodium": 165.0
         },
         {
-          "name": "可口可乐(中)",
+          "name": "可乐",
           "qty": 1,
-          "price": 9.02,
-          "calories": 150.0,
+          "price": 8.57,
+          "calories": 147.0,
           "protein": 0.0,
           "fat": 0.0,
-          "carbs": 38.0,
-          "sodium": 15.0
+          "carbs": 36.0,
+          "sodium": 0.0
+        }
+      ]
+    },
+    {
+      "order_id": "MC202607090061",
+      "time": "2026-07-09T08:05:23+08:00",
+      "channel": "delivery",
+      "store": "上海徐家汇店",
+      "total": 25.13,
+      "discount": 5.87,
+      "items": [
+        {
+          "name": "双层猪柳蛋麦满分",
+          "qty": 1,
+          "price": 17.02,
+          "calories": 513.0,
+          "protein": 29.0,
+          "fat": 32.0,
+          "carbs": 26.0,
+          "sodium": 1210.0
+        },
+        {
+          "name": "优品豆浆",
+          "qty": 1,
+          "price": 8.11,
+          "calories": 202.0,
+          "protein": 8.0,
+          "fat": 4.0,
+          "carbs": 33.0,
+          "sodium": 43.0
         }
       ]
     },
     {
       "order_id": "MC202607090060",
-      "time": "2026-07-09T08:05:23+08:00",
-      "channel": "delivery",
-      "store": "上海徐家汇店",
-      "total": 22.7,
-      "discount": 5.3,
-      "items": [
-        {
-          "name": "猪柳蛋麦满分",
-          "qty": 1,
-          "price": 12.97,
-          "calories": 380.0,
-          "protein": 21.0,
-          "fat": 23.0,
-          "carbs": 31.0,
-          "sodium": 830.0
-        },
-        {
-          "name": "鲜煮咖啡",
-          "qty": 1,
-          "price": 9.73,
-          "calories": 5.0,
-          "protein": 0.0,
-          "fat": 0.0,
-          "carbs": 1.0,
-          "sodium": 5.0
-        }
-      ]
-    },
-    {
-      "order_id": "MC202607090070",
-      "time": "2026-07-09T13:24:17+08:00",
-      "channel": "mcdrive",
-      "store": "上海徐家汇店",
-      "total": 33.17,
-      "discount": 6.33,
-      "items": [
-        {
-          "name": "麦旋风",
-          "qty": 1,
-          "price": 11.34,
-          "calories": 230.0,
-          "protein": 5.0,
-          "fat": 7.0,
-          "carbs": 38.0,
-          "sodium": 90.0
-        },
-        {
-          "name": "香芋派",
-          "qty": 1,
-          "price": 7.56,
-          "calories": 220.0,
-          "protein": 3.0,
-          "fat": 10.0,
-          "carbs": 30.0,
-          "sodium": 130.0
-        },
-        {
-          "name": "拿铁",
-          "qty": 1,
-          "price": 14.27,
-          "calories": 130.0,
-          "protein": 7.0,
-          "fat": 7.0,
-          "carbs": 9.0,
-          "sodium": 80.0
-        }
-      ]
-    },
-    {
-      "order_id": "MC202607090059",
       "time": "2026-07-09T19:18:20+08:00",
       "channel": "dinein",
       "store": "北京国贸店",
-      "total": 26.38,
-      "discount": 7.62,
-      "items": [
-        {
-          "name": "玉米杯",
-          "qty": 1,
-          "price": 6.21,
-          "calories": 90.0,
-          "protein": 3.0,
-          "fat": 2.0,
-          "carbs": 17.0,
-          "sodium": 5.0
-        },
-        {
-          "name": "麦香鱼",
-          "qty": 1,
-          "price": 10.86,
-          "calories": 340.0,
-          "protein": 15.0,
-          "fat": 15.0,
-          "carbs": 33.0,
-          "sodium": 580.0
-        },
-        {
-          "name": "橙汁",
-          "qty": 1,
-          "price": 9.31,
-          "calories": 130.0,
-          "protein": 1.0,
-          "fat": 0.0,
-          "carbs": 31.0,
-          "sodium": 5.0
-        }
-      ]
-    },
-    {
-      "order_id": "MC202607100039",
-      "time": "2026-07-10T12:18:48+08:00",
-      "channel": "pickup",
-      "store": "杭州武林广场店",
-      "total": 42.13,
-      "discount": 6.37,
-      "items": [
-        {
-          "name": "巨无霸",
-          "qty": 1,
-          "price": 22.15,
-          "calories": 550.0,
-          "protein": 26.0,
-          "fat": 29.0,
-          "carbs": 45.0,
-          "sodium": 950.0
-        },
-        {
-          "name": "中薯条",
-          "qty": 1,
-          "price": 11.29,
-          "calories": 230.0,
-          "protein": 3.0,
-          "fat": 11.0,
-          "carbs": 30.0,
-          "sodium": 160.0
-        },
-        {
-          "name": "可口可乐(中)",
-          "qty": 1,
-          "price": 8.69,
-          "calories": 150.0,
-          "protein": 0.0,
-          "fat": 0.0,
-          "carbs": 38.0,
-          "sodium": 15.0
-        }
-      ]
-    },
-    {
-      "order_id": "MC202607150066",
-      "time": "2026-07-15T09:46:04+08:00",
-      "channel": "dinein",
-      "store": "杭州武林广场店",
-      "total": 23.19,
-      "discount": 2.81,
-      "items": [
-        {
-          "name": "吉士蛋麦满分",
-          "qty": 1,
-          "price": 12.49,
-          "calories": 300.0,
-          "protein": 17.0,
-          "fat": 13.0,
-          "carbs": 30.0,
-          "sodium": 700.0
-        },
-        {
-          "name": "鲜煮咖啡",
-          "qty": 1,
-          "price": 10.7,
-          "calories": 5.0,
-          "protein": 0.0,
-          "fat": 0.0,
-          "carbs": 1.0,
-          "sodium": 5.0
-        }
-      ]
-    },
-    {
-      "order_id": "MC202607180061",
-      "time": "2026-07-18T22:38:58+08:00",
-      "channel": "delivery",
-      "store": "深圳福田中心店",
-      "total": 42.07,
-      "discount": 12.93,
-      "items": [
-        {
-          "name": "麦乐鸡(5块)",
-          "qty": 1,
-          "price": 11.09,
-          "calories": 230.0,
-          "protein": 14.0,
-          "fat": 13.0,
-          "carbs": 12.0,
-          "sodium": 490.0
-        },
-        {
-          "name": "大薯条",
-          "qty": 1,
-          "price": 13.0,
-          "calories": 340.0,
-          "protein": 4.0,
-          "fat": 16.0,
-          "carbs": 44.0,
-          "sodium": 230.0
-        },
-        {
-          "name": "麦辣鸡翅(2块)",
-          "qty": 1,
-          "price": 10.33,
-          "calories": 240.0,
-          "protein": 14.0,
-          "fat": 16.0,
-          "carbs": 11.0,
-          "sodium": 600.0
-        },
-        {
-          "name": "可口可乐(中)",
-          "qty": 1,
-          "price": 7.65,
-          "calories": 150.0,
-          "protein": 0.0,
-          "fat": 0.0,
-          "carbs": 38.0,
-          "sodium": 15.0
-        }
-      ]
-    },
-    {
-      "order_id": "MC202607300069",
-      "time": "2026-07-30T20:05:25+08:00",
-      "channel": "delivery",
-      "store": "上海徐家汇店",
-      "total": 51.97,
-      "discount": 0.03,
-      "items": [
-        {
-          "name": "双层吉士汉堡",
-          "qty": 1,
-          "price": 20.99,
-          "calories": 450.0,
-          "protein": 25.0,
-          "fat": 22.0,
-          "carbs": 35.0,
-          "sodium": 900.0
-        },
-        {
-          "name": "中薯条",
-          "qty": 1,
-          "price": 12.99,
-          "calories": 230.0,
-          "protein": 3.0,
-          "fat": 11.0,
-          "carbs": 30.0,
-          "sodium": 160.0
-        },
-        {
-          "name": "可口可乐(中)",
-          "qty": 1,
-          "price": 9.99,
-          "calories": 150.0,
-          "protein": 0.0,
-          "fat": 0.0,
-          "carbs": 38.0,
-          "sodium": 15.0
-        },
-        {
-          "name": "玉米杯",
-          "qty": 1,
-          "price": 8.0,
-          "calories": 90.0,
-          "protein": 3.0,
-          "fat": 2.0,
-          "carbs": 17.0,
-          "sodium": 5.0
-        }
-      ]
-    },
-    {
-      "order_id": "MC202608060071",
-      "time": "2026-08-06T18:46:17+08:00",
-      "channel": "pickup",
-      "store": "上海南京西路店",
-      "total": 32.07,
-      "discount": 9.43,
+      "total": 35.69,
+      "discount": 10.31,
       "items": [
         {
           "name": "板烧鸡腿堡",
           "qty": 1,
-          "price": 18.16,
-          "calories": 430.0,
-          "protein": 24.0,
+          "price": 18.23,
+          "calories": 391.0,
+          "protein": 23.0,
           "fat": 17.0,
-          "carbs": 42.0,
-          "sodium": 850.0
+          "carbs": 35.0,
+          "sodium": 1041.0
         },
         {
           "name": "玉米杯",
           "qty": 1,
-          "price": 6.18,
-          "calories": 90.0,
-          "protein": 3.0,
-          "fat": 2.0,
-          "carbs": 17.0,
-          "sodium": 5.0
+          "price": 10.09,
+          "calories": 87.0,
+          "protein": 4.0,
+          "fat": 1.0,
+          "carbs": 12.0,
+          "sodium": 2.0
         },
         {
-          "name": "雪碧(中)",
+          "name": "雪碧",
           "qty": 1,
-          "price": 7.73,
-          "calories": 150.0,
+          "price": 7.37,
+          "calories": 105.0,
           "protein": 0.0,
           "fat": 0.0,
-          "carbs": 38.0,
-          "sodium": 20.0
+          "carbs": 26.0,
+          "sodium": 29.0
+        }
+      ]
+    },
+    {
+      "order_id": "MC202607180062",
+      "time": "2026-07-18T22:38:58+08:00",
+      "channel": "delivery",
+      "store": "深圳福田中心店",
+      "total": 35.19,
+      "discount": 10.81,
+      "items": [
+        {
+          "name": "板烧鸡腿堡",
+          "qty": 1,
+          "price": 17.98,
+          "calories": 391.0,
+          "protein": 23.0,
+          "fat": 17.0,
+          "carbs": 35.0,
+          "sodium": 1041.0
+        },
+        {
+          "name": "玉米杯",
+          "qty": 1,
+          "price": 9.94,
+          "calories": 87.0,
+          "protein": 4.0,
+          "fat": 1.0,
+          "carbs": 12.0,
+          "sodium": 2.0
+        },
+        {
+          "name": "雪碧",
+          "qty": 1,
+          "price": 7.27,
+          "calories": 105.0,
+          "protein": 0.0,
+          "fat": 0.0,
+          "carbs": 26.0,
+          "sodium": 29.0
+        }
+      ]
+    },
+    {
+      "order_id": "MC202607210035",
+      "time": "2026-07-21T18:53:59+08:00",
+      "channel": "pickup",
+      "store": "深圳福田中心店",
+      "total": 39.01,
+      "discount": 2.99,
+      "items": [
+        {
+          "name": "玉米杯",
+          "qty": 1,
+          "price": 12.07,
+          "calories": 87.0,
+          "protein": 4.0,
+          "fat": 1.0,
+          "carbs": 12.0,
+          "sodium": 2.0
+        },
+        {
+          "name": "麦香鱼",
+          "qty": 1,
+          "price": 20.43,
+          "calories": 325.0,
+          "protein": 16.0,
+          "fat": 13.0,
+          "carbs": 35.0,
+          "sodium": 556.0
+        },
+        {
+          "name": "苹果片",
+          "qty": 1,
+          "price": 6.5,
+          "calories": 32.0,
+          "protein": 0.0,
+          "fat": 0.0,
+          "carbs": 7.0,
+          "sodium": 0.0
+        }
+      ]
+    },
+    {
+      "order_id": "MC202607300032",
+      "time": "2026-07-30T23:46:45+08:00",
+      "channel": "dinein",
+      "store": "上海徐家汇店",
+      "total": 41.58,
+      "discount": 4.42,
+      "items": [
+        {
+          "name": "板烧鸡腿堡",
+          "qty": 1,
+          "price": 21.24,
+          "calories": 391.0,
+          "protein": 23.0,
+          "fat": 17.0,
+          "carbs": 35.0,
+          "sodium": 1041.0
+        },
+        {
+          "name": "玉米杯",
+          "qty": 1,
+          "price": 11.75,
+          "calories": 87.0,
+          "protein": 4.0,
+          "fat": 1.0,
+          "carbs": 12.0,
+          "sodium": 2.0
+        },
+        {
+          "name": "雪碧",
+          "qty": 1,
+          "price": 8.59,
+          "calories": 105.0,
+          "protein": 0.0,
+          "fat": 0.0,
+          "carbs": 26.0,
+          "sodium": 29.0
         }
       ]
     },
@@ -2056,28 +2126,28 @@
       "time": "2026-08-08T08:31:48+08:00",
       "channel": "pickup",
       "store": "杭州武林广场店",
-      "total": 26.51,
-      "discount": 1.49,
+      "total": 29.35,
+      "discount": 1.65,
       "items": [
         {
-          "name": "猪柳蛋麦满分",
+          "name": "双层猪柳蛋麦满分",
           "qty": 1,
-          "price": 15.15,
-          "calories": 380.0,
-          "protein": 21.0,
-          "fat": 23.0,
-          "carbs": 31.0,
-          "sodium": 830.0
+          "price": 19.88,
+          "calories": 513.0,
+          "protein": 29.0,
+          "fat": 32.0,
+          "carbs": 26.0,
+          "sodium": 1210.0
         },
         {
-          "name": "鲜煮咖啡",
+          "name": "优品豆浆",
           "qty": 1,
-          "price": 11.36,
-          "calories": 5.0,
-          "protein": 0.0,
-          "fat": 0.0,
-          "carbs": 1.0,
-          "sodium": 5.0
+          "price": 9.47,
+          "calories": 202.0,
+          "protein": 8.0,
+          "fat": 4.0,
+          "carbs": 33.0,
+          "sodium": 43.0
         }
       ]
     },
@@ -2085,39 +2155,39 @@
       "order_id": "MC202608090006",
       "time": "2026-08-09T07:12:59+08:00",
       "channel": "delivery",
-      "store": "上海陆家嘴环路店",
-      "total": 32.85,
-      "discount": 8.65,
+      "store": "杭州武林广场店",
+      "total": 38.45,
+      "discount": 5.55,
       "items": [
         {
-          "name": "猪柳蛋麦满分",
+          "name": "猪柳炒双蛋堡",
           "qty": 1,
-          "price": 12.67,
-          "calories": 380.0,
-          "protein": 21.0,
-          "fat": 23.0,
-          "carbs": 31.0,
-          "sodium": 830.0
+          "price": 15.73,
+          "calories": 437.0,
+          "protein": 25.0,
+          "fat": 24.0,
+          "carbs": 29.0,
+          "sodium": 705.0
         },
         {
-          "name": "鲜煮咖啡",
+          "name": "纯牛奶(盒装)",
           "qty": 1,
-          "price": 9.5,
-          "calories": 5.0,
-          "protein": 0.0,
-          "fat": 0.0,
-          "carbs": 1.0,
-          "sodium": 5.0
+          "price": 9.17,
+          "calories": 129.0,
+          "protein": 7.0,
+          "fat": 7.0,
+          "carbs": 10.0,
+          "sodium": 73.0
         },
         {
-          "name": "麦辣鸡翅(2块)",
+          "name": "薄皮焦香V翅",
           "qty": 1,
-          "price": 10.69,
-          "calories": 240.0,
-          "protein": 14.0,
-          "fat": 16.0,
-          "carbs": 11.0,
-          "sodium": 600.0
+          "price": 13.54,
+          "calories": 192.0,
+          "protein": 17.0,
+          "fat": 11.0,
+          "carbs": 6.0,
+          "sodium": 594.0
         }
       ]
     },
@@ -2126,268 +2196,218 @@
       "time": "2026-08-10T08:46:45+08:00",
       "channel": "mcdrive",
       "store": "上海陆家嘴环路店",
-      "total": 25.04,
-      "discount": 2.96,
+      "total": 27.72,
+      "discount": 3.28,
       "items": [
         {
-          "name": "猪柳蛋麦满分",
+          "name": "双层猪柳蛋麦满分",
           "qty": 1,
-          "price": 14.31,
-          "calories": 380.0,
-          "protein": 21.0,
-          "fat": 23.0,
-          "carbs": 31.0,
-          "sodium": 830.0
+          "price": 18.78,
+          "calories": 513.0,
+          "protein": 29.0,
+          "fat": 32.0,
+          "carbs": 26.0,
+          "sodium": 1210.0
         },
         {
-          "name": "鲜煮咖啡",
+          "name": "优品豆浆",
           "qty": 1,
-          "price": 10.73,
-          "calories": 5.0,
-          "protein": 0.0,
-          "fat": 0.0,
-          "carbs": 1.0,
-          "sodium": 5.0
+          "price": 8.94,
+          "calories": 202.0,
+          "protein": 8.0,
+          "fat": 4.0,
+          "carbs": 33.0,
+          "sodium": 43.0
         }
       ]
     },
     {
-      "order_id": "MC202608170048",
+      "order_id": "MC202608170049",
       "time": "2026-08-17T08:05:56+08:00",
       "channel": "pickup",
-      "store": "上海徐家汇店",
-      "total": 33.49,
-      "discount": 0.51,
+      "store": "上海南京西路店",
+      "total": 28.18,
+      "discount": 0.32,
       "items": [
         {
-          "name": "热香饼(3片)",
+          "name": "猪柳炒双蛋堡",
           "qty": 1,
-          "price": 12.8,
-          "calories": 320.0,
+          "price": 17.8,
+          "calories": 437.0,
+          "protein": 25.0,
+          "fat": 24.0,
+          "carbs": 29.0,
+          "sodium": 705.0
+        },
+        {
+          "name": "纯牛奶(盒装)",
+          "qty": 1,
+          "price": 10.38,
+          "calories": 129.0,
           "protein": 7.0,
-          "fat": 10.0,
-          "carbs": 52.0,
-          "sodium": 480.0
-        },
-        {
-          "name": "鲜煮咖啡",
-          "qty": 1,
-          "price": 11.82,
-          "calories": 5.0,
-          "protein": 0.0,
-          "fat": 0.0,
-          "carbs": 1.0,
-          "sodium": 5.0
-        },
-        {
-          "name": "香芋派",
-          "qty": 1,
-          "price": 8.86,
-          "calories": 220.0,
-          "protein": 3.0,
-          "fat": 10.0,
-          "carbs": 30.0,
-          "sodium": 130.0
+          "fat": 7.0,
+          "carbs": 10.0,
+          "sodium": 73.0
         }
       ]
     },
     {
-      "order_id": "MC202608180042",
+      "order_id": "MC202608180043",
       "time": "2026-08-18T17:38:06+08:00",
       "channel": "delivery",
       "store": "上海徐家汇店",
-      "total": 21.05,
-      "discount": 6.95,
+      "total": 33.45,
+      "discount": 11.05,
       "items": [
         {
-          "name": "猪柳蛋麦满分",
+          "name": "麦香鱼",
           "qty": 1,
-          "price": 12.03,
-          "calories": 380.0,
-          "protein": 21.0,
-          "fat": 23.0,
-          "carbs": 31.0,
-          "sodium": 830.0
-        },
-        {
-          "name": "鲜煮咖啡",
-          "qty": 1,
-          "price": 9.02,
-          "calories": 5.0,
-          "protein": 0.0,
-          "fat": 0.0,
-          "carbs": 1.0,
-          "sodium": 5.0
-        }
-      ]
-    },
-    {
-      "order_id": "MC202608240019",
-      "time": "2026-08-24T22:12:51+08:00",
-      "channel": "dinein",
-      "store": "广州天河城店",
-      "total": 40.06,
-      "discount": 8.44,
-      "items": [
-        {
-          "name": "巨无霸",
-          "qty": 1,
-          "price": 21.06,
-          "calories": 550.0,
-          "protein": 26.0,
-          "fat": 29.0,
-          "carbs": 45.0,
-          "sodium": 950.0
-        },
-        {
-          "name": "中薯条",
-          "qty": 1,
-          "price": 10.74,
-          "calories": 230.0,
-          "protein": 3.0,
-          "fat": 11.0,
-          "carbs": 30.0,
-          "sodium": 160.0
-        },
-        {
-          "name": "可口可乐(中)",
-          "qty": 1,
-          "price": 8.26,
-          "calories": 150.0,
-          "protein": 0.0,
-          "fat": 0.0,
-          "carbs": 38.0,
-          "sodium": 15.0
-        }
-      ]
-    },
-    {
-      "order_id": "MC202608310064",
-      "time": "2026-08-31T20:31:00+08:00",
-      "channel": "dinein",
-      "store": "杭州武林广场店",
-      "total": 32.37,
-      "discount": 7.13,
-      "items": [
-        {
-          "name": "麦旋风",
-          "qty": 1,
-          "price": 11.06,
-          "calories": 230.0,
-          "protein": 5.0,
-          "fat": 7.0,
-          "carbs": 38.0,
-          "sodium": 90.0
-        },
-        {
-          "name": "香芋派",
-          "qty": 1,
-          "price": 7.38,
-          "calories": 220.0,
-          "protein": 3.0,
-          "fat": 10.0,
-          "carbs": 30.0,
-          "sodium": 130.0
-        },
-        {
-          "name": "拿铁",
-          "qty": 1,
-          "price": 13.93,
-          "calories": 130.0,
-          "protein": 7.0,
-          "fat": 7.0,
-          "carbs": 9.0,
-          "sodium": 80.0
-        }
-      ]
-    },
-    {
-      "order_id": "MC202609010072",
-      "time": "2026-09-01T08:12:01+08:00",
-      "channel": "pickup",
-      "store": "深圳福田中心店",
-      "total": 18.6,
-      "discount": 6.4,
-      "items": [
-        {
-          "name": "热香饼(3片)",
-          "qty": 1,
-          "price": 9.67,
-          "calories": 320.0,
-          "protein": 7.0,
-          "fat": 10.0,
-          "carbs": 52.0,
-          "sodium": 480.0
-        },
-        {
-          "name": "鲜煮咖啡",
-          "qty": 1,
-          "price": 8.93,
-          "calories": 5.0,
-          "protein": 0.0,
-          "fat": 0.0,
-          "carbs": 1.0,
-          "sodium": 5.0
-        }
-      ]
-    },
-    {
-      "order_id": "MC202609030014",
-      "time": "2026-09-03T08:53:01+08:00",
-      "channel": "pickup",
-      "store": "深圳福田中心店",
-      "total": 22.49,
-      "discount": 3.51,
-      "items": [
-        {
-          "name": "吉士蛋麦满分",
-          "qty": 1,
-          "price": 12.11,
-          "calories": 300.0,
-          "protein": 17.0,
+          "price": 16.54,
+          "calories": 325.0,
+          "protein": 16.0,
           "fat": 13.0,
-          "carbs": 30.0,
-          "sodium": 700.0
+          "carbs": 35.0,
+          "sodium": 556.0
         },
         {
-          "name": "鲜煮咖啡",
+          "name": "玉米杯",
           "qty": 1,
-          "price": 10.38,
-          "calories": 5.0,
+          "price": 9.77,
+          "calories": 87.0,
+          "protein": 4.0,
+          "fat": 1.0,
+          "carbs": 12.0,
+          "sodium": 2.0
+        },
+        {
+          "name": "雪碧",
+          "qty": 1,
+          "price": 7.14,
+          "calories": 105.0,
           "protein": 0.0,
           "fat": 0.0,
-          "carbs": 1.0,
-          "sodium": 5.0
+          "carbs": 26.0,
+          "sodium": 29.0
         }
       ]
     },
     {
-      "order_id": "MC202609070053",
-      "time": "2026-09-07T07:18:46+08:00",
-      "channel": "mcdrive",
-      "store": "北京国贸店",
-      "total": 25.55,
-      "discount": 2.45,
+      "order_id": "MC202608290018",
+      "time": "2026-08-29T12:18:48+08:00",
+      "channel": "dinein",
+      "store": "上海陆家嘴环路店",
+      "total": 56.25,
+      "discount": 1.75,
       "items": [
         {
-          "name": "猪柳蛋麦满分",
+          "name": "培根安格斯厚牛堡",
           "qty": 1,
-          "price": 14.6,
-          "calories": 380.0,
-          "protein": 21.0,
-          "fat": 23.0,
-          "carbs": 31.0,
-          "sodium": 830.0
+          "price": 33.46,
+          "calories": 707.0,
+          "protein": 34.0,
+          "fat": 44.0,
+          "carbs": 43.0,
+          "sodium": 1037.0
         },
         {
-          "name": "鲜煮咖啡",
+          "name": "薯条",
           "qty": 1,
-          "price": 10.95,
-          "calories": 5.0,
+          "price": 13.58,
+          "calories": 289.0,
+          "protein": 4.0,
+          "fat": 12.0,
+          "carbs": 38.0,
+          "sodium": 165.0
+        },
+        {
+          "name": "可乐",
+          "qty": 1,
+          "price": 9.21,
+          "calories": 147.0,
           "protein": 0.0,
           "fat": 0.0,
-          "carbs": 1.0,
-          "sodium": 5.0
+          "carbs": 36.0,
+          "sodium": 0.0
+        }
+      ]
+    },
+    {
+      "order_id": "MC202608310039",
+      "time": "2026-08-31T19:31:01+08:00",
+      "channel": "delivery",
+      "store": "上海徐家汇店",
+      "total": 48.37,
+      "discount": 9.63,
+      "items": [
+        {
+          "name": "培根安格斯厚牛堡",
+          "qty": 1,
+          "price": 28.77,
+          "calories": 707.0,
+          "protein": 34.0,
+          "fat": 44.0,
+          "carbs": 43.0,
+          "sodium": 1037.0
+        },
+        {
+          "name": "薯条",
+          "qty": 1,
+          "price": 11.68,
+          "calories": 289.0,
+          "protein": 4.0,
+          "fat": 12.0,
+          "carbs": 38.0,
+          "sodium": 165.0
+        },
+        {
+          "name": "可乐",
+          "qty": 1,
+          "price": 7.92,
+          "calories": 147.0,
+          "protein": 0.0,
+          "fat": 0.0,
+          "carbs": 36.0,
+          "sodium": 0.0
+        }
+      ]
+    },
+    {
+      "order_id": "MC202609020034",
+      "time": "2026-09-02T12:31:27+08:00",
+      "channel": "pickup",
+      "store": "广州天河城店",
+      "total": 48.46,
+      "discount": 9.54,
+      "items": [
+        {
+          "name": "培根安格斯厚牛堡",
+          "qty": 1,
+          "price": 28.83,
+          "calories": 707.0,
+          "protein": 34.0,
+          "fat": 44.0,
+          "carbs": 43.0,
+          "sodium": 1037.0
+        },
+        {
+          "name": "薯条",
+          "qty": 1,
+          "price": 11.7,
+          "calories": 289.0,
+          "protein": 4.0,
+          "fat": 12.0,
+          "carbs": 38.0,
+          "sodium": 165.0
+        },
+        {
+          "name": "可乐",
+          "qty": 1,
+          "price": 7.94,
+          "calories": 147.0,
+          "protein": 0.0,
+          "fat": 0.0,
+          "carbs": 36.0,
+          "sodium": 0.0
         }
       ]
     },
@@ -2396,98 +2416,158 @@
       "time": "2026-09-08T15:53:28+08:00",
       "channel": "pickup",
       "store": "杭州武林广场店",
-      "total": 37.52,
-      "discount": 3.98,
+      "total": 39.78,
+      "discount": 4.22,
       "items": [
         {
-          "name": "板烧鸡腿堡",
+          "name": "酥酥多笋卷",
           "qty": 1,
-          "price": 21.25,
-          "calories": 430.0,
+          "price": 18.53,
+          "calories": 342.0,
+          "protein": 14.0,
+          "fat": 15.0,
+          "carbs": 36.0,
+          "sodium": 1044.0
+        },
+        {
+          "name": "那么大鸡排（椒盐风味）",
+          "qty": 1,
+          "price": 12.66,
+          "calories": 385.0,
           "protein": 24.0,
-          "fat": 17.0,
-          "carbs": 42.0,
-          "sodium": 850.0
+          "fat": 21.0,
+          "carbs": 24.0,
+          "sodium": 996.0
         },
         {
-          "name": "玉米杯",
+          "name": "可乐",
           "qty": 1,
-          "price": 7.23,
-          "calories": 90.0,
-          "protein": 3.0,
-          "fat": 2.0,
-          "carbs": 17.0,
-          "sodium": 5.0
-        },
-        {
-          "name": "雪碧(中)",
-          "qty": 1,
-          "price": 9.04,
-          "calories": 150.0,
+          "price": 8.59,
+          "calories": 147.0,
           "protein": 0.0,
           "fat": 0.0,
-          "carbs": 38.0,
-          "sodium": 20.0
+          "carbs": 36.0,
+          "sodium": 0.0
         }
       ]
     },
     {
-      "order_id": "MC202609120033",
-      "time": "2026-09-12T08:53:31+08:00",
-      "channel": "delivery",
-      "store": "北京国贸店",
-      "total": 22.66,
-      "discount": 3.34,
-      "items": [
-        {
-          "name": "吉士蛋麦满分",
-          "qty": 1,
-          "price": 12.2,
-          "calories": 300.0,
-          "protein": 17.0,
-          "fat": 13.0,
-          "carbs": 30.0,
-          "sodium": 700.0
-        },
-        {
-          "name": "鲜煮咖啡",
-          "qty": 1,
-          "price": 10.46,
-          "calories": 5.0,
-          "protein": 0.0,
-          "fat": 0.0,
-          "carbs": 1.0,
-          "sodium": 5.0
-        }
-      ]
-    },
-    {
-      "order_id": "MC202609120056",
-      "time": "2026-09-12T09:31:25+08:00",
+      "order_id": "MC202609110058",
+      "time": "2026-09-11T09:24:51+08:00",
       "channel": "dinein",
-      "store": "上海徐家汇店",
-      "total": 20.76,
-      "discount": 7.24,
+      "store": "广州天河城店",
+      "total": 33.27,
+      "discount": 8.73,
       "items": [
         {
           "name": "猪柳蛋麦满分",
           "qty": 1,
-          "price": 11.87,
-          "calories": 380.0,
-          "protein": 21.0,
-          "fat": 23.0,
-          "carbs": 31.0,
-          "sodium": 830.0
+          "price": 14.26,
+          "calories": 387.0,
+          "protein": 23.0,
+          "fat": 21.0,
+          "carbs": 25.0,
+          "sodium": 846.0
         },
         {
-          "name": "鲜煮咖啡",
+          "name": "鲜萃咖啡",
           "qty": 1,
-          "price": 8.9,
-          "calories": 5.0,
+          "price": 7.92,
+          "calories": 13.0,
+          "protein": 1.0,
+          "fat": 0.0,
+          "carbs": 0.0,
+          "sodium": 3.0
+        },
+        {
+          "name": "薯条",
+          "qty": 1,
+          "price": 11.09,
+          "calories": 289.0,
+          "protein": 4.0,
+          "fat": 12.0,
+          "carbs": 38.0,
+          "sodium": 165.0
+        }
+      ]
+    },
+    {
+      "order_id": "MC202609130014",
+      "time": "2026-09-13T07:18:59+08:00",
+      "channel": "pickup",
+      "store": "上海南京西路店",
+      "total": 27.17,
+      "discount": 5.83,
+      "items": [
+        {
+          "name": "原味板烧鸡腿麦满分",
+          "qty": 1,
+          "price": 12.35,
+          "calories": 246.0,
+          "protein": 15.0,
+          "fat": 9.0,
+          "carbs": 25.0,
+          "sodium": 611.0
+        },
+        {
+          "name": "脆香油条",
+          "qty": 1,
+          "price": 6.59,
+          "calories": 202.0,
+          "protein": 5.0,
+          "fat": 12.0,
+          "carbs": 19.0,
+          "sodium": 230.0
+        },
+        {
+          "name": "鲜萃咖啡",
+          "qty": 1,
+          "price": 8.23,
+          "calories": 13.0,
+          "protein": 1.0,
+          "fat": 0.0,
+          "carbs": 0.0,
+          "sodium": 3.0
+        }
+      ]
+    },
+    {
+      "order_id": "MC202609170007",
+      "time": "2026-09-17T19:18:09+08:00",
+      "channel": "dinein",
+      "store": "北京国贸店",
+      "total": 37.18,
+      "discount": 9.32,
+      "items": [
+        {
+          "name": "双层吉士汉堡",
+          "qty": 1,
+          "price": 18.39,
+          "calories": 429.0,
+          "protein": 27.0,
+          "fat": 22.0,
+          "carbs": 31.0,
+          "sodium": 1017.0
+        },
+        {
+          "name": "薯条",
+          "qty": 1,
+          "price": 11.2,
+          "calories": 289.0,
+          "protein": 4.0,
+          "fat": 12.0,
+          "carbs": 38.0,
+          "sodium": 165.0
+        },
+        {
+          "name": "可乐",
+          "qty": 1,
+          "price": 7.6,
+          "calories": 147.0,
           "protein": 0.0,
           "fat": 0.0,
-          "carbs": 1.0,
-          "sodium": 5.0
+          "carbs": 36.0,
+          "sodium": 0.0
         }
       ]
     },
@@ -2496,238 +2576,118 @@
       "time": "2026-09-18T08:46:30+08:00",
       "channel": "pickup",
       "store": "上海陆家嘴环路店",
-      "total": 27.94,
-      "discount": 0.06,
+      "total": 30.93,
+      "discount": 0.07,
       "items": [
         {
-          "name": "猪柳蛋麦满分",
+          "name": "双层猪柳蛋麦满分",
           "qty": 1,
-          "price": 15.96,
-          "calories": 380.0,
-          "protein": 21.0,
-          "fat": 23.0,
+          "price": 20.95,
+          "calories": 513.0,
+          "protein": 29.0,
+          "fat": 32.0,
+          "carbs": 26.0,
+          "sodium": 1210.0
+        },
+        {
+          "name": "优品豆浆",
+          "qty": 1,
+          "price": 9.98,
+          "calories": 202.0,
+          "protein": 8.0,
+          "fat": 4.0,
+          "carbs": 33.0,
+          "sodium": 43.0
+        }
+      ]
+    },
+    {
+      "order_id": "MC202609200069",
+      "time": "2026-09-20T12:05:05+08:00",
+      "channel": "pickup",
+      "store": "上海陆家嘴环路店",
+      "total": 42.22,
+      "discount": 4.28,
+      "items": [
+        {
+          "name": "双层吉士汉堡",
+          "qty": 1,
+          "price": 20.88,
+          "calories": 429.0,
+          "protein": 27.0,
+          "fat": 22.0,
           "carbs": 31.0,
-          "sodium": 830.0
+          "sodium": 1017.0
         },
         {
-          "name": "鲜煮咖啡",
+          "name": "薯条",
           "qty": 1,
-          "price": 11.97,
-          "calories": 5.0,
+          "price": 12.71,
+          "calories": 289.0,
+          "protein": 4.0,
+          "fat": 12.0,
+          "carbs": 38.0,
+          "sodium": 165.0
+        },
+        {
+          "name": "可乐",
+          "qty": 1,
+          "price": 8.62,
+          "calories": 147.0,
           "protein": 0.0,
           "fat": 0.0,
-          "carbs": 1.0,
-          "sodium": 5.0
+          "carbs": 36.0,
+          "sodium": 0.0
         }
       ]
     },
     {
-      "order_id": "MC202609190051",
-      "time": "2026-09-19T07:18:04+08:00",
-      "channel": "delivery",
-      "store": "北京国贸店",
-      "total": 29.83,
-      "discount": 4.17,
-      "items": [
-        {
-          "name": "热香饼(3片)",
-          "qty": 1,
-          "price": 11.4,
-          "calories": 320.0,
-          "protein": 7.0,
-          "fat": 10.0,
-          "carbs": 52.0,
-          "sodium": 480.0
-        },
-        {
-          "name": "鲜煮咖啡",
-          "qty": 1,
-          "price": 10.53,
-          "calories": 5.0,
-          "protein": 0.0,
-          "fat": 0.0,
-          "carbs": 1.0,
-          "sodium": 5.0
-        },
-        {
-          "name": "香芋派",
-          "qty": 1,
-          "price": 7.9,
-          "calories": 220.0,
-          "protein": 3.0,
-          "fat": 10.0,
-          "carbs": 30.0,
-          "sodium": 130.0
-        }
-      ]
-    },
-    {
-      "order_id": "MC202609200063",
-      "time": "2026-09-20T12:18:50+08:00",
-      "channel": "party",
-      "store": "杭州武林广场店",
-      "total": 84.28,
-      "discount": 8.72,
-      "items": [
-        {
-          "name": "板烧鸡腿堡",
-          "qty": 1,
-          "price": 21.3,
-          "calories": 430.0,
-          "protein": 24.0,
-          "fat": 17.0,
-          "carbs": 42.0,
-          "sodium": 850.0
-        },
-        {
-          "name": "玉米杯",
-          "qty": 1,
-          "price": 7.25,
-          "calories": 90.0,
-          "protein": 3.0,
-          "fat": 2.0,
-          "carbs": 17.0,
-          "sodium": 5.0
-        },
-        {
-          "name": "雪碧(中)",
-          "qty": 1,
-          "price": 9.06,
-          "calories": 150.0,
-          "protein": 0.0,
-          "fat": 0.0,
-          "carbs": 38.0,
-          "sodium": 20.0
-        },
-        {
-          "name": "麦辣鸡翅(2块)",
-          "qty": 1,
-          "price": 12.23,
-          "calories": 240.0,
-          "protein": 14.0,
-          "fat": 16.0,
-          "carbs": 11.0,
-          "sodium": 600.0
-        },
-        {
-          "name": "麦乐鸡(5块)",
-          "qty": 1,
-          "price": 13.14,
-          "calories": 230.0,
-          "protein": 14.0,
-          "fat": 13.0,
-          "carbs": 12.0,
-          "sodium": 490.0
-        },
-        {
-          "name": "可口可乐(中)",
-          "qty": 1,
-          "price": 9.06,
-          "calories": 150.0,
-          "protein": 0.0,
-          "fat": 0.0,
-          "carbs": 38.0,
-          "sodium": 15.0
-        },
-        {
-          "name": "麦旋风",
-          "qty": 1,
-          "price": 12.23,
-          "calories": 230.0,
-          "protein": 5.0,
-          "fat": 7.0,
-          "carbs": 38.0,
-          "sodium": 90.0
-        }
-      ]
-    },
-    {
-      "order_id": "MC202609220065",
-      "time": "2026-09-22T11:18:58+08:00",
-      "channel": "delivery",
-      "store": "杭州武林广场店",
-      "total": 50.65,
-      "discount": 4.85,
-      "items": [
-        {
-          "name": "板烧鸡腿堡",
-          "qty": 1,
-          "price": 21.45,
-          "calories": 430.0,
-          "protein": 24.0,
-          "fat": 17.0,
-          "carbs": 42.0,
-          "sodium": 850.0
-        },
-        {
-          "name": "中薯条",
-          "qty": 1,
-          "price": 11.87,
-          "calories": 230.0,
-          "protein": 3.0,
-          "fat": 11.0,
-          "carbs": 30.0,
-          "sodium": 160.0
-        },
-        {
-          "name": "雪碧(中)",
-          "qty": 1,
-          "price": 9.13,
-          "calories": 150.0,
-          "protein": 0.0,
-          "fat": 0.0,
-          "carbs": 38.0,
-          "sodium": 20.0
-        },
-        {
-          "name": "香芋派",
-          "qty": 1,
-          "price": 8.21,
-          "calories": 220.0,
-          "protein": 3.0,
-          "fat": 10.0,
-          "carbs": 30.0,
-          "sodium": 130.0
-        }
-      ]
-    },
-    {
-      "order_id": "MC202609260041",
+      "order_id": "MC202609260042",
       "time": "2026-09-26T12:05:33+08:00",
       "channel": "pickup",
       "store": "上海徐家汇店",
-      "total": 34.31,
-      "discount": 1.69,
+      "total": 54.79,
+      "discount": 2.71,
       "items": [
         {
-          "name": "猪柳蛋麦满分",
+          "name": "麦香鱼",
           "qty": 1,
-          "price": 15.25,
-          "calories": 380.0,
-          "protein": 21.0,
-          "fat": 23.0,
-          "carbs": 31.0,
-          "sodium": 830.0
-        },
-        {
-          "name": "鲜煮咖啡",
-          "qty": 1,
-          "price": 11.44,
-          "calories": 5.0,
-          "protein": 0.0,
-          "fat": 0.0,
-          "carbs": 1.0,
-          "sodium": 5.0
+          "price": 20.96,
+          "calories": 325.0,
+          "protein": 16.0,
+          "fat": 13.0,
+          "carbs": 35.0,
+          "sodium": 556.0
         },
         {
           "name": "玉米杯",
           "qty": 1,
-          "price": 7.62,
-          "calories": 90.0,
-          "protein": 3.0,
-          "fat": 2.0,
-          "carbs": 17.0,
-          "sodium": 5.0
+          "price": 12.39,
+          "calories": 87.0,
+          "protein": 4.0,
+          "fat": 1.0,
+          "carbs": 12.0,
+          "sodium": 2.0
+        },
+        {
+          "name": "雪碧",
+          "qty": 1,
+          "price": 9.05,
+          "calories": 105.0,
+          "protein": 0.0,
+          "fat": 0.0,
+          "carbs": 26.0,
+          "sodium": 29.0
+        },
+        {
+          "name": "玉米杯",
+          "qty": 1,
+          "price": 12.39,
+          "calories": 87.0,
+          "protein": 4.0,
+          "fat": 1.0,
+          "carbs": 12.0,
+          "sodium": 2.0
         }
       ]
     },
@@ -2736,38 +2696,38 @@
       "time": "2026-10-02T19:05:27+08:00",
       "channel": "pickup",
       "store": "上海南京西路店",
-      "total": 36.66,
-      "discount": 8.84,
+      "total": 37.07,
+      "discount": 8.93,
       "items": [
         {
           "name": "麦辣鸡腿汉堡",
           "qty": 1,
           "price": 18.13,
-          "calories": 480.0,
-          "protein": 22.0,
+          "calories": 485.0,
+          "protein": 24.0,
           "fat": 24.0,
-          "carbs": 45.0,
-          "sodium": 900.0
+          "carbs": 42.0,
+          "sodium": 1208.0
         },
         {
-          "name": "中薯条",
+          "name": "薯条",
           "qty": 1,
-          "price": 10.48,
-          "calories": 230.0,
-          "protein": 3.0,
-          "fat": 11.0,
-          "carbs": 30.0,
-          "sodium": 160.0
+          "price": 11.28,
+          "calories": 289.0,
+          "protein": 4.0,
+          "fat": 12.0,
+          "carbs": 38.0,
+          "sodium": 165.0
         },
         {
-          "name": "可口可乐(中)",
+          "name": "可乐",
           "qty": 1,
-          "price": 8.06,
-          "calories": 150.0,
+          "price": 7.65,
+          "calories": 147.0,
           "protein": 0.0,
           "fat": 0.0,
-          "carbs": 38.0,
-          "sodium": 15.0
+          "carbs": 36.0,
+          "sodium": 0.0
         }
       ]
     },
@@ -2776,108 +2736,138 @@
       "time": "2026-10-04T09:53:41+08:00",
       "channel": "delivery",
       "store": "上海南京西路店",
-      "total": 19.12,
-      "discount": 5.88,
+      "total": 14.92,
+      "discount": 4.58,
       "items": [
         {
-          "name": "热香饼(3片)",
+          "name": "大脆鸡扒麦满分",
           "qty": 1,
-          "price": 9.94,
-          "calories": 320.0,
-          "protein": 7.0,
-          "fat": 10.0,
-          "carbs": 52.0,
-          "sodium": 480.0
+          "price": 8.8,
+          "calories": 361.0,
+          "protein": 16.0,
+          "fat": 17.0,
+          "carbs": 35.0,
+          "sodium": 804.0
         },
         {
-          "name": "鲜煮咖啡",
+          "name": "脆薯饼",
           "qty": 1,
-          "price": 9.18,
-          "calories": 5.0,
-          "protein": 0.0,
-          "fat": 0.0,
-          "carbs": 1.0,
-          "sodium": 5.0
+          "price": 6.12,
+          "calories": 146.0,
+          "protein": 1.0,
+          "fat": 9.0,
+          "carbs": 14.0,
+          "sodium": 311.0
         }
       ]
     },
     {
-      "order_id": "MC202610050055",
+      "order_id": "MC202610040064",
+      "time": "2026-10-04T22:18:19+08:00",
+      "channel": "party",
+      "store": "深圳福田中心店",
+      "total": 41.71,
+      "discount": 11.79,
+      "items": [
+        {
+          "name": "麦乐鸡",
+          "qty": 1,
+          "price": 11.31,
+          "calories": 213.0,
+          "protein": 12.0,
+          "fat": 12.0,
+          "carbs": 13.0,
+          "sodium": 422.0
+        },
+        {
+          "name": "薯条",
+          "qty": 1,
+          "price": 10.92,
+          "calories": 289.0,
+          "protein": 4.0,
+          "fat": 12.0,
+          "carbs": 38.0,
+          "sodium": 165.0
+        },
+        {
+          "name": "薄皮焦香V翅",
+          "qty": 1,
+          "price": 12.08,
+          "calories": 192.0,
+          "protein": 17.0,
+          "fat": 11.0,
+          "carbs": 6.0,
+          "sodium": 594.0
+        },
+        {
+          "name": "可乐",
+          "qty": 1,
+          "price": 7.41,
+          "calories": 147.0,
+          "protein": 0.0,
+          "fat": 0.0,
+          "carbs": 36.0,
+          "sodium": 0.0
+        }
+      ]
+    },
+    {
+      "order_id": "MC202610050056",
       "time": "2026-10-05T09:38:32+08:00",
       "channel": "mcdrive",
       "store": "上海陆家嘴环路店",
-      "total": 32.2,
-      "discount": 3.8,
+      "total": 27.84,
+      "discount": 0.66,
       "items": [
         {
-          "name": "猪柳蛋麦满分",
+          "name": "猪柳炒双蛋堡",
           "qty": 1,
-          "price": 14.31,
-          "calories": 380.0,
-          "protein": 21.0,
-          "fat": 23.0,
-          "carbs": 31.0,
-          "sodium": 830.0
+          "price": 17.59,
+          "calories": 437.0,
+          "protein": 25.0,
+          "fat": 24.0,
+          "carbs": 29.0,
+          "sodium": 705.0
         },
         {
-          "name": "鲜煮咖啡",
+          "name": "纯牛奶(盒装)",
           "qty": 1,
-          "price": 10.73,
-          "calories": 5.0,
-          "protein": 0.0,
-          "fat": 0.0,
-          "carbs": 1.0,
-          "sodium": 5.0
-        },
-        {
-          "name": "玉米杯",
-          "qty": 1,
-          "price": 7.16,
-          "calories": 90.0,
-          "protein": 3.0,
-          "fat": 2.0,
-          "carbs": 17.0,
-          "sodium": 5.0
+          "price": 10.26,
+          "calories": 129.0,
+          "protein": 7.0,
+          "fat": 7.0,
+          "carbs": 10.0,
+          "sodium": 73.0
         }
       ]
     },
     {
-      "order_id": "MC202610080073",
-      "time": "2026-10-08T12:53:07+08:00",
-      "channel": "delivery",
-      "store": "上海南京西路店",
-      "total": 36.99,
-      "discount": 9.51,
+      "order_id": "MC202610070023",
+      "time": "2026-10-07T08:46:23+08:00",
+      "channel": "pickup",
+      "store": "杭州武林广场店",
+      "total": 23.45,
+      "discount": 5.05,
       "items": [
         {
-          "name": "板烧鸡腿堡",
+          "name": "猪柳炒双蛋堡",
           "qty": 1,
-          "price": 18.7,
-          "calories": 430.0,
-          "protein": 24.0,
-          "fat": 17.0,
-          "carbs": 42.0,
-          "sodium": 850.0
+          "price": 14.81,
+          "calories": 437.0,
+          "protein": 25.0,
+          "fat": 24.0,
+          "carbs": 29.0,
+          "sodium": 705.0
         },
         {
-          "name": "中薯条",
+          "name": "纯牛奶(盒装)",
           "qty": 1,
-          "price": 10.34,
-          "calories": 230.0,
-          "protein": 3.0,
-          "fat": 11.0,
-          "carbs": 30.0,
-          "sodium": 160.0
-        },
-        {
-          "name": "雪碧(中)",
-          "qty": 1,
-          "price": 7.96,
-          "calories": 150.0,
-          "protein": 0.0,
-          "fat": 0.0,
-          "carbs": 38.0,
-          "sodium": 20.0
+          "price": 8.64,
+          "calories": 129.0,
+          "protein": 7.0,
+          "fat": 7.0,
+          "carbs": 10.0,
+          "sodium": 73.0
         }
       ]
     }

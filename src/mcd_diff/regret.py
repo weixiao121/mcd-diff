@@ -28,7 +28,7 @@
 
 from __future__ import annotations
 
-from dataclasses import dataclass, field, replace
+from dataclasses import dataclass, field
 from typing import Any, Callable
 
 from .menu import MenuItem
@@ -51,8 +51,8 @@ MODES: dict[str, str] = {
 }
 
 #: 默认走「省钱向」。产品的核心钩子是"你本可以省下多少钱"。
-#: 实测同一批订单：thrift 省 11.4%，balanced 只省 3.1%（它把预算优先换成了蛋白质），
-#: lean 省 7.1% 但少摄入 8,525 kcal。三种模式**约束完全相同、只有目标函数不同**，
+#: 实测同一批订单（74 单）：thrift 省 ¥371（14.0%），balanced 只省 ¥73（2.8%，它把预算优先换成了蛋白质，蛋白 +493 g），
+#: lean 省 ¥103（3.9%）但少摄入 12,268 kcal。三种模式**约束完全相同、只有目标函数不同**，
 #: 所以结果天然可对照 —— 报告里三条路线并排展示。
 DEFAULT_MODE = "thrift"
 
@@ -176,18 +176,18 @@ def _gross_of(order: Order, menu: list[MenuItem]) -> float:
     return round(total, 2)
 
 
-def _scaled_menu(menu: list[MenuItem], factor: float) -> list[MenuItem]:
-    """按折扣系数缩放菜单价格。
+def _price_factor(order: Order, menu: list[MenuItem], cost: float) -> float:
+    """该单的折扣系数 = 实付 ÷ 菜单原价。
 
-    订单实付里含优惠，而菜单是原价 —— 拿实付去卡原价菜单会得到大量「无解」。
-    按该单自身的折扣系数缩放后，两边口径一致，等价于假设
+    订单实付含优惠，而菜单是原价 —— 拿实付去卡原价菜单会得到大量「无解」。
+    按该单自身的折扣系数缩放后两边口径一致，等价于假设
     「那天的优惠力度不变，换个点法会怎样」。
+
+    刻意不 round：缩放后「原组合」的价格必须精确回到该单实付，
+    否则会踩到求解器的预算容差、把原单自己判成不可行。
     """
-    if factor >= 0.9999:
-        return menu
-    # 刻意不 round：缩放后「原组合」的价格必须精确回到该单实付，
-    # 否则会踩到求解器的预算容差、把原单自己判成不可行。
-    return [replace(m, price=m.price * factor) for m in menu]
+    gross = _gross_of(order, menu)
+    return (cost / gross) if gross > cost > 0 else 1.0
 
 
 def categories_of_order(order: Order, menu: list[MenuItem]) -> set[str]:
@@ -197,13 +197,23 @@ def categories_of_order(order: Order, menu: list[MenuItem]) -> set[str]:
     用户想喝咖啡，但未必要喝**这一杯**咖啡 —— 换一杯更便宜的饮品可以接受；
     而直接把饮品取消掉，就不是"同等条件下的更优解"了。
     """
+    return set(category_counts_of_order(order, menu))
+
+
+def category_counts_of_order(order: Order, menu: list[MenuItem]) -> dict[str, int]:
+    """提取订单的**点单结构**：每个品类各几件。
+
+    比单纯的品类集合更强 —— 原单「1 个汉堡 + 2 份小食 + 1 杯饮料」，
+    重开之后也应当是这个结构，而不是把两份小食并成一份来省钱。
+    用户能接受「换一个更划算的汉堡」，不太能接受「我的小食少了一份」。
+    """
     index = {_norm_name(m.name): m.category for m in menu}
-    cats: set[str] = set()
+    counts: dict[str, int] = {}
     for item in order.items:
         cat = index.get(_norm_name(item.name))
         if cat:
-            cats.add(cat)
-    return cats
+            counts[cat] = counts.get(cat, 0) + item.qty
+    return counts
 
 
 _SOLVERS: dict[str, Callable[[list[MenuItem], Constraints], Solution]] = {
@@ -259,36 +269,40 @@ def replay_order(
 
     solver = _SOLVERS[mode]
 
-    # 口径对齐：按该单自身的折扣系数缩放菜单，让重开价与实付可比
-    gross = _gross_of(order, menu)
-    factor = (cost / gross) if gross > cost > 0 else 1.0
+    # 口径对齐：把该单的折扣系数交给求解器，而不是复制一张缩放后的菜单 ——
+    # 正数缩放不改变排序，所以同一张组合表对所有订单都成立（性能关键）。
+    factor = _price_factor(order, menu, cost)
     diff.price_factor = round(factor, 4)
-    priced = _scaled_menu(menu, factor)
 
-    # 品类保留：重开方案必须保持原单的点单结构
-    cats = categories_of_order(order, menu)
-    if len(cats) > MAX_COMBO_SIZE:
-        cats = set()  # 品类多于可枚举件数时放弃该约束，避免必然无解
-    required = frozenset(cats) if cats else None
+    # 品类保留：重开方案必须保持原单的**点单结构**（品类 + 份数）
+    counts = category_counts_of_order(order, menu)
+    total = sum(counts.values())
+    if total > MAX_COMBO_SIZE:
+        # 原单件数超出可枚举上限，退化为「每个品类至少一件」
+        counts = {cat: 1 for cat in counts}
+        if len(counts) > MAX_COMBO_SIZE:
+            counts = {}  # 仍然超上限就放弃该约束，避免必然无解
+    required_counts = counts or None
 
     def _cons(floor: float) -> Constraints:
         return Constraints(
             budget=cost,
             kcal_cap=kcal if kcal > 0 else None,
             protein_floor=floor,
-            require_categories=required,
+            require_category_counts=required_counts,
+            price_factor=factor,
         )
 
     # 第一次尝试：蛋白质不低于原单（严格 Pareto —— 钱不增、热量不增、蛋白不减）
     cons = _cons(round(protein, 1))
-    sol = solver(priced, cons)
+    sol = solver(menu, cons)
 
     # 第二次尝试：蛋白质让步 25%（原单本身蛋白就不高时不值得让步，直接判不可行）
     if not sol.feasible and protein > MIN_PROTEIN_FLOOR:
         relaxed = round(max(MIN_PROTEIN_FLOOR, protein * 0.75), 1)
         if relaxed < cons.protein_floor:
             cons = _cons(relaxed)
-            sol = solver(priced, cons)
+            sol = solver(menu, cons)
             if sol.feasible:
                 diff.note = f"蛋白质由 {protein:.0f}g 放宽至 {relaxed:.0f}g 后求解"
 

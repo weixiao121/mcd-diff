@@ -7,17 +7,27 @@
     B · 热量优先  : 预算 ≤ B、蛋白质 ≥ P  →  最小化热量
     C · 双约束    : 预算 ≤ B 且 热量 ≤ K  →  最大化蛋白质   ← 本产品方案
 
-**算法**：菜单约 24 项、一餐组合 ≤ 4 件 → 全集仅 12,950 种组合，
-全枚举即可得到**精确最优解**，无需启发式，纯标准库、完全确定性、可复现。
+**算法**：一餐组合 ≤ 4 件，菜单 N 项 → 组合数为 O(N⁴)。全枚举即可得到
+**精确最优解**，无需启发式，纯标准库、完全确定性、可复现。
+
+为了让它在大菜单上也够快，做了两件事（都不改变结果，只改变顺序）：
+
+1. **组合表只算一次**。枚举 + 求和全部预计算，缓存在菜单指纹上；
+   同一份菜单在整轮重开中只构建一次。
+2. **按目标预排序，首个可行即最优**。排序键与平手规则一致，所以
+   扫到第一个满足约束的组合就可以立刻返回（通常几百次比较）。
+
+> 关键设计：价格缩放系数做成 `Constraints.price_factor` 而不是真去改菜单里的价格 ——
+> **正数缩放不改变排序**，于是同一张组合表对所有订单都成立。
+> 这也让"每单的折扣系数"这个业务概念直接落在约束层，比复制菜单更省、也更清楚。
 
 安全性：本模块**纯本地计算**，不调用任何 MCP 交易类工具，不产生任何订单。
 """
 
 from __future__ import annotations
 
-from dataclasses import dataclass, field
+from dataclasses import dataclass, field, replace
 from itertools import combinations
-from typing import Iterable
 
 from .menu import MenuItem
 
@@ -95,33 +105,109 @@ class Constraints:
     #: **保持原单的点单结构** —— 原单有饮料，重开就必须也有饮料，
     #: 而不是简单地把饮料删掉换来一个更大的省钱数字。
     require_categories: frozenset[str] | None = None
+    #: 必须覆盖的**品类份数**（品类 -> 至少几件）。比 `require_categories` 更强：
+    #: 原单是「1 个汉堡 + 2 份小食 + 1 杯饮料」，重开之后也得是这个结构，
+    #: 而不只是"每个品类沾一个"。用它才能避免"把两份小食并成一份"式的伪优化。
+    require_category_counts: dict[str, int] | None = None
+    #: 价格缩放系数（口径对齐用）。订单实付含优惠而菜单是原价，
+    #: 用 `实付 ÷ 菜单原价` 缩放后两边才可比。
+    #:
+    #: 之所以做成系数而不是直接缩放菜单里的价格：**正数缩放不改变排序**，
+    #: 所以同一张菜单的"按价格排序"结果对所有订单都成立 ——
+    #: 组合表只需预计算一次，逐单重开才能从分钟级降到秒级。
+    price_factor: float = 1.0
 
 
-def _iter_combos(menu: list[MenuItem], max_size: int = MAX_COMBO_SIZE) -> Iterable[tuple[MenuItem, ...]]:
-    """枚举 1..max_size 件的所有组合。"""
+# ---------------------------------------------------------------------------
+# 组合表：一次预计算，全流程复用
+# ---------------------------------------------------------------------------
+
+#: 预计算好的组合：(价格, 热量, 蛋白, 钠, 品类元组, 餐品元组)
+_Combo = tuple[float, float, float, float, tuple[str, ...], tuple[MenuItem, ...]]
+
+#: 缓存：菜单指纹 -> {目标: 按该目标"最优在前"排好序的组合列表}
+_TABLE_CACHE: dict[tuple, dict[str, list[_Combo]]] = {}
+_TABLE_CACHE_LIMIT = 8
+
+_OBJECTIVE_SORT: dict[str, str] = {
+    "min_price": "price",
+    "min_kcal": "kcal",
+    "max_protein": "protein",
+}
+
+
+def _menu_fingerprint(menu: list[MenuItem], max_size: int) -> tuple:
+    return (
+        max_size,
+        tuple(
+            (i.name, i.price, i.calories, i.protein, i.sodium, i.category) for i in menu
+        ),
+    )
+
+
+def _build_tables(menu: list[MenuItem], max_size: int) -> dict[str, list[_Combo]]:
+    """枚举全部组合一次，并按三种目标各排一遍（最优在前）。
+
+    排序键刻意与 `score()` 的平手规则一致，这样"第一个满足约束的组合"
+    就**恰好是**该目标下的最优解 —— 找到即可立即返回，无需扫完全表。
+    """
     usable = [i for i in menu if i.price > 0]
+    combos: list[_Combo] = []
     for size in range(1, max_size + 1):
-        yield from combinations(usable, size)
+        for items in combinations(usable, size):
+            combos.append((
+                sum(i.price for i in items),
+                sum(i.calories for i in items),
+                sum(i.protein for i in items),
+                sum(i.sodium for i in items),
+                # 保留重复项：品类约束要按「份数」校验，不能只留唯一值
+                tuple(sorted(i.category for i in items)),
+                items,
+            ))
+
+    # score 是"越大越好"，所以按 score 取负后升序排 = 最优在前
+    return {
+        "min_price": sorted(combos, key=lambda t: (t[0], -t[2], t[3])),
+        "min_kcal": sorted(combos, key=lambda t: (t[1], -t[2], t[3])),
+        "max_protein": sorted(combos, key=lambda t: (-t[2], t[1], t[3])),
+    }
 
 
-def _ok(items: tuple[MenuItem, ...], c: Constraints, *, ignore: set[str] = frozenset()) -> bool:
-    """校验约束。`ignore` 中的约束键会被跳过（用于单目标对照方案）。"""
-    price = sum(i.price for i in items)
-    kcal = sum(i.calories for i in items)
-    prot = sum(i.protein for i in items)
-    na = sum(i.sodium for i in items)
+def combo_tables(menu: list[MenuItem], max_size: int = MAX_COMBO_SIZE) -> dict[str, list[_Combo]]:
+    """取（或构建）该菜单的组合表。同一张菜单在整轮重开中只算一次。"""
+    key = _menu_fingerprint(menu, max_size)
+    hit = _TABLE_CACHE.get(key)
+    if hit is None:
+        if len(_TABLE_CACHE) >= _TABLE_CACHE_LIMIT:
+            _TABLE_CACHE.clear()
+        hit = _build_tables(menu, max_size)
+        _TABLE_CACHE[key] = hit
+    return hit
 
-    if "budget" not in ignore and c.budget is not None and price > c.budget + 1e-9:
-        return False
+
+def clear_cache() -> None:
+    """清空组合表缓存（测试或多菜单场景用）。"""
+    _TABLE_CACHE.clear()
+
+
+def _ok(combo: _Combo, c: Constraints, *, ignore: set[str] = frozenset()) -> bool:
+    """校验约束。`combo` 是预计算的元组；`ignore` 中的约束键会被跳过。"""
+    base_price, kcal, prot, na, cats, _items = combo
+    if "budget" not in ignore and c.budget is not None:
+        if base_price * c.price_factor > c.budget + 1e-9:
+            return False
     if "kcal_cap" not in ignore and c.kcal_cap is not None and kcal > c.kcal_cap + 1e-9:
         return False
     if "protein_floor" not in ignore and prot < c.protein_floor - 1e-9:
         return False
     if "sodium_cap" not in ignore and c.sodium_cap is not None and na > c.sodium_cap + 1e-9:
         return False
-    if c.require_categories:
-        if not c.require_categories.issubset({i.category for i in items}):
-            return False
+    if c.require_category_counts:
+        for cat, need in c.require_category_counts.items():
+            if cats.count(cat) < need:
+                return False
+    elif c.require_categories and not c.require_categories.issubset(cats):
+        return False
     return True
 
 
@@ -133,33 +219,27 @@ def _search(
     ignore: set[str] = frozenset(),
     max_size: int = MAX_COMBO_SIZE,
 ) -> Solution | None:
-    """在约束内按 target 寻找最优组合。"""
+    """在约束内寻找最优组合。
 
-    def score(items: tuple[MenuItem, ...]) -> tuple:
-        price = sum(i.price for i in items)
-        kcal = sum(i.calories for i in items)
-        prot = sum(i.protein for i in items)
-        na = sum(i.sodium for i in items)
-        # 统一为"越大越好"；末位用钠做平手时的次级偏好（越低越好 → 取负）
-        if objective == "max_protein":
-            return (prot, -kcal, -na)
-        if objective == "min_price":
-            return (-price, prot, -na)
-        if objective == "min_kcal":
-            return (-kcal, prot, -na)
+    组合表按目标"最优在前"排好序，因此**第一个满足约束的组合就是最优解**，
+    命中即可返回 —— 这是把 74 单重开从分钟级压到秒级的关键。
+    """
+    if objective not in _OBJECTIVE_SORT:
         raise ValueError(f"未知目标：{objective}")
 
-    best: tuple[MenuItem, ...] | None = None
-    best_score: tuple | None = None
-
-    for combo in _iter_combos(menu, max_size):
+    for combo in combo_tables(menu, max_size)[objective]:
         if not _ok(combo, c, ignore=ignore):
             continue
-        s = score(combo)
-        if best_score is None or s > best_score:
-            best, best_score = combo, s
+        items = combo[5]
+        return Solution(items=_apply_factor(items, c.price_factor))
+    return None
 
-    return Solution(items=list(best)) if best else None
+
+def _apply_factor(items: tuple[MenuItem, ...], factor: float) -> list[MenuItem]:
+    """把价格缩放系数落到最终选中的那几个餐品上（口径对齐）。"""
+    if factor >= 0.9999 and factor <= 1.0001:
+        return list(items)
+    return [replace(i, price=i.price * factor) for i in items]
 
 
 # ---------------------------------------------------------------------------

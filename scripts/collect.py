@@ -24,6 +24,7 @@ import re
 import sys
 import urllib.error
 import urllib.request
+from datetime import date, timedelta
 from pathlib import Path
 from typing import Any
 
@@ -501,31 +502,65 @@ def collect(args: argparse.Namespace) -> int:
     print(f"   → {len(nutrition)} 项营养数据")
 
     # 5. 菜单（需要门店编码，取自订单）
+    #
+    # ⚠️ 菜单是**随时段变化**的：晚上拉不到早餐品项、早上拉不到正餐品项。
+    # 所以对同一门店按多个时段各拉一次，合并去重 —— 这样得到的才是完整菜单。
     menu_items: list[dict[str, Any]] = []
     store_codes: list[str] = []
     for o in rows:
         sc = str(o.get("storeCode") or "")
         if sc and sc not in store_codes:
             store_codes.append(sc)
+
+    base_date = (now_str or "")[:10] or ""
+    probe_times: list[str | None] = [None]  # None = 当前时刻
+    if args.menu_times:
+        try:
+            next_day = (
+                date.fromisoformat(base_date) + timedelta(days=1)
+            ).isoformat() if base_date else ""
+        except ValueError:
+            next_day = ""
+        for t in args.menu_times.split(","):
+            t = t.strip()
+            if t and next_day:
+                probe_times.append(f"{next_day} {t}")
+
     for sc in store_codes[: args.max_stores]:
         betype = 1
         for o in rows:
             if str(o.get("storeCode")) == sc:
                 betype = int(_to_float(o.get("beType"), 1) or 1)
                 break
-        try:
-            print(f"   拉取 query-meals（storeCode={sc}, beType={betype}）…")
-            payload = client.call_tool(
-                "query-meals", {"storeCode": sc, "orderType": 1, "beType": betype}
+
+        merged: dict[str, dict[str, Any]] = {}
+        for rd in probe_times:
+            params: dict[str, Any] = {"storeCode": sc, "orderType": 1, "beType": betype}
+            if rd:
+                params["reservationDate"] = rd
+            label = rd or "当前"
+            try:
+                got = parse_menu(client.call_tool("query-meals", params), nutrition)
+            except McpError as exc:
+                warn.append(f"query-meals({sc},{label}): {exc}")
+                print(f"   ⚠️  query-meals({sc}, {label}) 失败：{exc}")
+                continue
+            added = 0
+            for it in got:
+                key = _strict_norm(it["name"])
+                prev = merged.get(key)
+                # 同一餐品在不同时段出现时，保留**信息更全**的那条
+                if prev is None or (it["calories"] > 0 and prev["calories"] <= 0):
+                    merged[key] = it
+                    added += 1
+            print(f"   query-meals({label}) → {len(got)} 项（新增 {added}）")
+
+        if merged:
+            menu_items = sorted(
+                merged.values(), key=lambda x: (x["kind"] != "single", -x["price"], x["name"])
             )
-            got = parse_menu(payload, nutrition)
-            if got:
-                menu_items = got
-                print(f"   → {len(got)} 项餐品（含价格与分类）")
-                break
-        except McpError as exc:
-            warn.append(f"query-meals({sc}): {exc}")
-            print(f"   ⚠️  query-meals({sc}) 失败：{exc}")
+            print(f"   → 合并后共 {len(menu_items)} 项")
+            break
 
     # 6. 辅助数据
     account_payload = soft("query-my-account", lambda: client.call_tool("query-my-account"), {})
@@ -670,6 +705,12 @@ def build_parser() -> argparse.ArgumentParser:
     p.add_argument("--timeout", type=int, default=60, help="单次请求超时秒数")
     p.add_argument("--window-days", type=int, default=365, help="统计窗口天数（写入 meta）")
     p.add_argument("--max-stores", type=int, default=3, help="最多尝试几个门店拉菜单")
+    p.add_argument(
+        "--menu-times",
+        default="08:00,12:00,15:30",
+        help="额外探测的时段（HH:MM，逗号分隔）。菜单随时段变化，"
+             "多拉几次才能拿到早餐等分时段品项；传空字符串可关闭。",
+    )
     return p
 
 

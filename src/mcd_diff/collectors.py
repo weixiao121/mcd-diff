@@ -5,7 +5,9 @@
 - 真实运行时，MCP 工具的调用由 WorkBuddy 智能体编排（见 SKILL.md），
   采集结果落盘为 raw.json；
 - 本模块提供读取入口（`JsonFileCollector`）与一个最小的 `McpClient` 协议，
-  便于未来接入原生 MCP Client，也便于单元测试注入假数据。
+  便于单元测试注入假数据；
+- 需要脱离 WorkBuddy 独立采集时，用 `scripts/collect.py` —— 它自带一个
+  标准库实现的 Streamable HTTP MCP 客户端，产物同样落盘为 raw.json。
 """
 
 from __future__ import annotations

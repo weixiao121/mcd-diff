@@ -50,11 +50,22 @@ def _order(items: list[dict], total: float, *, oid: str = "T1", time: str = "202
     )
 
 
+#: 一单典型正餐：主食 + 小食 + 饮料，三件分属三个不同品类。
+#: 名称必须与 data/menu.json（MCP 实拉的真实菜单）一致。
 BIGMAC_MEAL = [
-    {"name": "巨无霸", "qty": 1, "price": 25.5, "calories": 550, "protein": 26},
-    {"name": "中薯条", "qty": 1, "price": 13.0, "calories": 230, "protein": 3},
-    {"name": "可口可乐(中)", "qty": 1, "price": 10.0, "calories": 150, "protein": 0},
+    {"name": "巨无霸", "qty": 1, "price": 26.5, "calories": 513, "protein": 27},
+    {"name": "薯条", "qty": 1, "price": 14.0, "calories": 289, "protein": 4},
+    {"name": "可乐", "qty": 1, "price": 9.5, "calories": 147, "protein": 0},
 ]
+
+#: 品类名不写死 —— 菜单来自 MCP 实拉，品类命名以数据为准。
+_MENU = load_menu()
+
+
+def _categories(names: list[str]) -> frozenset[str]:
+    """按餐品名反查品类，用于构造品类保留约束。"""
+    index = {m.name: m.category for m in _MENU}
+    return frozenset(index[n] for n in names if n in index)
 
 
 class TestMenuAndSolver(unittest.TestCase):
@@ -74,16 +85,17 @@ class TestMenuAndSolver(unittest.TestCase):
         self.assertGreaterEqual(sol.protein, 15 - 1e-6)
 
     def test_require_categories_is_enforced(self) -> None:
+        """品类保留约束：要求「鸡类主食 + 饮料」时，解里必须两样都有。"""
+        want = _categories(["麦辣鸡腿汉堡", "可乐"])
+        self.assertEqual(len(want), 2, "测试餐品应分属两个不同品类")
+
         c = Constraints(
-            budget=60,
-            kcal_cap=1200,
-            protein_floor=10,
-            require_categories=frozenset({"主食", "饮料"}),
+            budget=75, kcal_cap=1500, protein_floor=10, require_categories=want
         )
         sol = solve_dual_constraint(self.menu, c)
         self.assertTrue(sol.feasible)
         cats = {i.category for i in sol.items}
-        self.assertTrue({"主食", "饮料"}.issubset(cats), f"品类未覆盖：{cats}")
+        self.assertTrue(want.issubset(cats), f"品类未覆盖：{want - cats}")
 
 
 class TestRegretEngine(unittest.TestCase):
@@ -103,7 +115,7 @@ class TestRegretEngine(unittest.TestCase):
         """重开必须保持点单结构：原单有饮料，重开也得有。"""
         order = _order(BIGMAC_MEAL, 48.5)
         want = categories_of_order(order, self.menu)
-        self.assertEqual(want, {"主食", "小食", "饮料"})
+        self.assertEqual(len(want), 3, f"测试单应覆盖三个品类，实得 {want}")
         for mode in MODES:
             d = replay_order(order, self.menu, mode=mode)
             if not d.feasible:
