@@ -20,8 +20,8 @@ classifiers = [
 dependencies = []
 
 [project.urls]
-Homepage = "https://github.com/<your-name>/mcd-diff"
-Issues = "https://github.com/<your-name>/mcd-diff/issues"
+Homepage = "https://github.com/weixiao121/mcd-diff"
+Issues = "https://github.com/weixiao121/mcd-diff/issues"
 
 [project.scripts]
 mcd-diff = "mcd_diff.cli:main"

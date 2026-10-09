@@ -283,7 +283,7 @@
 ### 1. 克隆仓库
 
 ```bash
-git clone https://github.com/<your-name>/mcd-diff.git
+git clone https://github.com/weixiao121/mcd-diff.git
 cd mcd-diff
 ```
 

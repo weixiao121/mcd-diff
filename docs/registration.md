@@ -26,7 +26,7 @@ git init
 git add .
 git commit -m "feat: 麦门 Diff v1.0 —— 把你的麦当劳账单跑一遍 diff"
 git branch -M main
-git remote add origin https://github.com/<你的用户名>/mcd-diff.git
+git remote add origin https://github.com/weixiao121/mcd-diff.git
 git push -u origin main
 ```
 
@@ -44,7 +44,7 @@ git push -u origin main
 ```text
 【参赛申请】
 项目名称：麦门 Diff（mcd-diff）
-项目地址：https://github.com/<你的用户名>/mcd-diff
+项目地址：https://github.com/weixiao121/mcd-diff
 项目简介：把你的麦当劳账单，跑一遍 diff——对过去一年发生的每一单，在「同等预算 ∩ 同等热量」约束下重新点一遍，算出本可以省下多少钱、少吃多少热量。全榜唯一对历史订单做「反事实推演」的项目：别人回答「我该买什么」，它回答「我本该买什么」。三条硬约束保证它是复盘而非说教——预算上限定为该单实付、热量上限定为该单实际摄入、并保留原单结构（品类 + 份数：不把饮料删掉、也不少给一份小食），因此差额 Δcost ≥ 0 是数学保证。输出含重开橱窗、差额账簿、三条重开路线（省钱向／扎实向／轻负担向）、时段与渠道归因、以及「现实宇宙 vs 平行宇宙」人格对照。工程上零第三方依赖、完全确定性、每一单都能复算：`scripts/collect.py` 自带标准库 MCP 客户端（手写 initialize → tools/call，兼容裸 JSON 与 SSE），可脱离任何宿主直接拉通真实采集；求解器对 41 项真实菜单做 112,791 种组合的精确全枚举，74 单全年重开耗时 4.9 秒（优化前 66 秒），结果逐位相同。
 ```
 
