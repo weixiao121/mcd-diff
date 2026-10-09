@@ -19,18 +19,34 @@
 - [ ] 首屏截图 `docs/images/hero.png` 与示例数据数字一致
 - [ ] **同一账号下只保留本项目**（规则：同账号多个项目仅 Star 最高者进榜）
 
-## 二、本地初始化命令
+## 二、推送（仓库已初始化，只剩这一步）
+
+本地 Git 仓库已经就绪，无需再 `git init`：
+
+- 分支：`main`（5 个提交）
+- 远端：`origin` → `https://github.com/weixiao121/mcd-diff.git`（已配置）
+- 提交身份：`weixiao121 <weixiao121@users.noreply.github.com>`
+- 待推送内容：37 个跟踪文件；`.mcd-diff/` 与生成的报告已被 `.gitignore` 排除
+
+**先在 GitHub 网页端建一个空的 Public 仓库 `mcd-diff`（不要勾选 README / .gitignore / License），然后：**
 
 ```bash
-git init
-git add .
-git commit -m "feat: 麦门 Diff v1.0 —— 把你的麦当劳账单跑一遍 diff"
+git push -u origin main
+```
+
+> 推送到 GitHub 后，务必在仓库 Settings 中确认可见性为 **Public**。
+
+<details>
+<summary>若需要从零重建（一般用不到）</summary>
+
+```bash
+git init && git add . && git commit -m "feat: 麦门 Diff v1.0 —— 把你的麦当劳账单跑一遍 diff"
 git branch -M main
 git remote add origin https://github.com/weixiao121/mcd-diff.git
 git push -u origin main
 ```
 
-> 推送到 GitHub 后，务必在仓库 Settings 中确认可见性为 **Public**。
+</details>
 
 ## 三、报名 Issue
 
