@@ -2,39 +2,38 @@
 
 ## 一、提交前自检清单
 
-- [ ] 仓库已创建为 **Public**
-- [ ] 根目录包含 **6 项必需内容**：
-  - [ ] `README.md`
-  - [ ] `CONTEST_DECLARATION.md`（**官方原文，一字未改**）
-  - [ ] `MCP_INTEGRATION.md`
-  - [ ] `mcp-config.example.json`（**只有 `${MCD_MCP_TOKEN}` 占位符**）
-  - [ ] `workbuddy.md`（参加 WorkBuddy 专项奖励必需）
-  - [ ] 源代码（`src/`、`scripts/`、`examples/`）
-- [ ] 仓库中**没有** `.env`、没有真实 Token、没有密钥
-- [ ] `git log` 历史里没有泄露过密钥
-- [ ] `.mcd-diff/` 与生成的报告未被提交（已在 `.gitignore` 中）
-- [ ] README 已写明「非麦当劳官方产品」
-- [ ] 22 项单元测试全过：`PYTHONPATH=src python -m unittest discover -s tests`
-- [ ] 示例产物已重新生成（`examples/sample_diff.{html,md,json}`、`sample_solve.md`）
-- [ ] 首屏截图 `docs/images/hero.png` 与示例数据数字一致
-- [ ] **同一账号下只保留本项目**（规则：同账号多个项目仅 Star 最高者进榜）
+- [x] 仓库已创建为 **Public** —— 已确认（API 返回 `visibility: public`）
+- [x] 根目录包含 **6 项必需内容**：
+  - [x] `README.md`
+  - [x] `CONTEST_DECLARATION.md`（**官方原文，一字未改**）
+  - [x] `MCP_INTEGRATION.md`
+  - [x] `mcp-config.example.json`（**只有 `${MCD_MCP_TOKEN}` 占位符**）
+  - [x] `workbuddy.md`（参加 WorkBuddy 专项奖励必需）
+  - [x] 源代码（`src/`、`scripts/`、`examples/`）
+- [x] 仓库中**没有** `.env`、没有真实 Token、没有密钥
+- [x] `git log` 历史里没有泄露过密钥
+- [x] `.mcd-diff/` 与生成的报告未被提交（已在 `.gitignore` 中）
+- [x] README 已写明「非麦当劳官方产品」
+- [x] 22 项单元测试全过：`PYTHONPATH=src python -m unittest discover -s tests`
+- [x] 示例产物已重新生成（`examples/sample_diff.{html,md,json}`、`sample_solve.md`）
+- [x] 首屏截图 `docs/images/hero.png` 与示例数据数字一致
+- [ ] **同一账号下只保留本项目**（规则：同账号多个项目仅 Star 最高者进榜）← **需你自己确认**
 
-## 二、推送（仓库已初始化，只剩这一步）
+## 二、推送 ✅ 已完成
 
-本地 Git 仓库已经就绪，无需再 `git init`：
+已于 **2026-10-09 22:17（北京时间）** 推送到 <https://github.com/weixiao121/mcd-diff>：
 
-- 分支：`main`（5 个提交）
-- 远端：`origin` → `https://github.com/weixiao121/mcd-diff.git`（已配置）
+- 分支：`main`（6 个提交）
+- 远端：`origin` → `https://github.com/weixiao121/mcd-diff.git`
 - 提交身份：`weixiao121 <weixiao121@users.noreply.github.com>`
-- 待推送内容：37 个跟踪文件；`.mcd-diff/` 与生成的报告已被 `.gitignore` 排除
+- 已推送 37 个跟踪文件；`.mcd-diff/` 与本地生成的报告由 `.gitignore` 排除
+- 可见性：已确认为 **Public**
 
-**先在 GitHub 网页端建一个空的 Public 仓库 `mcd-diff`（不要勾选 README / .gitignore / License），然后：**
+后续更新只需：
 
 ```bash
-git push -u origin main
+git add -A && git commit -m "..." && git push
 ```
-
-> 推送到 GitHub 后，务必在仓库 Settings 中确认可见性为 **Public**。
 
 <details>
 <summary>若需要从零重建（一般用不到）</summary>
