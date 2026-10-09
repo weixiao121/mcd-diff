@@ -1,0 +1,40 @@
+# ---- 敏感数据（绝不提交）----
+.env
+.env.*
+*.env
+.mcd-diff/
+raw.json
+*.token
+secrets.json
+
+# ---- 生成的报告（用户本地产物；examples/ 下的示例报告会被正常跟踪）----
+/diff-report.html
+/diff-report.md
+/diff-report.json
+/report.html
+/report-*.html
+*.report.html
+
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+dist/
+build/
+
+# ---- 编辑器 / 系统 ----
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+*.swp
+
+# ---- 其他 ----
+*.log
+node_modules/

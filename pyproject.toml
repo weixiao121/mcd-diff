@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mcd-diff"
+version = "1.0.0"
+description = "麦门 Diff —— 把你的麦当劳账单，跑一遍 diff：对历史每一单在「同等预算 ∩ 同等热量」约束下重开一次，算出你本可以省下多少钱、少吃多少热量"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "mcd-diff contributors" }]
+keywords = ["mcp", "mcdonalds", "skill", "diff", "workbuddy", "counterfactual", "coupon", "budget"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Natural Language :: Chinese (Simplified)",
+]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/<your-name>/mcd-diff"
+Issues = "https://github.com/<your-name>/mcd-diff/issues"
+
+[project.scripts]
+mcd-diff = "mcd_diff.cli:main"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+mcd_diff = ["templates/*.html"]
+
+[tool.setuptools.data-files]
+"share/mcd-diff" = ["data/menu.json"]
